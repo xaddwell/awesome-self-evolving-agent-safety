@@ -275,9 +275,31 @@
   document.getElementById('q').addEventListener('input', function () { q = this.value.trim().toLowerCase(); renderCards(); });
   document.getElementById('sort').addEventListener('change', function () { sortMode = this.value; renderCards(); });
 
+  function applyParams() {
+    var sp = new URLSearchParams(location.search);
+    var fieldMap = { substrate: 'substrate', adaptation: 'adaptation', outcome: 'outcome', detail: 'outcome_detail', origin: 'record_origin' };
+    if (sp.get('q')) {
+      q = sp.get('q').toLowerCase();
+      document.getElementById('q').value = sp.get('q');
+    }
+    Object.keys(fieldMap).forEach(function (param) {
+      var v = sp.get(param);
+      if (!v) return;
+      filters[fieldMap[param]] = v;
+      var groups = { substrate: 'fSubstrate', adaptation: 'fAdaptation', outcome: 'fOutcome', outcome_detail: 'fDetail', record_origin: 'fOrigin' };
+      var el = document.getElementById(groups[fieldMap[param]]);
+      if (el) {
+        el.querySelectorAll('.pill').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-v') === v);
+        });
+      }
+    });
+  }
+
   fetch('papers.json').then(function (r) { return r.json(); }).then(function (d) {
     PAPERS = d;
     renderFilters();
+    applyParams();
     renderCards();
   }).catch(function () {
     document.getElementById('cards').innerHTML = '<p class="empty">Failed to load papers.json.</p>';

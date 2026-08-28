@@ -247,32 +247,109 @@
   .info-card h3 { margin: 0 0 0.4rem; font-family: 'Space Grotesk', sans-serif; font-size: 1rem; }
   .info-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
   pre.bibtex { background: var(--bg-code); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; line-height: 1.7; white-space: pre-wrap; }
-  .figure-row { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; }
-  .fig-panel { flex: 1 1 320px; max-width: 560px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: var(--shadow-card); }
-  .fig-panel h3 { margin: 0 0 0.7rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; }
-  .fig-panel figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.8rem; line-height: 1.6; }
+  .figure-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; align-items: start; }
+  .fig-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: var(--shadow-card); min-width: 0; }
+  .fig-wide { grid-column: 1 / -1; }
+  .fig-panel h3 { margin: 0 0 0.7rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; overflow-wrap: anywhere; }
+  .fig-panel figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.8rem; line-height: 1.6; overflow-wrap: anywhere; }
 
   footer { padding: 2.4rem 1.5rem 3rem; text-align: center; color: var(--text-muted); font-size: 0.82rem; }
   footer a { color: var(--accent); }
 
-  /* inline diagrams */
-  .chip-flow { display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem; justify-content: center; padding: 0.9rem 0; }
-  .chip { border-radius: 8px; padding: 0.4rem 0.7rem; font-size: 0.78rem; font-weight: 600; color: #fff; }
-  .chip-flow .arr { color: var(--text-muted); }
-  .panel3 { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
-  .panel3 .p3 {
-    flex: 1 1 240px; border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem;
-    background: var(--bg-alt); text-align: center; font-size: 0.84rem;
+  /* inline diagrams — responsive live components */
+  .xm-flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.4rem; justify-content: center; padding: 0.8rem 0 0.4rem; }
+  .xm-step {
+    flex: 1 1 150px; min-width: 0; max-width: 100%;
+    border: 1px solid var(--border); border-top: 3px solid var(--sc, #64748b); border-radius: 8px;
+    background: var(--bg-alt); padding: 0.5rem 0.6rem; text-align: center;
   }
-  .panel3 .p3 .p3-q { font-weight: 700; display: block; margin-bottom: 0.3rem; }
-  .panel3 .p3 .p3-a { color: var(--text-muted); font-size: 0.78rem; }
-  .panel3 .p3-arrow { align-self: center; color: var(--text-muted); font-size: 1.2rem; }
-  .lattice { display: flex; flex-direction: column; gap: 0.3rem; max-width: 620px; margin: 0 auto; }
-  .lat-level { display: flex; align-items: center; gap: 0.8rem; }
-  .lat-name { width: 130px; text-align: right; font-weight: 600; font-size: 0.8rem; }
-  .lat-desc { flex: 1; font-size: 0.76rem; color: var(--text-muted); background: var(--bg-alt); border-radius: 8px; padding: 0.4rem 0.7rem; }
-  .lat-gate { width: 100%; margin-left: 130px; display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
-  .lat-gate .line { flex: 1; border-top: 1px dashed var(--border); }
+  .xm-k { display: block; font-weight: 700; font-size: 0.82rem; overflow-wrap: anywhere; }
+  .xm-t { display: block; color: var(--text-muted); font-size: 0.72rem; margin-top: 0.15rem; overflow-wrap: anywhere; }
+  .xm-arr { align-self: center; color: var(--text-muted); font-size: 1rem; flex: 0 0 auto; }
+  .xm-scale { display: flex; align-items: center; gap: 0.6rem; font-size: 0.68rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; margin-top: 0.5rem; }
+  .xm-bar { flex: 1; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #64748b, #4067C4, #527CDF, #2F9E8F, #E2707C); }
+  @media (max-width: 560px) { .xm-arr { display: none; } .xm-step { flex-basis: 100%; } }
+
+  .o2s { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.4rem; justify-content: center; padding: 0.8rem 0; }
+  .o2s-step {
+    flex: 1 1 190px; min-width: 0; max-width: 100%; text-align: center;
+    border: 1px solid var(--border); border-top: 3px solid var(--sc, #64748b); border-radius: 8px;
+    background: var(--bg-alt); padding: 0.7rem 0.6rem;
+  }
+  .o2s-q { display: block; font-weight: 700; font-size: 0.84rem; overflow-wrap: anywhere; }
+  .o2s-a { display: block; color: var(--text-muted); font-size: 0.74rem; margin-top: 0.2rem; overflow-wrap: anywhere; }
+  .o2s-arr { align-self: center; color: var(--text-muted); font-size: 1rem; flex: 0 0 auto; }
+  @media (max-width: 560px) { .o2s-arr { display: none; } .o2s-step { flex-basis: 100%; } }
+
+  .lattice { display: flex; flex-direction: column; gap: 0.35rem; }
+  .lat-level { display: flex; align-items: stretch; gap: 0.7rem; min-width: 0; }
+  .lat-name {
+    flex: 0 0 118px; display: flex; align-items: center; justify-content: flex-end; text-align: right;
+    font-weight: 700; font-size: 0.76rem; font-family: 'JetBrains Mono', monospace; overflow-wrap: anywhere;
+  }
+  .lat-desc {
+    flex: 1; min-width: 0; font-size: 0.76rem; color: var(--text-muted);
+    background: var(--bg-alt); border-left: 3px solid var(--lv, #64748b); border-radius: 0 8px 8px 0;
+    padding: 0.45rem 0.7rem; overflow-wrap: anywhere;
+  }
+  .lat-gate { display: flex; align-items: center; gap: 0.5rem; margin-left: 118px; font-size: 0.68rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+  .lat-gate .line { flex: 1; border-top: 1px dashed var(--border); min-width: 12px; }
+  .lat-gate span:last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 560px) {
+    .lat-level { flex-direction: column; gap: 0.15rem; }
+    .lat-name { flex: none; justify-content: flex-start; text-align: left; }
+    .lat-gate { margin-left: 0; }
+    .lat-gate span:last-child { white-space: normal; }
+  }
+
+  /* ---------- roadmap tree (paper-style) ---------- */
+  #roadmapTree { margin-top: 0.6rem; }
+  .rm { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .rm-root {
+    display: inline-block; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem;
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: 999px; padding: 0.45rem 1.2rem;
+  }
+  .rm-trunk { width: 2px; height: 22px; background: linear-gradient(var(--border), var(--border)); }
+  .rm-lanes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; width: 100%; margin-top: 14px; position: relative; }
+  .rm-lanes::before { content: ''; position: absolute; top: -14px; left: 12.5%; right: 12.5%; height: 2px; background: var(--border); }
+  .rm-lane { border: 1px solid color-mix(in srgb, var(--lc) 45%, var(--border)); border-radius: 10px; overflow: hidden; background: var(--bg-card); min-width: 0; }
+  .rm-lane-head {
+    background: var(--lc); color: #fff; font-weight: 700; font-size: 0.8rem; text-align: center;
+    padding: 0.5rem 0.6rem; overflow-wrap: anywhere; line-height: 1.35;
+  }
+  .rm-path { border-top: 1px solid var(--border); padding: 0.5rem 0.55rem; }
+  .rm-path-head {
+    font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.7rem;
+    color: var(--text); padding: 0.3rem 0.45rem; border: 1px solid color-mix(in srgb, var(--lc) 55%, var(--border));
+    border-left: 3px solid var(--lc); border-radius: 6px; background: var(--bg-alt);
+    margin-bottom: 0.45rem; overflow-wrap: anywhere; line-height: 1.45;
+  }
+  .rm-leaf {
+    border-radius: 6px; padding: 0.4rem 0.5rem; margin-bottom: 0.4rem; font-size: 0.73rem; line-height: 1.5;
+    border: 1px solid var(--border); border-left: 3px solid var(--lc2, var(--accent)); background: var(--bg-alt);
+    overflow-wrap: anywhere;
+  }
+  .rm-leaf:last-child { margin-bottom: 0; }
+  .rm-v { --lc2: var(--c-violation); }
+  .rm-r { --lc2: var(--c-response); }
+  .rm-ref { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; color: var(--accent); margin-left: 0.28rem; cursor: pointer; }
+  .rm-ref:hover { text-decoration: underline; }
+  .rm-leaf-k { font-weight: 600; color: var(--lc2, var(--accent)); }
+  @media (max-width: 900px) { .rm-lanes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .rm-lanes { grid-template-columns: 1fr; } }
+
+  /* ---------- papers teaser ---------- */
+  .papers-teaser { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; margin-top: 1.2rem; }
+  .pt-card {
+    display: flex; flex-direction: column; align-items: center; gap: 0.1rem; text-align: center;
+    background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid var(--lc, var(--accent));
+    border-radius: 10px; padding: 0.9rem 0.7rem; transition: transform .15s var(--expo-out), box-shadow .15s;
+  }
+  .pt-card:hover { transform: translateY(-2px); text-decoration: none; box-shadow: var(--shadow-card); }
+  .pt-num { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--lc, var(--accent)); }
+  .pt-name { font-weight: 600; font-size: 0.88rem; color: var(--text); }
+  .pt-desc { font-size: 0.72rem; color: var(--text-muted); overflow-wrap: anywhere; }
+  @media (max-width: 640px) { .papers-teaser { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
   /* ---------- classification tables ---------- */
   .ct-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.9rem; overflow: hidden; }
@@ -302,9 +379,6 @@
   .tref { font-size: 0.66rem; color: var(--accent); margin-left: 0.15rem; }
   .ct-caption { font-size: 0.78rem; color: var(--text-muted); margin: 0.55rem 0.1rem 0; line-height: 1.6; }
 
-  /* ---------- roadmap tree ---------- */
-  #roadmapChart { width: 100%; height: 720px; }
-
   /* ---------- overflow / contrast hardening ---------- */
   p, li, td, figcaption, .viz-sub, .fn-label, .lat-desc, .scope-lead { overflow-wrap: anywhere; }
   .fn-row { grid-template-columns: minmax(130px, 200px) 1fr auto; }
@@ -327,9 +401,9 @@
     <a class="nav-brand" href="#">SAVER · Safety in Self-Evolving Agents</a>
     <div class="nav-links">
       <a class="nav-link" href="#overview">Overview</a>
+      <a class="nav-link" href="#mechanisms">Mechanisms</a>
       <a class="nav-link" href="#glance">At a Glance</a>
       <a class="nav-link" href="#roadmap">Roadmap</a>
-      <a class="nav-link" href="#papers">Papers</a>
       <a class="nav-link" href="#tables">Tables</a>
       <a class="nav-link" href="papers.html">Paper Reader</a>
       <a class="nav-link" href="#citation">Citation</a>
@@ -448,6 +522,61 @@
 </section>
 
 <!-- SCOPE -->
+<!-- KEY MECHANISMS -->
+<section id="mechanisms">
+  <div class="inner">
+    <h2 class="sh">Key Mechanisms</h2>
+    <p class="scope-lead">Three paper figures, redrawn as responsive live components — the same sentences, carriers, and gates as the manuscript.</p>
+    <div class="figure-row">
+      <div class="fig-panel fig-wide">
+        <h3>Cross-Substrate Transmutation</h3>
+        <div class="xm-flow">
+          <div class="xm-step" style="--sc:#64748b"><span class="xm-k">Untrusted text</span><span class="xm-t">webpage observation</span></div>
+          <div class="xm-arr">→</div>
+          <div class="xm-step" style="--sc:#4067C4"><span class="xm-k">Prompt context</span><span class="xm-t">transient, read-only</span></div>
+          <div class="xm-arr">→</div>
+          <div class="xm-step" style="--sc:#527CDF"><span class="xm-k">Durable memory</span><span class="xm-t">persists across sessions</span></div>
+          <div class="xm-arr">→</div>
+          <div class="xm-step" style="--sc:#2F9E8F"><span class="xm-k">Callable skill</span><span class="xm-t">reusable procedure</span></div>
+          <div class="xm-arr">→</div>
+          <div class="xm-step" style="--sc:#E2707C"><span class="xm-k">Tool argument</span><span class="xm-t">external effect</span></div>
+        </div>
+        <div class="xm-scale"><span>low authority</span><div class="xm-bar"><i></i></div><span>high authority</span></div>
+        <figcaption>The same sentence carries different authority depending on its carrier: from untrusted environment text to prompt context, durable memory, callable skill, and finally external effect.</figcaption>
+      </div>
+
+      <div class="fig-panel">
+        <h3>From Output Safety to Adaptive State Safety</h3>
+        <div class="o2s">
+          <div class="o2s-step" style="--sc:#64748b"><span class="o2s-q">Response safety</span><span class="o2s-a">Is this response acceptable?</span></div>
+          <div class="o2s-arr">→</div>
+          <div class="o2s-step" style="--sc:#527CDF"><span class="o2s-q">Agent safety</span><span class="o2s-a">Is this action authorized?</span></div>
+          <div class="o2s-arr">→</div>
+          <div class="o2s-step" style="--sc:#E2707C"><span class="o2s-q">Adaptive state safety</span><span class="o2s-a">Do safety attributes survive the state transition?</span></div>
+        </div>
+        <figcaption>The unit of analysis expands from a single response, to action mediated by tools, to a reusable state transition that must carry safety attributes across sessions.</figcaption>
+      </div>
+
+      <div class="fig-panel">
+        <h3>Safety Attribute Laundering</h3>
+        <div class="lattice">
+          <div class="lat-level" style="--lv:#64748b"><span class="lat-name">Observation</span><span class="lat-desc">Web pages, tool outputs, peer notes — quotable as evidence only.</span></div>
+          <div class="lat-gate"><span class="line"></span><span>gate: source + scope + freshness</span></div>
+          <div class="lat-level" style="--lv:#4067C4"><span class="lat-name">Evidence</span><span class="lat-desc">May support reasoning; must carry source, scope, and freshness.</span></div>
+          <div class="lat-gate"><span class="line"></span><span>gate: task scoping</span></div>
+          <div class="lat-level" style="--lv:#527CDF"><span class="lat-name">Task Context</span><span class="lat-desc">May shape the current task; should expire afterward.</span></div>
+          <div class="lat-gate"><span class="line"></span><span>gate: explicit approval</span></div>
+          <div class="lat-level" style="--lv:#2F9E8F"><span class="lat-name">Procedure</span><span class="lat-desc">Workflow rules, skills, adapter manifests — activated with approval.</span></div>
+          <div class="lat-gate"><span class="line"></span><span>gate: actor + target + permission + rollback record</span></div>
+          <div class="lat-level" style="--lv:#E2707C"><span class="lat-name">Action</span><span class="lat-desc">External effects only with full authorization records.</span></div>
+        </div>
+        <figcaption>Upward authority movement requires an explicit gate; without one, a low-authority observation can quietly become workflow guidance or action authority.</figcaption>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCOPE -->
 <section id="scope">
   <div class="inner">
     <h2 class="sh">Survey Scope</h2>
@@ -498,79 +627,18 @@
 
 <!-- PAPERS -->
 <section id="papers">
-  <div class="inner">
+  <div class="inner" style="max-width:900px;">
     <h2 class="sh">Surveyed Papers</h2>
-    <div class="paper-toolbar">
-      <div class="search-box">
-        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input id="paperSearch" class="search-input" type="search" placeholder="Search title, family, operation, citation key…" aria-label="Search papers" autocomplete="off">
-      </div>
-      <span class="search-stats" id="searchStats">619 papers</span>
-      <select id="paperSort" class="sort-sel" aria-label="Sort papers">
-        <option value="default">Curated order</option>
-        <option value="date-desc">Newest first</option>
-        <option value="date-asc">Oldest first</option>
-        <option value="title">Title A–Z</option>
-      </select>
-      <button id="toggleAll" class="gh-star-btn" type="button">Collapse all</button>
+    <p class="scope-lead">All 619 coded records live in the dedicated <a href="papers.html">Paper Reader</a> with search and SAVER filters. Jump straight to a substrate family:</p>
+    <div class="papers-teaser">
+      <a class="pt-card" href="papers.html?substrate=Workflow" style="--lc:var(--c-workflow)"><span class="pt-num">288</span><span class="pt-name">Workflow</span><span class="pt-desc">rules · planners · shared artifacts</span></a>
+      <a class="pt-card" href="papers.html?substrate=Memory" style="--lc:var(--c-memory)"><span class="pt-num">195</span><span class="pt-name">Memory</span><span class="pt-desc">context · long-term · retrieval</span></a>
+      <a class="pt-card" href="papers.html?substrate=Tools%20%26%20Skills" style="--lc:var(--c-tools)"><span class="pt-num">98</span><span class="pt-name">Tools &amp; Skills</span><span class="pt-desc">bindings · skill libraries · MCP</span></a>
+      <a class="pt-card" href="papers.html?substrate=Model" style="--lc:var(--c-model)"><span class="pt-num">38</span><span class="pt-name">Model</span><span class="pt-desc">parameters · adapters · policy</span></a>
     </div>
-    <div class="filter-pills" role="tablist" aria-label="Filter by substrate">
-      <button class="pill active" data-sub="all">All (619)</button>
-      <button class="pill" data-sub="Model" style="--pill-c:var(--c-model)">Model (38)</button>
-      <button class="pill" data-sub="Memory" style="--pill-c:var(--c-memory)">Memory (195)</button>
-      <button class="pill" data-sub="Workflow" style="--pill-c:var(--c-workflow)">Workflow (288)</button>
-      <button class="pill" data-sub="Tools &amp; Skills" style="--pill-c:var(--c-tools)">Tools &amp; Skills (98)</button>
-    </div>
-    <div class="paper-toc" id="paperToc"></div>
-    <div id="paperBlocks"></div>
-    <noscript><p class="empty">This section renders from <code>papers.json</code> with JavaScript. Use the <a href="papers.html">Paper Reader</a> or enable JavaScript to browse the 619 coded papers.</p></noscript>
-  </div>
-</section>
-
-<!-- FIGURES -->
-<section id="figures">
-  <div class="inner">
-    <h2 class="sh">Key Mechanisms</h2>
-    <p class="scope-lead">Three paper figures, redrawn as live components.</p>
-    <div class="figure-row">
-      <div class="fig-panel">
-        <h3>Cross-Substrate Transmutation</h3>
-        <div class="chip-flow">
-          <span class="chip" style="background:#64748b">Untrusted webpage text</span><span class="arr">→</span>
-          <span class="chip" style="background:#4067C4">Prompt context</span><span class="arr">→</span>
-          <span class="chip" style="background:#527CDF">Durable memory</span><span class="arr">→</span>
-          <span class="chip" style="background:#2F9E8F">Callable skill</span><span class="arr">→</span>
-          <span class="chip" style="background:#E2707C">Tool argument with external effect</span>
-        </div>
-        <figcaption>The same sentence carries different authority depending on its carrier: from untrusted environment text to prompt context, durable memory, callable skill, and finally external effect.</figcaption>
-      </div>
-      <div class="fig-panel">
-        <h3>From Output Safety to Adaptive State Safety</h3>
-        <div class="panel3">
-          <div class="p3"><span class="p3-q">Response safety</span><span class="p3-a">Is this response acceptable?</span></div>
-          <div class="p3-arrow">→</div>
-          <div class="p3"><span class="p3-q">Agent safety</span><span class="p3-a">Is this action authorized?</span></div>
-          <div class="p3-arrow">→</div>
-          <div class="p3"><span class="p3-q">Adaptive state safety</span><span class="p3-a">Do safety attributes survive the state transition?</span></div>
-        </div>
-        <figcaption>The unit of analysis expands from a single response, to action mediated by tools, to a reusable state transition that must carry safety attributes across sessions.</figcaption>
-      </div>
-      <div class="fig-panel">
-        <h3>Safety Attribute Laundering</h3>
-        <div class="lattice">
-          <div class="lat-level"><span class="lat-name">Observation</span><span class="lat-desc">Web pages, tool outputs, peer notes — quotable as evidence only.</span></div>
-          <div class="lat-gate"><span class="line"></span><span>gate: source + scope + freshness</span></div>
-          <div class="lat-level"><span class="lat-name">Evidence</span><span class="lat-desc">May support reasoning; must carry source, scope, and freshness.</span></div>
-          <div class="lat-gate"><span class="line"></span><span>gate: task scoping</span></div>
-          <div class="lat-level"><span class="lat-name">Task Context</span><span class="lat-desc">May shape the current task; should expire afterward.</span></div>
-          <div class="lat-gate"><span class="line"></span><span>gate: explicit approval</span></div>
-          <div class="lat-level"><span class="lat-name">Procedure</span><span class="lat-desc">Workflow rules, skills, adapter manifests — activated with approval.</span></div>
-          <div class="lat-gate"><span class="line"></span><span>gate: actor + target + permission + rollback record</span></div>
-          <div class="lat-level"><span class="lat-name">Action</span><span class="lat-desc">External effects only with full authorization records.</span></div>
-        </div>
-        <figcaption>Upward authority movement requires an explicit gate; without one, a low-authority observation can quietly become workflow guidance or action authority.</figcaption>
-      </div>
-    </div>
+    <p style="text-align:center;margin-top:1.2rem;">
+      <a class="cta-btn cta-primary" href="papers.html">Open Paper Reader →</a>
+    </p>
   </div>
 </section>
 
@@ -578,10 +646,8 @@
 <section id="roadmap">
   <div class="inner">
     <h2 class="sh">Literature Roadmap</h2>
-    <p class="scope-lead">The survey's roadmap, drawn as an interactive tree from the same data as the paper figure: four substrate lanes → recurrent operation paths → violation/exposure and response leaves. Hover a leaf to see its reference papers; click lanes and paths to expand or collapse.</p>
-    <div class="viz-card">
-      <div id="roadmapChart"></div>
-    </div>
+    <p class="scope-lead">The survey roadmap, rendered in the paper's own layout and colors: the SAVER root, four substrate lanes, recurrent operation paths, and violation / response leaves. Hover a reference number to see the paper; click it to open the source.</p>
+    <div id="roadmapTree"><p class="empty">Loading roadmap…</p></div>
   </div>
 </section>
 
@@ -688,9 +754,6 @@
   var RESPONSES = ['Preventive Governance', 'Transition & Activation', 'Monitoring & Containment', 'Recovery & Contestability'];
 
   var PAPERS = null;
-  var filterSub = 'all';
-  var query = '';
-  var sortMode = 'default';
 
   function paperHref(p) {
     if (p.url && /^https?:\/\//.test(p.url)) return p.url;
@@ -698,63 +761,6 @@
     if (p.doi && /^10\./.test(p.doi)) return 'https://doi.org/' + p.doi;
     return '#papers';
   }
-  function paperVenue(p) {
-    if (p.arxiv_id) return 'arXiv ' + p.arxiv_id;
-    if (p.doi) return 'doi:' + p.doi;
-    return 'n.d.';
-  }
-  function outcomeBadge(p) {
-    if (p.outcome === 'Violation') return '<span class="p-badge" style="--bc:#E2707C">V·' + esc(p.outcome_detail || 'Violation') + '</span>';
-    if (p.outcome === 'Response') return '<span class="p-badge" style="--bc:#2F7F73">R·' + esc(p.outcome_detail || 'Response') + '</span>';
-    return '';
-  }
-  function matches(p) {
-    if (filterSub !== 'all' && p.substrate !== filterSub) return false;
-    if (!query) return true;
-    var hay = (p.title + ' ' + p.substrate + ' ' + p.adaptation + ' ' + p.outcome + ' ' + (p.outcome_detail || '') + ' ' + (p.citation_key || '') + ' ' + (p.arxiv_id || '')).toLowerCase();
-    return query.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
-  }
-
-  function renderPapers() {
-    var blocks = document.getElementById('paperBlocks');
-    var toc = document.getElementById('paperToc');
-    var stats = document.getElementById('searchStats');
-    if (!blocks || !PAPERS) return;
-
-    var list = PAPERS.filter(matches);
-    if (sortMode === 'date-desc') list.sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
-    else if (sortMode === 'date-asc') list.sort(function (a, b) { return (a.year || 0) - (b.year || 0); });
-    else if (sortMode === 'title') list.sort(function (a, b) { return a.title.localeCompare(b.title); });
-    else list.sort(function (a, b) { return SUB_ORDER.indexOf(a.substrate) - SUB_ORDER.indexOf(b.substrate) || a.title.localeCompare(b.title); });
-
-    if (stats) stats.textContent = list.length + ' / ' + PAPERS.length + ' papers';
-
-    var html = '';
-    var tocHtml = '';
-    SUB_ORDER.forEach(function (sub) {
-      var lane = list.filter(function (p) { return p.substrate === sub; });
-      if (!lane.length) return;
-      var laneId = 'lane-' + sub.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      tocHtml += '<a class="ptoc-link" style="--lc:' + SUB_COLOR[sub] + '" href="#' + laneId + '">' + esc(sub) + ' <em>(' + lane.length + ')</em></a>';
-      html += '<details class="layer-block" open id="' + laneId + '">';
-      html += '<summary class="layer-summary"><span class="layer-dot" style="background:' + SUB_COLOR[sub] + '"></span><span class="layer-label">' + esc(sub) + '</span><span class="layer-cnt">' + lane.length + ' papers</span></summary>';
-      html += '<div class="layer-body">';
-      ADAPT_ORDER.forEach(function (op) {
-        var ops = lane.filter(function (p) { return p.adaptation === op; });
-        if (!ops.length) return;
-        ops.sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
-        html += '<details class="cat-block" open><summary class="cat-summary">' + esc(op) + ' <span class="cat-cnt">(' + ops.length + ')</span></summary><ul class="paper-list" style="--lc:' + SUB_COLOR[sub] + '">';
-        ops.forEach(function (p) {
-          html += '<li><a href="' + esc(paperHref(p)) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a> <em>' + paperVenue(p) + '</em>, ' + (p.year || 'n.d.') + outcomeBadge(p) + (p.record_origin === 'reviewed_card' ? '<span class="p-badge" style="--bc:#8B5CF6">card</span>' : '') + '</li>';
-        });
-        html += '</ul></details>';
-      });
-      html += '</div></details>';
-    });
-    blocks.innerHTML = html || '<p class="empty">No papers match the current filter.</p>';
-    toc.innerHTML = tocHtml;
-  }
-
   function renderFunnel(stats) {
     var box = document.getElementById('funnelBars');
     var cap = document.getElementById('funnelCap');
@@ -781,22 +787,6 @@
       var el = document.getElementById(id);
       if (el) insts[id] = echarts.init(el);
     });
-  }
-  function gotoPapers() {
-    var el = document.getElementById('papers');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }
-  function filterByText(t) {
-    var s = document.getElementById('paperSearch');
-    if (s) { s.value = t; query = t.trim().toLowerCase(); renderPapers(); }
-    gotoPapers();
-  }
-  function filterBySub(sub) {
-    filterSub = sub;
-    document.querySelectorAll('.pill').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-sub') === sub);
-    });
-    renderPapers(); gotoPapers();
   }
   function chartColors() {
     var dark = document.documentElement.classList.contains('dark');
@@ -935,55 +925,50 @@
     el.innerHTML = items.join('') || '<li class="empty">Related works will appear here.</li>';
   }
 
-  /* ---------- roadmap tree ---------- */
+  /* ---------- roadmap tree (paper-style HTML) ---------- */
   var ROADMAP = null;
-  var roadmapInst = null;
   function renderRoadmap() {
-    var el = document.getElementById('roadmapChart');
-    if (!el || !ROADMAP || typeof echarts === 'undefined') return;
-    if (!roadmapInst) roadmapInst = echarts.init(el);
-    var c = chartColors();
-    function paperRef(k) {
+    var box = document.getElementById('roadmapTree');
+    if (!box || !ROADMAP) return;
+
+    function paperLink(k) {
       var p = PAPERS.filter(function (x) { return x.citation_key === k; })[0];
-      if (!p) return esc(k);
+      if (!p) return null;
       var href = p.arxiv_id ? 'https://arxiv.org/abs/' + p.arxiv_id : (p.url || '#');
-      return '<a href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + '</a> <span style="opacity:.6">(' + (p.year || 'n.d.') + ')</span>';
+      return { href: href, title: p.title, year: p.year };
     }
-    function toNode(n) {
-      var c2 = chartColors();
-      var dark = document.documentElement.classList.contains('dark');
-      var leafColor = n.kind === 'violation' ? (dark ? '#EF8D99' : '#C0392B') : (dark ? '#4FC3B4' : '#1F6F63');
-      var item = {
-        name: n.name,
-        itemStyle: { color: n.color || '#9BA4B5', borderColor: c2.card },
-        symbolSize: 0,
-        label: { color: c2.text, fontSize: 11, position: 'right' },
-        lineStyle: { color: n.color || '#9BA4B5', width: 1.4 }
-      };
-      if (n.kind === 'lane') { item.label = { color: n.color || c2.text, fontSize: 12, fontWeight: 700 }; }
-      if (n.kind === 'path') { item.label = { color: c2.text, fontSize: 11, fontWeight: 600, position: 'right' }; }
-      if (n.kind === 'violation' || n.kind === 'response') {
-        item.label = { color: leafColor, fontSize: 10.5, position: 'right' };
-        var refs = (n.refs || []).map(paperRef).join('<br>');
-        item.tooltip = { formatter: '<div style="max-width:420px"><b>' + esc(n.name) + '</b><br><br>' + refs + '</div>' };
-      }
-      if (n.children && n.children.length) item.children = n.children.map(toNode);
-      return item;
+    function refsHtml(refs) {
+      if (!refs || !refs.length) return '';
+      return refs.map(function (k, i) {
+        var p = paperLink(k);
+        if (!p) return '<span class="rm-ref" title="' + esc(k) + '">' + (i + 1) + '</span>';
+        return '<a class="rm-ref" href="' + esc(p.href) + '" target="_blank" rel="noopener" title="' + esc(p.title) + ' (' + (p.year || 'n.d.') + ')">' + (i + 1) + '</a>';
+      }).join('');
     }
-    roadmapInst.setOption({
-      tooltip: { confine: true },
-      series: [{
-        type: 'tree', data: [toNode(ROADMAP)], orient: 'LR', layout: 'orthogonal',
-        top: '2%', left: '1%', bottom: '2%', right: '16%',
-        symbol: 'emptyCircle', symbolSize: 0, roam: true,
-        expandAndCollapse: true, initialTreeDepth: 2,
-        edgeShape: 'curve', edgeForkPosition: '55%',
-        label: { position: 'right', fontSize: 11, color: c.text },
-        leaves: { label: { position: 'right', fontSize: 10.5 } },
-        emphasis: { focus: 'descendant' },
-        animationDuration: 450, animationDurationUpdate: 500
-      }]
-    }, true);
+    function leafHtml(n) {
+      var cls = n.kind === 'violation' ? 'rm-leaf rm-v' : 'rm-leaf rm-r';
+      var tag = n.kind === 'violation' ? 'Violation' : 'Response';
+      return '<div class="' + cls + '"><span class="rm-leaf-k">' + tag + '.</span> ' + esc(n.name) + refsHtml(n.refs) + '</div>';
+    }
+    function pathHtml(p, laneColor) {
+      return '<div class="rm-path">'
+        + '<div class="rm-path-head">' + esc(p.name) + '</div>'
+        + (p.children || []).map(leafHtml).join('')
+        + '</div>';
+    }
+    var lanes = ROADMAP.children || [];
+    var lanesHtml = lanes.map(function (lane) {
+      return '<div class="rm-lane" style="--lc:' + (lane.color || '#9BA4B5') + '">'
+        + '<div class="rm-lane-head">' + esc(lane.name) + '</div>'
+        + (lane.children || []).map(function (p) { return pathHtml(p, lane.color); }).join('')
+        + '</div>';
+    }).join('');
+
+    box.innerHTML = '<div class="rm">'
+      + '<div class="rm-root">' + esc(ROADMAP.name || 'SAVER Roadmap') + '</div>'
+      + '<div class="rm-trunk"></div>'
+      + '<div class="rm-lanes">' + lanesHtml + '</div>'
+      + '</div>';
   }
 
   /* ---------- classification tables ---------- */
@@ -1057,35 +1042,29 @@
     });
   })();
 
-  /* ---------- paper section interactions ---------- */
+  /* ---------- paper reader deep links ---------- */
+  function gotoReader(params) {
+    var qs = Object.keys(params).filter(function (k) { return params[k]; }).map(function (k) {
+      return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+    }).join('&');
+    window.location.href = 'papers.html' + (qs ? '?' + qs : '');
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initCharts();
-    var search = document.getElementById('paperSearch');
-    if (search) search.addEventListener('input', function () { query = this.value.trim().toLowerCase(); renderPapers(); });
-    var sort = document.getElementById('paperSort');
-    if (sort) sort.addEventListener('change', function () { sortMode = this.value; renderPapers(); });
-    var toggle = document.getElementById('toggleAll');
-    if (toggle) toggle.addEventListener('click', function () {
-      var open = toggle.textContent.indexOf('Expand') < 0;
-      document.querySelectorAll('#paperBlocks details.layer-block').forEach(function (d) { d.open = !open; });
-      toggle.textContent = open ? 'Expand all' : 'Collapse all';
-    });
-    document.querySelectorAll('.pill').forEach(function (b) {
-      b.addEventListener('click', function () { filterBySub(b.getAttribute('data-sub')); });
-    });
     if (insts['vz-sun']) insts['vz-sun'].on('click', function (p) {
       var tp = p.treePathInfo || [];
       if (!tp.length) return;
       var first = tp[0].name;
-      if (SUB_ORDER.indexOf(first) >= 0) { filterBySub(first); return; }
-      filterByText(tp[tp.length - 1].name);
+      if (SUB_ORDER.indexOf(first) >= 0) { gotoReader({ substrate: first }); return; }
+      gotoReader({ detail: tp[tp.length - 1].name });
     });
-    if (insts['vz-bar']) insts['vz-bar'].on('click', function (p) { if (p.name) filterByText(p.name); });
+    if (insts['vz-bar']) insts['vz-bar'].on('click', function (p) { if (p.name) gotoReader({ detail: p.name }); });
     if (insts['vz-sankey']) insts['vz-sankey'].on('click', function (p) {
-      if (p.dataType === 'node' && p.name) {
-        if (SUB_ORDER.indexOf(p.name) >= 0) filterBySub(p.name);
-        else filterByText(p.name);
-      }
+      if (p.dataType !== 'node' || !p.name) return;
+      if (SUB_ORDER.indexOf(p.name) >= 0) gotoReader({ substrate: p.name });
+      else if (ADAPT_ORDER.indexOf(p.name) >= 0) gotoReader({ adaptation: p.name });
+      else gotoReader({ outcome: p.name });
     });
   });
 
@@ -1100,15 +1079,15 @@
       PAPERS = res[0];
       TABLES = res[2];
       ROADMAP = res[3];
-      renderPapers(); renderReading(); renderCharts(); renderFunnel(res[1]);
+      renderReading(); renderCharts(); renderFunnel(res[1]);
       renderRoadmap(); renderTables();
       var stCoded = document.getElementById('stCoded'); if (stCoded) stCoded.textContent = fmt(PAPERS.length);
     }).catch(function () {
-      var el = document.getElementById('paperBlocks');
-      if (el) el.innerHTML = '<p class="empty">Failed to load papers.json.</p>';
+      var el = document.getElementById('roadmapTree');
+      if (el) el.innerHTML = '<p class="empty">Failed to load data.</p>';
     });
-    window.addEventListener('resize', function () { Object.keys(insts).forEach(function (k) { insts[k].resize(); }); if (roadmapInst) roadmapInst.resize(); });
-    new MutationObserver(function () { renderCharts(); renderRoadmap(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    window.addEventListener('resize', function () { Object.keys(insts).forEach(function (k) { insts[k].resize(); }); });
+    new MutationObserver(function () { renderCharts(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   }
   boot();
 })();
