@@ -1,0 +1,83 @@
+\begin{table}[t]
+\centering
+\begin{minipage}{0.98\linewidth}
+\captionsetup{hypcap=false}
+\caption{Evaluation literature for adaptive state safety. Most benchmarks expose one lifecycle slice; HarnessSafe, SkillMisevo-Bench, and EVOMAL provide complementary connected traces across cross-carrier, skill-specific, and descendant-propagation lifecycles, while the denominator column states what each row can safely measure.}
+\label{tab:evaluation-literature-index}
+\centering
+\tiny
+\setlength{\tabcolsep}{1.1pt}
+\renewcommand{\arraystretch}{1.05}
+\SAVERTableRows
+\begin{tabular}{@{}p{0.15\linewidth}p{0.04\linewidth}p{0.145\linewidth}p{0.075\linewidth}p{0.08\linewidth}p{0.18\linewidth}p{0.145\linewidth}p{0.15\linewidth}@{}}
+\toprule
+\rowcolor{saverEvaluationHead}
+\textbf{Method or Work} & \textbf{Year} & \textbf{\TableHeadRole} & \textbf{\TableHeadTarget} & \textbf{\TableHeadObject} & \textbf{Task Focus} & \textbf{SAVER Slice} & \textbf{Denominator} \\
+\midrule
+\SAVERTableGroup{saverEvaluationHead}{8}{General agent capability and environment benchmarks}
+AgentBench~\cite{liu_2023_agentbench_evaluating_llms_a} & 2023 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectEvaluation & General agent tasks & Substrate & Task success \\
+AgentBoard~\cite{he_2024_agentboard_an_analytical_eva} & 2024 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectEvaluation & Analytical agent tasks & Adjacent capability context & Task progress and success \\
+MIRAI~\cite{ye_2024_mirai_evaluating_llm_agents} & 2024 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectWorkflow & Long horizon tasks & Substrate & Task episodes \\
+GameBench~\cite{costarelli_2024_gamebench_evaluating_strateg} & 2024 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectEnvironment & Strategy tasks & Substrate & Game episodes \\
+MultiAgentBench~\cite{zhu_2025_multiagentbench_evaluating_t} & 2025 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent tasks & Adjacent coordination & Collaborative tasks \\
+LegalAgentBench~\cite{li_2024_legalagentbench_evaluating_l} & 2024 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectWorkflow & Legal tasks & Substrate & Legal tasks \\
+\SAVERTableGroup{saverEvaluationHead}{8}{Attack, safety, and exposure benchmarks}
+AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Prompt injection through tool use & Exposure & Security cases \\
+InjecAgent~\cite{zhan_2024_injecagent_benchmarking_indi} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Indirect injection & Exposure & Injection tasks \\
+ACIArena~\cite{an-etal-2026-aciarena} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMultiAgent & Cascading injection & Propagation/\allowbreak Exposure & MAS test cases \\
+Agents of Chaos~\cite{shapira2026agents_chaos} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMultiAgent & Live-lab failures & Propagation/\allowbreak Exposure & Eleven case studies \\
+MAS code execution~\cite{triedman2025multi} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & Control-flow hijacking & Activation/\allowbreak Exposure & Model-orchestrator trials \\
+AgentHarm~\cite{andriushchenko2025agentharm} & 2025 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Harmful agent tasks & Exposure & Harmful task cases \\
+RedCode~\cite{guo2024redcode} & 2024 & \TableStudyAttackBenchmark & \TableTargetLLM & \TableObjectCode & Code safety tasks & Exposure & Code tasks \\
+MobileSafetyBench~\cite{lee2026mobilesafetybench} & 2026 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectTool & Mobile control safety & Exposure & Mobile tasks \\
+Machiavelli~\cite{pan2023machiavelli} & 2023 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEnvironment & Ethical decision making & Exposure & Game scenarios \\
+SafeLawBench~\cite{cao2025safelawbench} & 2025 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectWorkflow & Legal safety & Exposure & Legal cases \\
+R-Judge~\cite{yuan2024rjudge} & 2024 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Safety recognition & Response & Annotated records \\
+Agent Security Bench~\cite{zhang_2024_agent_security_bench_asb_for} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectEvaluation & Agent security tasks & Violation & Task categories \\
+Agent-SafetyBench~\cite{zhang_2024_agent_safetybench_evaluating} & 2024 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Unsafe behavior & Exposure & Safety cases \\
+AttackEval~\cite{shu_2025_attackeval_how_to_evaluate_t} & 2025 & \TableStudyAttackBenchmark & \TableTargetLLMAgent & \TableObjectEvaluation & Attack evaluation & Exposure & Attack tasks \\
+CyberSecEval 2~\cite{bhatt_2024_cyberseceval_2_a_wide_rangin} & 2024 & \TableStudyAttackBenchmark & \TableTargetLLM & \TableObjectCode & Cyber capability & Exposure & Cyber tasks \\
+\SAVERTableGroup{saverEvaluationHead}{8}{Adaptive memory, experience, and model state benchmarks}
+AgentPoison~\cite{chen2024agentpoison} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMemory & Memory poisoning & Admission/\allowbreak Activation & Retrieval opportunities \\
+GhostWriter~\cite{torres2026agentsremembermuchmemory} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMemory & Personal agent memory poisoning & Admission/\allowbreak Activation & Injection/activation trials \\
+OEP~\cite{wang2026oep} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectWorkflow & Experience poisoning & Adaptation & Accepted experience updates \\
+EvoBreak~\cite{yan2026benignaloneharmfultogether} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMemory & Experience composition & Abstract/\allowbreak Activate & Acquired experience sets \\
+SkillJack~\cite{ying2026skilljackpersistentskillbackdoors} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectSkill & Skill backdoor & Migrate/\allowbreak Exposure & Trajectory-to-skill pairs \\
+PoisonedEvolution~\cite{chen2026experienceinstructiontrajectorypoisoning} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectSkill & Trajectory poisoning & Migrate/\allowbreak Violation & Completed evolution trials \\
+ColluSkill~\cite{zeng2026colluskilladversarialcrossskillcomposition} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectSkill & Cross-skill composition & Add/\allowbreak Activate/\allowbreak Response & Three-skill chains \\
+SkillMisevo-Bench~\cite{mao2026practicemakesunsafeskill} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectSkill & Skill misevolution & Migrate/\allowbreak Activate/\allowbreak Response & 525 tasks per configuration \\
+EVOMAL~\cite{wu2026evomalselfpoisoningselfevolvingcoding} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectSkill & Create-path self-poisoning & Propagate/\allowbreak Activate/\allowbreak Response & 153 tasks/model; five rounds \\
+PerMemSafe~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Personalized safety & Activation/\allowbreak Exposure & Long-horizon conversations \\
+PS-Bench~\cite{guo-etal-2026-personalization} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Intent legitimation & Activation/\allowbreak Exposure & Matched memory/query trials \\
+PASB~\cite{mao2026agentsdontjustagree} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Persistent sycophancy & Add/\allowbreak Activate/\allowbreak Exposure & Committed-claim trials \\
+AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Authority collapse & Abstract/\allowbreak Violation/\allowbreak Exposure & Matched authority pairs \\
+HarnessSafe~\cite{zhang2026harnesssafeevaluatingsafetypersistent} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectWorkflow & Persistent carrier progression & Carrier-to-exposure/\allowbreak Containment & 328 executable cases \\
+MemEvoBench~\cite{xie2026memevobench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Memory misevolution & Adaptation & Memory updates \\
+AgenticEval~\cite{wang2026agenticeval} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectEvaluation & Agentic safety tasks & Adaptation & Agent episodes \\
+RQGM~\cite{iacob2026redqueengodelmachine} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectEvaluation & Evolving evaluators & Evaluation/\allowbreak Adaptation & Epoch utilities \\
+Experience driven safety~\cite{zhao2026experience_driven_safety} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectWorkflow & Experience degradation & Adaptation & Experience updates \\
+AMA-Bench~\cite{zhao2026amabench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Agent memory adaptation & Adaptation & Memory tasks \\
+PersistBench~\cite{pulipaka2026persistbench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Forgetting boundary & Violation & Memory use samples \\
+RBI-Eval~\cite{xu2026memorystaysilentmeasuring} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Warranted use & Activation & Matched prompts \\
+Memory evaluation~\cite{hu_2025_evaluating_memory_in_llm_age} & 2025 & \TableStudyCapabilityBenchmark & \TableTargetAgent & \TableObjectMemory & Memory quality & Substrate & Memory tasks \\
+\SAVERTableGroup{saverEvaluationHead}{8}{Response, governance, and red team evaluation}
+SafeAgent~\cite{liu_2026_safeagent_a_runtime_protecti} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Runtime protection & Containment & Harmful task episodes \\
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Privilege control & Activation & Permission checks \\
+CaMeL~\cite{debenedetti2026defeating} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Capability control & Activation & AgentDojo tasks \\
+DRIFT~\cite{li2025drift} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Dynamic rule enforcement & Activation/\allowbreak Containment & Benchmark task episodes \\
+AID-Guard~\cite{tong2026aidguardstatefulauthorizationdelegated} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Delegated provider effects & Activate/\allowbreak Response & Provider-contract schedules \\
+ControlValve~\cite{jha2026breaking} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Control-flow integrity & Activation/\allowbreak Containment & Agent-invocation checks \\
+MAPLE-Guard~\cite{xiong2026mapleguardmemoryawarelinkenforcement} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Memory-link enforcement & Propagate/\allowbreak Response & Memory lifecycle links \\
+LlamaFirewall~\cite{chennabasappa_2025_llamafirewall_an_open_source} & 2025 & \TableRoleDefense & \TableTargetLLMAgent & \TableObjectRuntime & Runtime guardrail & Containment & Guard decisions \\
+OpenGuardrails~\cite{wang2025openguardrails} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Guardrail platform & Containment & Guard decisions \\
+AGENTSAFE~\cite{khan2025agentsafe_governance} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectGovernance & Agent safety governance & Response & Governance checks \\
+AgenticRed~\cite{yuan2026agenticred} & 2026 & \TableRoleRedTeam & \TableTargetAgent & \TableObjectEvaluation & Automated red teaming & Exposure & Red Team tasks \\
+Agent vs. Agent~\cite{kulkarni-etal-2025-agent} & 2025 & \TableRoleRedTeam & \TableTargetAgent & \TableObjectMultiAgent & Adversarial agent play & Exposure & Duel episodes \\
+SEVerA~\cite{banerjee2026severa} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Verified synthesis & Response & Constraint checks \\
+Safe LoRA~\cite{hsu2024safe_lora} & 2024 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Adapter mitigation & Model state & Safety regression tests \\
+DataGovBench~\cite{zhou_2025_datagovbench_benchmarking_ll} & 2025 & \TableStudyGovernanceBenchmark & \TableTargetAgent & \TableObjectData & Data governance & Adjacent data workflow & Data-governance transformation tasks \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{minipage}
+\end{table}

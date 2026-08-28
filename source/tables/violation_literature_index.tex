@@ -1,0 +1,68 @@
+\begin{table}[t]
+\centering
+\begin{minipage}{0.98\linewidth}
+\captionsetup{hypcap=false}
+\caption{Safety attribute violations in the current literature. Authority, scope, privacy, auditability, and recovery failures become comparable when tied to a concrete state transition; the role column distinguishes direct anchors from capability or survey rows that are reread through \SAVER{}.}
+\label{tab:violation-literature-index}
+\centering
+\tiny
+\setlength{\tabcolsep}{1.1pt}
+\renewcommand{\arraystretch}{1.05}
+\SAVERTableRows
+\begin{tabular}{@{}p{0.165\linewidth}p{0.04\linewidth}p{0.12\linewidth}p{0.07\linewidth}p{0.065\linewidth}p{0.13\linewidth}p{0.38\linewidth}@{}}
+\toprule
+\rowcolor{saverViolationHead}
+\textbf{Method or Work} & \textbf{Year} & \textbf{\TableHeadRole} & \textbf{\TableHeadTarget} & \textbf{\TableHeadObject} & \textbf{Violation} & \textbf{Failed Attribute} \\
+\midrule
+\SAVERTableGroup{saverViolationHead}{7}{Provenance and authority failures}
+AgentPoison~\cite{chen2024agentpoison} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Provenance loss & Memory source attribute \\
+GhostWriter~\cite{torres2026agentsremembermuchmemory} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Provenance loss & Hidden payload memory source \\
+PASB~\cite{mao2026agentsdontjustagree} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Provenance / scope & Claim attribution and role preservation \\
+AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Authority / provenance & Source authority erased during consolidation \\
+AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Provenance loss & Tool context source role \\
+FragFuse~\cite{rao2026fragfusebypassingaccesscontrol} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Authority / scope & Fragment authority context \\
+EvoBreak~\cite{yan2026benignaloneharmfultogether} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Authority / scope & Benign experiences gain joint authority \\
+PoisonedEvolution~\cite{chen2026experienceinstructiontrajectorypoisoning} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Authority / provenance & Untrusted recurring evidence gains instruction authority \\
+SkillMisevo-Bench~\cite{mao2026practicemakesunsafeskill} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectSkill & Authority / persistence & Unsafe success becomes reusable procedure \\
+EVOMAL~\cite{wu2026evomalselfpoisoningselfevolvingcoding} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Provenance / persistence & Agent-authored copies obscure attacker origin \\
+PS-Bench~\cite{guo-etal-2026-personalization} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Authority / scope & Benign context legitimizes harmful intent \\
+InjecAgent~\cite{zhan_2024_injecagent_benchmarking_indi} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Authority / scope & Indirect instruction authority \\
+ACIArena~\cite{an-etal-2026-aciarena} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMultiAgent & Authority / scope & Inter-agent instruction authority \\
+MAS code execution~\cite{triedman2025multi} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & Authority / scope & Untrusted content controls agent invocation \\
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Authority / scope & Scoped tool privilege \\
+\SAVERTableGroup{saverViolationHead}{7}{Privacy and persistent repair gaps}
+Agent memory privacy~\cite{wang2025privacy_agent_memory} & 2025 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & Privacy / purpose & Sensitivity/purpose/retention \\
+Personal agents~\cite{li_2024_personal_llm_agents_insights} & 2024 & \TableRoleSurveySafety & \TableTargetAgent & \TableObjectMemory & Privacy / purpose & Persistent personal context carriers \\
+PerMemSafe~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy / purpose & Personalized context safety \\
+PersistBench~\cite{pulipaka2026persistbench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy / purpose & Memory scope/forgetting \\
+AgentPoison~\cite{chen2024agentpoison} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Persistent repair & Delayed poisoned influence \\
+Memory poisoning~\cite{sunil2026memory_poisoning_agents} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & Poisoned retrieval & Persistent query-to-memory influence \\
+SkillJack~\cite{ying2026skilljackpersistentskillbackdoors} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Persistent repair & Skill survives source-record deletion \\
+Self-evolving agents~\cite{gao2025self_evolving_agents} & 2025 & \TableRoleSurveyCapability & \TableTargetAgent & \TableObjectWorkflow & Adaptive process & Capability evolution taxonomy \\
+\SAVERTableGroup{saverViolationHead}{7}{Action authority and operational integrity}
+ReAct~\cite{yao2022react} & 2022 & \TableRoleCapability & \TableTargetLLMAgent & \TableObjectWorkflow & Authority / scope & Observation to action role \\
+Voyager~\cite{wang2023voyager} & 2023 & \TableRoleCapability & \TableTargetAgent & \TableObjectSkill & Authority / scope & Executable skill authority \\
+AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Authority / scope & Untrusted tool action state \\
+OWASP LLM Top 10~\cite{owasp2025llm_top10} & 2025 & \TableRoleFrameworkSecurity & \TableTargetLLMAgent & \TableObjectGeneral & Operational integrity & Agency/cost bounds \\
+AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Operational integrity & External effect tool context \\
+Agent Security Bench~\cite{zhang_2024_agent_security_bench_asb_for} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectEvaluation & Operational integrity & Agent security behavior \\
+Agent-SafetyBench~\cite{zhang_2024_agent_safetybench_evaluating} & 2024 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Operational integrity & Agent safety behavior \\
+GuardAgent~\cite{xiang2024guardagent} & 2024 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Local guard checking & Safety request $\rightarrow$ action check \\
+R-Judge~\cite{yuan2024rjudge} & 2024 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Operational integrity & Safety signal without transition cause \\
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Authority / scope & Explicit tool privilege control \\
+Misattribution Gap~\cite{ahad_2026_misattribution_gap} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & Operational integrity & Memory fault attribution \\
+Agents of Chaos~\cite{shapira2026agents_chaos} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMultiAgent & Operational integrity & Cross-agent uptake and live-system compromise \\
+\SAVERTableGroup{saverViolationHead}{7}{Lifecycle drift and model regression}
+Reflexion~\cite{shinn2023reflexion} & 2023 & \TableRoleCapability & \TableTargetAgent & \TableObjectWorkflow & Authority / scope & Feedback to strategy reuse \\
+Self-evolution survey~\cite{tao2024self_evolution_llm_survey} & 2024 & \TableRoleSurveyCapability & \TableTargetLLMAgent & \TableObjectWorkflow & Adaptive process & Self-evolution operation taxonomy \\
+EDDOps~\cite{xia_2024_evaluation_driven_developmen} & 2024 & \TableRoleGovernance & \TableTargetAgent & \TableObjectGovernance & Operational integrity & Lifecycle drift tracking \\
+Memory security survey~\cite{lin2026memory_security_survey} & 2026 & \TableRoleSurveySafety & \TableTargetAgent & \TableObjectMemory & Authority / scope & Memory semantic drift \\
+Fine-tuning safety~\cite{qi2023finetuning_safety} & 2023 & \TableRoleSafety & \TableTargetLLM & \TableObjectModel & Model-side regression & Fine-tuning safety regression \\
+PEFT Trojan~\cite{hong2024peta} & 2024 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Model-side regression & Adapter trigger safety issue \\
+Dormant behavior~\cite{gloaguen2025watch_your_steps} & 2025 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Model-side regression & Dormant activation context \\
+Safe LoRA~\cite{hsu2024safe_lora} & 2024 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Model-side regression & Adapter mitigation handle \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{minipage}
+\end{table}

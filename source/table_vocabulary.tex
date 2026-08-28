@@ -1,0 +1,194 @@
+% Canonical table vocabulary. Rendered table sources use these labels so global
+% term changes stay centralized.
+%
+% Contribution-role rule:
+% Attack = paper primarily demonstrates an adversarial method or unsafe exploit.
+% Defense = local technical detector, verifier, guard, mitigation, or repair.
+% Governance = lifecycle policy, control plane, audit, authorization, recovery,
+% and accountability coordination across multiple controls.
+% Benchmark = reusable task suite, protocol, sample set, or denominator.
+% Safety = diagnostic or measurement work whose main contribution is exposing a
+% hazard, drift, leakage, or failure mode rather than attacking or defending it.
+% Capability = architecture, algorithm, system, or substrate mechanism used to
+% explain reusable state, without being primarily safety work.
+% Survey = literature synthesis or review. Survey subtypes describe the
+% contribution function, not the research object: use Survey (Capability) for
+% architecture/mechanism/lifecycle surveys, Survey (Safety) for safety,
+% privacy, or governance-risk syntheses, and Survey (Attack) for threat or
+% attack-family syntheses.
+% Framework = external standard, formal framework, or conceptual security model;
+% use Framework (Subtype) when the framework role is security, governance, or
+% formalization-specific.
+% Theory = foundational theory used for comparison.
+% Red Team = adversarial testing where the primary artifact is a red-team
+% procedure or evaluation rather than a reusable benchmark suite.
+%
+% Role-name rule:
+% Literature-index tables use Role only for contribution/content type. Research
+% objects such as LLM, Agent, Memory, Tool, Skill, Model, Workflow, or Multi-Agent
+% state must live in Target/Object columns, not inside Role. When a coarse role
+% needs a content subtype, render it as Role (Subtype), e.g.,
+% Benchmark (Attack), Benchmark (Safety), Evaluation (Defense), or
+% Framework (Governance). Security-oriented and cyber/misuse benchmarks use
+% Benchmark (Attack), not a separate security-benchmark term.
+%
+% Visual grammar:
+% Role terms use text color only. Target terms use a quiet sans-serif text style
+% without background. Object and adaptation-operation terms use restrained
+% rounded pills because they are short, repeated scan cues.
+\definecolor{tableRoleAttack}{HTML}{7B4A4E}
+\definecolor{tableRoleDefense}{HTML}{3F6762}
+\definecolor{tableRoleGovernance}{HTML}{45616D}
+\definecolor{tableRoleBenchmark}{HTML}{6F5B3B}
+\definecolor{tableRoleSafety}{HTML}{695C76}
+\definecolor{tableRoleCapability}{HTML}{4E5A5D}
+\definecolor{tableRoleSurvey}{HTML}{5B6570}
+\definecolor{tableRoleFramework}{HTML}{536676}
+\definecolor{tableRoleTheory}{HTML}{6B604D}
+\definecolor{tableRoleRedTeam}{HTML}{7A4F48}
+\definecolor{tableTargetText}{HTML}{455A64}
+\definecolor{tableChipBack}{HTML}{E9EFF2}
+\definecolor{tableChipFrame}{HTML}{D8E1E4}
+\definecolor{tableChipText}{HTML}{3F4F55}
+\definecolor{tableChipMemory}{HTML}{E4EEFF}
+\definecolor{tableChipTool}{HTML}{E2F1EA}
+\definecolor{tableChipWorkflow}{HTML}{F0E8D7}
+\definecolor{tableChipModel}{HTML}{EDE2F3}
+\definecolor{tableChipRuntime}{HTML}{E5EEF2}
+\definecolor{tableAdaptationBack}{HTML}{E3F1E8}
+\definecolor{tableAdaptationText}{HTML}{4D685B}
+\newcommand{\TablePill}[3]{%
+  \tcbox[
+    on line,
+    box align=base,
+    enhanced,
+    boxsep=0pt,
+    left=0.9pt,
+    right=0.9pt,
+    top=0.2pt,
+    bottom=0.2pt,
+    arc=1.45pt,
+    boxrule=0pt,
+    colback=#1,
+    colframe=#1,
+    coltext=#2,
+    nobeforeafter
+  ]{\strut #3}%
+}
+\newcommand{\TableRoleTag}[2]{\textcolor{#1}{#2}}
+\newcommand{\TableTargetTag}[1]{\textcolor{tableTargetText}{\textsf{#1}}}
+\newcommand{\TableChip}[2]{\TablePill{#1}{tableChipText}{#2}}
+\newcommand{\TablePlainChip}[1]{\TableChip{tableChipBack}{#1}}
+\newcommand{\TableMemoryChip}[1]{\TableChip{tableChipMemory}{#1}}
+\newcommand{\TableToolChip}[1]{\TableChip{tableChipTool}{#1}}
+\newcommand{\TableWorkflowChip}[1]{\TableChip{tableChipWorkflow}{#1}}
+\newcommand{\TableModelChip}[1]{\TableChip{tableChipModel}{#1}}
+\newcommand{\TableRuntimeChip}[1]{\TableChip{tableChipRuntime}{#1}}
+\newcommand{\TableAdaptationOp}[1]{\TablePill{tableAdaptationBack}{tableAdaptationText}{#1}}
+\newcommand{\TableHeadRole}{Role}
+\newcommand{\TableHeadStudyType}{\TableHeadRole}
+\newcommand{\TableHeadTarget}{Target}
+\newcommand{\TableHeadObject}{Object}
+\newcommand{\TableTargetLLM}{\TableTargetTag{LLM}}
+\newcommand{\TableTargetAgent}{\TableTargetTag{Agent}}
+\newcommand{\TableTargetLLMAgent}{\TableTargetTag{LLM/Agent}}
+\newcommand{\TableObjectGeneral}{\TablePlainChip{General}}
+\newcommand{\TableObjectContext}{\TablePlainChip{Context}}
+\newcommand{\TableObjectMemory}{\TableMemoryChip{Memory}}
+\newcommand{\TableObjectTool}{\TableToolChip{Tool}}
+\newcommand{\TableObjectSkill}{\TableWorkflowChip{Skill}}
+\newcommand{\TableObjectWorkflow}{\TableWorkflowChip{Workflow}}
+\newcommand{\TableObjectModel}{\TableModelChip{Model}}
+\newcommand{\TableObjectMultiAgent}{\TableWorkflowChip{Multi-Agent}}
+\newcommand{\TableObjectRuntime}{\TableRuntimeChip{Runtime}}
+\newcommand{\TableObjectGovernance}{\TableRuntimeChip{Governance}}
+\newcommand{\TableObjectEvaluation}{\TablePlainChip{Evaluation}}
+\newcommand{\TableObjectArtifact}{\TablePlainChip{Artifact}}
+\newcommand{\TableObjectCode}{\TablePlainChip{Code}}
+\newcommand{\TableObjectEnvironment}{\TablePlainChip{Environment}}
+\newcommand{\TableObjectData}{\TablePlainChip{Data}}
+\newcommand{\TableHeadBoundary}{Boundary}
+\newcommand{\TableHeadReadingArea}{Reading Area}
+\newcommand{\TableHeadTraceFunction}{Trace Function}
+\newcommand{\TableHeadInfluenceShift}{Influence Shift}
+\newcommand{\TableRoleAttack}{\TableRoleTag{tableRoleAttack}{Attack}}
+\newcommand{\TableRoleDefense}{\TableRoleTag{tableRoleDefense}{Defense}}
+\newcommand{\TableRoleGovernance}{\TableRoleTag{tableRoleGovernance}{Governance}}
+\newcommand{\TableRoleBenchmark}{\TableRoleTag{tableRoleBenchmark}{Benchmark}}
+\newcommand{\TableRoleBenchmarkCapability}{\TableRoleTag{tableRoleBenchmark}{Benchmark (Capability)}}
+\newcommand{\TableRoleBenchmarkAttack}{\TableRoleTag{tableRoleBenchmark}{Benchmark (Attack)}}
+\newcommand{\TableRoleBenchmarkSafety}{\TableRoleTag{tableRoleBenchmark}{Benchmark (Safety)}}
+\newcommand{\TableRoleBenchmarkSecurity}{\TableRoleBenchmarkAttack}
+\newcommand{\TableRoleBenchmarkState}{\TableRoleBenchmark}
+\newcommand{\TableRoleBenchmarkMemory}{\TableRoleBenchmark}
+\newcommand{\TableRoleBenchmarkGovernance}{\TableRoleTag{tableRoleBenchmark}{Benchmark (Governance)}}
+\newcommand{\TableRoleSafety}{\TableRoleTag{tableRoleSafety}{Safety}}
+\newcommand{\TableRoleCapability}{\TableRoleTag{tableRoleCapability}{Capability}}
+\newcommand{\TableRoleMechanism}{\TableRoleCapability}
+\newcommand{\TableRoleSurvey}{\TableRoleTag{tableRoleSurvey}{Survey}}
+\newcommand{\TableRoleSurveyCapability}{\TableRoleTag{tableRoleSurvey}{Survey (Capability)}}
+\newcommand{\TableRoleSurveySafety}{\TableRoleTag{tableRoleSurvey}{Survey (Safety)}}
+\newcommand{\TableRoleSurveyAttack}{\TableRoleTag{tableRoleSurvey}{Survey (Attack)}}
+\newcommand{\TableRoleSurveyGovernance}{\TableRoleTag{tableRoleSurvey}{Survey (Governance)}}
+\newcommand{\TableRoleSurveyAgent}{\TableRoleSurveyCapability}
+\newcommand{\TableRoleSurveyMemory}{\TableRoleSurveyCapability}
+\newcommand{\TableRoleSurveySelfEvolution}{\TableRoleSurveyCapability}
+\newcommand{\TableRoleSurveyMultiAgent}{\TableRoleSurveyCapability}
+\newcommand{\TableRoleSurveyModelSide}{\TableRoleSurveyCapability}
+\newcommand{\TableRoleFramework}{\TableRoleTag{tableRoleFramework}{Framework}}
+\newcommand{\TableRoleFrameworkSecurity}{\TableRoleTag{tableRoleFramework}{Framework (Security)}}
+\newcommand{\TableRoleFrameworkFormal}{\TableRoleTag{tableRoleFramework}{Framework (Formal)}}
+\newcommand{\TableRoleFrameworkGovernance}{\TableRoleTag{tableRoleFramework}{Framework (Governance)}}
+\newcommand{\TableRoleTheory}{\TableRoleTag{tableRoleTheory}{Theory}}
+\newcommand{\TableRoleRedTeam}{\TableRoleTag{tableRoleRedTeam}{Red Team}}
+\newcommand{\TableRoleEvaluation}{\TableRoleTag{tableRoleBenchmark}{Evaluation}}
+\newcommand{\TableRoleEvaluationDefense}{\TableRoleTag{tableRoleDefense}{Evaluation (Defense)}}
+\newcommand{\TableRoleEvaluationState}{\TableRoleEvaluation}
+\newcommand{\TableRoleEvaluationRedTeam}{\TableRoleTag{tableRoleRedTeam}{Evaluation (Red Team)}}
+\newcommand{\TableRoleEvaluationModelSide}{\TableRoleEvaluation}
+\newcommand{\TableRoleVerification}{\TableRoleTag{tableRoleDefense}{Verification}}
+\newcommand{\TableRoleSystem}{\TableRoleMechanism}
+\newcommand{\TableRoleDiagnostic}{\TableRoleSafety}
+\newcommand{\TableStudyCapabilityBenchmark}{\TableRoleBenchmarkCapability}
+\newcommand{\TableStudyAttackBenchmark}{\TableRoleBenchmarkAttack}
+\newcommand{\TableStudySafetyBenchmark}{\TableRoleBenchmarkSafety}
+\newcommand{\TableStudySecurityBenchmark}{\TableRoleBenchmarkAttack}
+\newcommand{\TableStudyStateBenchmark}{\TableRoleBenchmarkState}
+\newcommand{\TableStudyMemoryBenchmark}{\TableRoleBenchmarkMemory}
+\newcommand{\TableStudyDefenseEval}{\TableRoleEvaluationDefense}
+\newcommand{\TableStudyStateEval}{\TableRoleEvaluationState}
+\newcommand{\TableStudyRedTeamEval}{\TableRoleEvaluationRedTeam}
+\newcommand{\TableStudyGovernanceFramework}{\TableRoleFrameworkGovernance}
+\newcommand{\TableStudyGovernanceBenchmark}{\TableRoleBenchmarkGovernance}
+\newcommand{\TableStudyVerification}{\TableRoleVerification}
+\newcommand{\TableStudyModelSideEval}{\TableRoleEvaluationModelSide}
+\newcommand{\TableBoundaryGovernance}{Governance}
+\newcommand{\TableBoundaryMotivation}{Motivation}
+\newcommand{\TableBoundaryAdjacent}{Adjacent}
+\newcommand{\TableBoundaryBackground}{Background}
+\newcommand{\TableBoundaryExtended}{Extended}
+\newcommand{\TableBoundaryAppendix}{Appendix}
+\newcommand{\TableBoundaryScope}{Boundary}
+\newcommand{\TableBoundaryBenchmark}{Benchmark}
+\newcommand{\TableBoundaryExposure}{Exposure}
+\newcommand{\TableBoundaryCapability}{Capability}
+\newcommand{\TableBoundaryResponse}{Response}
+\newcommand{\TableBoundaryRedTeamSetting}{Red Team Setting}
+\newcommand{\TableBoundaryMemory}{Memory}
+\newcommand{\TableBoundaryToolRoute}{Tool Route}
+\newcommand{\TableBoundaryRouteDrift}{Route Drift}
+\newcommand{\TableBoundaryUneven}{Uneven}
+\newcommand{\TableBoundaryOwnership}{Ownership}
+\newcommand{\TableBoundarySetting}{Setting}
+\newcommand{\TableBoundaryReview}{Review}
+\newcommand{\TableBoundaryPoisoningClearest}{Poisoning Clearest}
+\newcommand{\TableBoundaryLocalScores}{Local Scores}
+\newcommand{\TableBoundaryRecoveryOpen}{Recovery Open}
+\newcommand{\TableBoundaryRecoveryThin}{Recovery Thin}
+\newcommand{\TableBoundaryRepairOpen}{Repair Open}
+\newcommand{\TableBoundaryOwnershipOpen}{Ownership Open}
+\newcommand{\TableBoundaryDescendantRepairOpen}{Descendant Repair Open}
+\newcommand{\TableBoundaryContestabilityUneven}{Contestability Uneven}
+\newcommand{\TableBoundaryCarrierStrongest}{Carrier Strongest}
+\newcommand{\TableBoundaryExposureStrong}{Exposure Strong}
+\newcommand{\TableBoundaryHandlesNeeded}{Handles Needed}

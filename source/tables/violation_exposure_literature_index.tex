@@ -1,0 +1,84 @@
+\begin{table}[t]
+\centering
+\begin{minipage}{0.98\linewidth}
+\captionsetup{hypcap=false}
+\caption{Exposure surfaces for latent state failures. Memory retrieval, privacy disclosure, tool action, multi-agent uptake, benchmark tasks, and model deployment expose different parts of the same lifecycle gap; role labels mark whether a row is direct evidence, contextual rereading, or gap-facing support.}
+\label{tab:violation-exposure-literature-index}
+\centering
+\tiny
+\setlength{\tabcolsep}{1.1pt}
+\renewcommand{\arraystretch}{1.05}
+\SAVERTableRows
+\begin{tabular}{@{}p{0.155\linewidth}p{0.04\linewidth}p{0.13\linewidth}p{0.065\linewidth}p{0.07\linewidth}p{0.105\linewidth}p{0.40\linewidth}@{}}
+\toprule
+\rowcolor{saverExposureHead}
+\textbf{Method or Work} & \textbf{Year} & \textbf{\TableHeadRole} & \textbf{\TableHeadTarget} & \textbf{\TableHeadObject} & \textbf{Surface} & \textbf{Failure $\rightarrow$ Exposure} \\
+\midrule
+\SAVERTableGroup{saverExposureHead}{7}{Memory retrieval}
+AgentPoison~\cite{chen2024agentpoison} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Poisoned memory $\rightarrow$ delayed retrieval \\
+FragFuse~\cite{rao2026fragfusebypassingaccesscontrol} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Fragmented memory $\rightarrow$ fused query/access gate \\
+Stealth memory injection~\cite{zhang2026clawsremembertellstealthy} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Hidden email memory $\rightarrow$ later behavior \\
+GhostWriter~\cite{torres2026agentsremembermuchmemory} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Hidden payload $\rightarrow$ recalled poisoned memory \\
+PASB~\cite{mao2026agentsdontjustagree} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Committed claim $\rightarrow$ neutral-query reuse \\
+OEP~\cite{wang2026oep} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectWorkflow & Memory retrieval & Unsafe rule abstraction $\rightarrow$ downstream transfer \\
+Zombie Agents~\cite{yang2026zombie_agents} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Dormant memory $\rightarrow$ trigger activation \\
+MemoryGraft~\cite{srivastava2025memorygraft} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Poisoned experience $\rightarrow$ evidence retrieval \\
+PS-Bench~\cite{guo-etal-2026-personalization} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Memory retrieval & Benign memory $\rightarrow$ unsafe compliance \\
+Tool-Drift~\cite{dabas2026tool_drift} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectTool & Memory retrieval & Memory route drift $\rightarrow$ tool choice \\
+\SAVERTableGroup{saverExposureHead}{7}{Privacy exposure}
+Agent memory privacy~\cite{wang2025privacy_agent_memory} & 2025 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & Privacy exposure & Sensitive memory reuse $\rightarrow$ personalization/leakage \\
+PerMemSafe~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy exposure & Personalized memory context $\rightarrow$ unsafe response \\
+PersistBench~\cite{pulipaka2026persistbench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy exposure & Forgetting failure $\rightarrow$ leakage across domains \\
+RBI-Eval~\cite{xu2026memorystaysilentmeasuring} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy exposure & Memory use boundary $\rightarrow$ sensitive recall \\
+EchoLeak~\cite{reddy_2025_echoleak_the_first_real_worl} & 2025 & \TableRoleAttack & \TableTargetLLMAgent & \TableObjectContext & Privacy exposure & Data leakage $\rightarrow$ assistant context \\
+Personal agent context~\cite{li_2024_personal_llm_agents_insights} & 2024 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & Personal context & Persistent user context $\rightarrow$ assistant reuse \\
+\SAVERTableGroup{saverExposureHead}{7}{Tool action}
+Prompt injection apps~\cite{liu_2023_prompt_injection_attack_agai} & 2023 & \TableRoleAttack & \TableTargetLLMAgent & \TableObjectTool & Tool action & Untrusted content $\rightarrow$ web/action step \\
+AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool action & Untrusted tool data $\rightarrow$ tool call/web action \\
+InjecAgent~\cite{zhan_2024_injecagent_benchmarking_indi} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool action & Authority confusion $\rightarrow$ indirect injection \\
+AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Tool action & Authority-collapsed memory $\rightarrow$ unauthorized action \\
+STAC~\cite{li2026stac} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Tool chain compromise $\rightarrow$ tool route \\
+LivePI~\cite{zhao2026livepi} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Live injected state $\rightarrow$ interactive action \\
+Prompt tool selection~\cite{shi2026prompt_tool_selection} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Connector manipulation $\rightarrow$ tool selection \\
+SafeSearch~\cite{dong2026safesearch} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Search safety $\rightarrow$ search action \\
+Task Shield~\cite{jia_2025_the_task_shield_enforcing_ta} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Tool action & Task policy mismatch $\rightarrow$ tool action gate \\
+ASB~\cite{zhang_2024_agent_security_bench_asb_for} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectEvaluation & Tool action & Authority/cost misuse $\rightarrow$ agent actions \\
+\SAVERTableGroup{saverExposureHead}{7}{Runtime guard}
+LlamaFirewall~\cite{chennabasappa_2025_llamafirewall_an_open_source} & 2025 & \TableRoleDefense & \TableTargetLLMAgent & \TableObjectRuntime & Runtime guard & Prompt safety signal $\rightarrow$ runtime decision \\
+Prompt injection detection~\cite{lan_2025_prompt_injection_detection_i} & 2025 & \TableRoleDefense & \TableTargetLLMAgent & \TableObjectRuntime & Runtime guard & Injection signal $\rightarrow$ prompt flow \\
+LLM Firewall~\cite{podpora_2025_llm_firewall_using_validator} & 2025 & \TableRoleDefense & \TableTargetLLM & \TableObjectRuntime & Runtime guard & Validator gap $\rightarrow$ prompt/output flow \\
+Signed-Prompt~\cite{suo_2024_signed_prompt_a_new_approach} & 2024 & \TableRoleDefense & \TableTargetLLMAgent & \TableObjectContext & Runtime guard & Source authenticity loss $\rightarrow$ step driven by document \\
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Runtime guard & Privilege overgrant $\rightarrow$ tool authority \\
+GuardAgent~\cite{xiang2024guardagent} & 2024 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Runtime guard & Local guard signal $\rightarrow$ response choice \\
+R-Judge~\cite{yuan2024rjudge} & 2024 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Safety recognition & Risk-awareness gap $\rightarrow$ unsafe decision signal \\
+EDDOps~\cite{xia_2024_evaluation_driven_developmen} & 2024 & \TableRoleGovernance & \TableTargetAgent & \TableObjectGovernance & Runtime guard & Signal/control mismatch $\rightarrow$ operations loop \\
+\SAVERTableGroup{saverExposureHead}{7}{Multi-agent}
+Collective Misremembering~\cite{xu2026when} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Shared memory drift $\rightarrow$ consensus distortion \\
+ACIArena~\cite{an-etal-2026-aciarena} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Cascading injection $\rightarrow$ propagated failure \\
+Agents of Chaos~\cite{shapira2026agents_chaos} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Cross-agent unsafe practice $\rightarrow$ live-system failure \\
+MAS code execution~\cite{triedman2025multi} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Orchestrator hijack $\rightarrow$ code execution/exfiltration \\
+MAS security~\cite{nguyen2026security_mas} & 2026 & \TableRoleSurveySafety & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Message boundary safety $\rightarrow$ multi-agent context \\
+Teams of LLM Agents~\cite{yuxuan_2024_teams_of_llm_agents_can_expl} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Collective misuse $\rightarrow$ team behavior \\
+MADRA~\cite{wang2025madra} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMultiAgent & Multi-agent & Debate safety state $\rightarrow$ multi-agent plan \\
+RedTeamCUA~\cite{liao2026redteamcua} & 2026 & \TableRoleRedTeam & \TableTargetAgent & \TableObjectTool & Multi-agent & GUI action state $\rightarrow$ computer use uptake \\
+\SAVERTableGroup{saverExposureHead}{7}{Benchmark task}
+HarnessSafe~\cite{zhang2026harnesssafeevaluatingsafetypersistent} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectWorkflow & Benchmark task & Persistent carrier path $\rightarrow$ oracle-confirmed violation \\
+SkillMisevo-Bench~\cite{mao2026practicemakesunsafeskill} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectSkill & Benchmark task & Skill authoring $\rightarrow$ clean-session carryover \\
+EVOMAL~\cite{wu2026evomalselfpoisoningselfevolvingcoding} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Benchmark task & Authored skill $\rightarrow$ callback and later copies \\
+AgentHarm~\cite{andriushchenko2025agentharm} & 2025 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Benchmark task & Harmful agent task $\rightarrow$ agent action \\
+RedCode~\cite{guo2024redcode} & 2024 & \TableStudyAttackBenchmark & \TableTargetLLM & \TableObjectCode & Benchmark task & Code safety $\rightarrow$ code execution \\
+MobileSafetyBench~\cite{lee2026mobilesafetybench} & 2026 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectTool & Benchmark task & Mobile safety $\rightarrow$ device action \\
+Machiavelli~\cite{pan2023machiavelli} & 2023 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEnvironment & Benchmark task & Ethical drift $\rightarrow$ game behavior \\
+\SAVERTableGroup{saverExposureHead}{7}{Model-side}
+Fine-tuning safety~\cite{qi2023finetuning_safety} & 2023 & \TableRoleSafety & \TableTargetLLM & \TableObjectModel & Model-side & Safety regression $\rightarrow$ refusal shift \\
+PEFT Trojan~\cite{hong2024peta} & 2024 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Model-side & Adapter backdoor $\rightarrow$ trigger behavior \\
+Jailbreak backdoors~\cite{rando2024universal_jailbreak_backdoors} & 2024 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Model-side & Preference backdoor $\rightarrow$ unsafe compliance \\
+Dormant behavior~\cite{gloaguen2025watch_your_steps} & 2025 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Model-side & Dormant behavior $\rightarrow$ context activation \\
+BadAgent~\cite{wang_2024_badagent_inserting_and_activ} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectModel & Model-side & Agent backdoor $\rightarrow$ agent behavior \\
+Safe LoRA~\cite{hsu2024safe_lora} & 2024 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Model-side & Adapter safety $\rightarrow$ constrained update \\
+Backdoor survey~\cite{zhou2025backdoor_llm_survey} & 2025 & \TableRoleSurveyAttack & \TableTargetLLM & \TableObjectModel & Model-side & Backdoor threat $\rightarrow$ LLM systems \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{minipage}
+\end{table}

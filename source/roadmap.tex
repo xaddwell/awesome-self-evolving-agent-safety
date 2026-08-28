@@ -1,0 +1,261 @@
+\definecolor{saverLaneBlue}{HTML}{527CDF}
+\definecolor{saverLaneBlueLight}{HTML}{EEF3FF}
+\definecolor{saverLaneGreen}{HTML}{86D4CD}
+\definecolor{saverLaneGreenLight}{HTML}{F2FBFA}
+\definecolor{saverLaneOrange}{HTML}{E9A859}
+\definecolor{saverLaneOrangeLight}{HTML}{FFF7EB}
+\definecolor{saverLaneRed}{HTML}{E2707C}
+\definecolor{saverLaneRedLight}{HTML}{FFECEF}
+\definecolor{saverResponseTeal}{HTML}{2F7F73}
+\definecolor{saverResponseTealLight}{HTML}{EAF7F4}
+\definecolor{saverRoadmapRoot}{HTML}{F7F7F7}
+\definecolor{saverRoadmapBorder}{HTML}{4A4A4A}
+
+\newcommand{\saverRoadmapFont}{\fontsize{6pt}{6.8pt}\selectfont}
+\newcommand{\saverRoadmapRef}[1]{{\hspace{0.15em}\normalfont\fontsize{5pt}{5.5pt}\selectfont\color{saverRoadmapBorder!72}\hyperref[#1]{(\S\ref*{#1})}}}
+\newcommand{\saverRoadmapRefRange}[2]{{\hspace{0.15em}\normalfont\fontsize{5pt}{5.5pt}\selectfont\color{saverRoadmapBorder!72}(\hyperref[#1]{\S\ref*{#1}}--\hyperref[#2]{\S\ref*{#2}})}}
+\let\saverRoadmapNatbibCite\citep
+\makeatletter
+\newcommand{\saverRoadmapCiteOne}[1]{\saverRoadmapNatbibCite{#1}\allowbreak}
+\newcommand{\saverRoadmapCite}[1]{{\hspace{0.08em}\normalfont\fontsize{5pt}{5.5pt}\selectfont\color{saverRoadmapBorder!78}\@for\saverRoadmapKey:=#1\do{\saverRoadmapCiteOne{\saverRoadmapKey}}}}
+\makeatother
+\newcommand{\saverRoadmapLevelOneWidth}{6.5em}
+\newcommand{\saverRoadmapLevelTwoWidth}{9.3em}
+\newcommand{\saverRoadmapLevelThreeWidth}{15.8em}
+
+\tikzset{
+  saver-root/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverRoadmapRoot,
+    draw=saverRoadmapBorder,
+    inner sep=3pt,
+    line width=0.8pt,
+    text=black,
+    align=center
+  },
+  saver-blue-bg/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverLaneBlueLight,
+    draw=saverLaneBlue,
+    inner sep=3pt,
+    line width=0.8pt,
+    text=black,
+    text justified
+  },
+  saver-blue-line/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=none,
+    draw=saverLaneBlue,
+    inner sep=3pt,
+    line width=0.5pt,
+    text=black,
+    text justified
+  },
+  saver-green-bg/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverLaneGreenLight,
+    draw=saverLaneGreen,
+    inner sep=3pt,
+    line width=0.8pt,
+    text=black,
+    text justified
+  },
+  saver-green-line/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=none,
+    draw=saverLaneGreen,
+    inner sep=3pt,
+    line width=0.5pt,
+    text=black,
+    text justified
+  },
+  saver-orange-bg/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverLaneOrangeLight,
+    draw=saverLaneOrange,
+    inner sep=3pt,
+    line width=0.8pt,
+    text=black,
+    text justified
+  },
+  saver-orange-line/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=none,
+    draw=saverLaneOrange,
+    inner sep=3pt,
+    line width=0.5pt,
+    text=black,
+    text justified
+  },
+  saver-red-bg/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverLaneRedLight,
+    draw=saverLaneRed,
+    inner sep=3pt,
+    line width=0.8pt,
+    text=black,
+    text justified
+  },
+  saver-red-line/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=none,
+    draw=saverLaneRed,
+    inner sep=3pt,
+    line width=0.5pt,
+    text=black,
+    text justified
+  },
+  saver-violation-leaf/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverLaneRedLight,
+    draw=saverLaneRed,
+    inner sep=3pt,
+    line width=0.45pt,
+    text=black,
+    text justified
+  },
+  saver-response-leaf/.style={
+    rectangle,
+    rounded corners=2pt,
+    fill=saverResponseTealLight,
+    draw=saverResponseTeal,
+    inner sep=3pt,
+    line width=0.45pt,
+    text=black,
+    text justified
+  }
+}
+
+\begin{figure*}[p]
+  \centering
+  \resizebox{0.97\textwidth}{!}{%
+    \begin{forest}
+      forked edges,
+      for tree={
+        grow=east,
+        reversed=true,
+        anchor=mid west,
+        parent anchor=mid east,
+        child anchor=mid west,
+        base=left,
+        font=\saverRoadmapFont,
+        rectangle,
+        draw=none,
+        sharp corners,
+        minimum width=2em,
+        edge+={darkgray, line width=0.55pt},
+        s sep=3.6pt,
+        l sep=7.2pt,
+        fork sep=3.6pt,
+        inner xsep=1.8pt,
+        inner ysep=2.0pt,
+        line width=0.6pt,
+        par/.style={rotate=90, child anchor=north, parent anchor=south, anchor=center}
+      },
+      where level=0{font=\footnotesize\bfseries, text width=6.8em}{},
+      where level=1{font=\saverRoadmapFont\bfseries, text width=\saverRoadmapLevelOneWidth, l-=12pt, tier=substrate}{},
+      where level=2{font=\saverRoadmapFont, text width=\saverRoadmapLevelTwoWidth, l-=6pt, tier=adaptation}{},
+      where level=3{font=\saverRoadmapFont, text width=\saverRoadmapLevelThreeWidth, tier=evidence}{},
+      [
+        {\SAVER Roadmap}, par, saver-root
+        [
+          {Prompt, Context, Memory, Retrieval\saverRoadmapRefRange{sec:substrate-prompt-context}{sec:substrate-retrieval-knowledge}}, saver-blue-bg
+          [
+            {Write$\rightarrow$Abstract$\rightarrow$Retrieve; Memory Attacks; Admission Checks\saverRoadmapRef{sec:adaptation-operations}}, saver-blue-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Memory Poisoning, Stealth Injection, Fragmented Bypass~\saverRoadmapCite{chen2024agentpoison,torres2026agentsremembermuchmemory,rao2026fragfusebypassingaccesscontrol,sunil2026memory_poisoning_agents,pulipaka2026hidden_memory,yang2026zombie_agents}, Stale Retrieval~\saverRoadmapCite{zhang2026memmorph}, Privacy Extraction~\saverRoadmapCite{wang2025privacy_agent_memory,zhang_2024_privacyasst_safeguarding_use,yan_2025_on_protecting_the_data_priva}, Long Horizon Memory Drift~\saverRoadmapCite{liu2026simplemem,mi2026darwinian_memory,rajesh2026panini}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Admission Gating~\saverRoadmapCite{lam2026ssgm,taheri2026governed_memory,kandala2026echoguard}, Deletion Checks~\saverRoadmapCite{pulipaka2026persistbench,kannabhiran_2026_consensus_validated_memory_i}, Residual Probes~\saverRoadmapCite{shao2026misevolve,wang2026agenticeval}, Memory Evaluation~\saverRoadmapCite{hu_2025_evaluating_memory_in_llm_age,luo_2026_from_storage_to_experience_a,lupascu2026elephantbroker}}, saver-response-leaf
+            ]
+          ]
+          [
+            {Promote$\rightarrow$Migrate$\rightarrow$Activate; Stale State Attacks; Activation Gates\saverRoadmapRef{sec:adaptation-operations}}, saver-blue-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Scope Drift~\saverRoadmapCite{wang2026oep,zhao2026experience_driven_safety,jiang_2026_agentlab}, Delayed Activation~\saverRoadmapCite{xie2026memevobench,zhao2026amabench,yang2026zombie_agents,shao2026misevolve}, Instruction Laundering~\saverRoadmapCite{wang2026oep,rao2026fragfusebypassingaccesscontrol}, Environment Drift~\saverRoadmapCite{xing_2024_understanding_the_weakness_o,liao2026redteamcua}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Migration Logs~\saverRoadmapCite{ravindran2026portable_agent_memory,hatalis_2024_memory_matters_the_need_to_i,pink_2025_position_episodic_memory_is}, Activation Authorization~\saverRoadmapCite{zhao2026faithful_self_evolvers,chitan2026srm,jewell_2026_pre_execution_self_review_ca}, Rollback Handles~\saverRoadmapCite{deng_2026_taming_openclaw}, Replay Logs~\saverRoadmapCite{souza_2025_llm_agents_for_interactive_w}}, saver-response-leaf
+            ]
+          ]
+        ]
+        [
+          {Tool, API, Skill, Workflow State\saverRoadmapRefRange{sec:substrate-tool-interface}{sec:substrate-workflow-topology}}, saver-green-bg
+          [
+            {Authorize$\rightarrow$Call$\rightarrow$Persist Output; Tool Hijack; Privilege Checks\saverRoadmapRef{sec:adaptation-operations}}, saver-green-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Indirect Prompt Injection (IPI)~\saverRoadmapCite{debenedetti2024agentdojo,zhan_2024_injecagent_benchmarking_indi,zhao2026livepi,greshake_2023_not_what_you_ve_signed_up_fo,hines_2024_defending_against_indirect_p,joseph_2025_prompt_injection_in_large_la}, Tool Misuse~\saverRoadmapCite{shi2026prompt_tool_selection,dong2026safesearch,zhou2026mcpshield,radosevich2025mcp_safety_audit,li2026stac}, Privilege Escalation~\saverRoadmapCite{rao2026fragfusebypassingaccesscontrol,fang_2024_llm_agents_can_autonomously}, Cross Modal Injection~\saverRoadmapCite{lee_2025_mind_mapping_prompt_injectio,wang_2025_manipulating_multimodal_agen,zhang_2024_a_study_on_prompt_injection}, Cyber Offense Tasks~\saverRoadmapCite{anurin_2024_catastrophic_cyber_capabilit,bhatt_2024_cyberseceval_2_a_wide_rangin,muzsai_2024_hacksynth_llm_agent_and_eval}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Least Privilege Gates~\saverRoadmapCite{shi2025progent,siu2026formalizing_agent_security,zhou2026mcpshield,radosevich2025mcp_safety_audit}, Runtime Guards~\saverRoadmapCite{xiang2024guardagent,liu_2026_safeagent_a_runtime_protecti,chennabasappa_2025_llamafirewall_an_open_source,hua_2024_trustagent_towards_safe_and,podpora_2025_llm_firewall_using_validator,wang2025openguardrails,luo2025agrail}, Tool Audit Trails~\saverRoadmapCite{jia_2025_the_task_shield_enforcing_ta,an2025ipiguard,luo2025agentauditor,syros2026saga}, Injection Detectors~\saverRoadmapCite{chen_2025_defending_against_prompt_inj,prakash_2026_hybrid_real_time_framework_f,jain_2025_comprehensive_analysis_of_ma,panterino_2024_dynamic_moving_target_defens}, SOC Orchestration~\saverRoadmapCite{alqahtani_2026_secure_autonomous_cyber_defe,ismail_2025_toward_robust_security_orche,molleti_2024_automated_threat_detection_a}}, saver-response-leaf
+            ]
+          ]
+          [
+            {Compile$\rightarrow$Reuse$\rightarrow$Route; Skill Drift; Rollback Handles\saverRoadmapRef{sec:adaptation-operations}}, saver-green-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Boundary Drift~\saverRoadmapCite{zhang2026library_drift,li2026stac}, Stale Permission~\saverRoadmapCite{wang2023voyager,jewell_2026_pre_execution_self_review_ca}, Skill Overgeneralization~\saverRoadmapCite{shinn2023reflexion,li2026experience_evolving_memory,renze_2024_self_reflection_in_llm_agent}, Route Coordination Drift~\saverRoadmapCite{yang_2025_autohma_llm_efficient_task_c,zhang_2025_webpilot_a_versatile_and_aut}, Planning Drift~\saverRoadmapCite{he_2025_plan_then_execute_an_empiric,zhuang_2025_llm_agents_can_be_choice_sup}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Versioned Artifacts~\saverRoadmapCite{xia_2024_evaluation_driven_developmen}, Change Records~\saverRoadmapCite{liu2025webcoach}, Contextual Security Constraints~\saverRoadmapCite{siu2026formalizing_agent_security}, Workflow Provenance~\saverRoadmapCite{souza_2025_llm_agents_for_interactive_w,mittal_2025_practical_integration_of_lar}, Governance Layers~\saverRoadmapCite{figurelli_2026_from_talking_to_blackbox_to,chen_2025_securegov_agent_a_governance,kumar_2026_a_multi_evaluator_behavioura}}, saver-response-leaf
+            ]
+          ]
+        ]
+        [
+          {Shared Artifacts and Agent State\saverRoadmapRefRange{sec:substrate-workflow-topology}{sec:substrate-external-artifacts}}, saver-orange-bg
+          [
+            {Delegate$\rightarrow$Propagate$\rightarrow$Uptake; Shared Memory Attacks; Propagation Control\saverRoadmapRef{sec:adaptation-operations}}, saver-orange-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Shared Memory Poisoning~\saverRoadmapCite{xu2026when}, Provenance Dilution~\saverRoadmapCite{zhang2026embedding_defenses_fail,li_2023_camel_communicative_agents_f}, Agent To Agent Spread~\saverRoadmapCite{lee_2026_prompt_infection_llm_to_llm,an-etal-2026-aciarena,wang2026devil_moltbook}, Coordination Failure~\saverRoadmapCite{mosquera_2025_can_llm_augmented_autonomous,gao_2025_contextual_trust_evaluation,yuan_2023_robust_multi_agent_coordinat}, Social Trust Drift~\saverRoadmapCite{haez_2026_socio_normative_trustworthin,volta_2026_experimental_campaign_for_po,zhuang_2025_llm_agents_can_be_choice_sup}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Recipient Scoped Traces~\saverRoadmapCite{taheri2026governed_memory,ravindran2026portable_agent_memory,siu2026formalizing_agent_security,khan2025agentsafe_governance}, Propagation Stops~\saverRoadmapCite{yu_2022_security_preserving_multi_ag}, Handoff Policies~\saverRoadmapCite{harrison_2026_protocol_mediated_execution,fernandez_2026_protocol_layer_governance_fo}, Coordination Audits~\saverRoadmapCite{gao_2025_contextual_trust_evaluation,dorri_2018_multi_agent_systems_a_survey,yang_2025_autohma_llm_efficient_task_c}}, saver-response-leaf
+            ]
+          ]
+          [
+            {Copy$\rightarrow$Reinterpret$\rightarrow$Publish; Artifact Leakage; Contestability\saverRoadmapRef{sec:adaptation-operations}}, saver-orange-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Artifact Leakage~\saverRoadmapCite{wang2025privacy_agent_memory,taheri2026governed_memory,reddy_2025_echoleak_the_first_real_worl,rathod_2025_privacy_and_security_challen}, Scope Widening~\saverRoadmapCite{taheri2026governed_memory}, Cross Team Reuse~\saverRoadmapCite{ravindran2026portable_agent_memory,bamil_2026_a_unified_evaluation_and_gov}, Data Federation Leakage~\saverRoadmapCite{karim_2025_ai_agents_meet_blockchain_a,geren_2025_blockchain_for_large_languag,yang_2025_synergizing_intelligence_and}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Access Partitions~\saverRoadmapCite{taheri2026governed_memory,khan2025agentsafe_governance}, Retention Limits~\saverRoadmapCite{pulipaka2026persistbench,wang2025privacy_agent_memory,rathod_2025_privacy_and_security_challen}, Contestability Paths~\saverRoadmapCite{ravindran2026portable_agent_memory,siu2026formalizing_agent_security,bamil_2026_a_unified_evaluation_and_gov}, Data Governance Benchmarks~\saverRoadmapCite{zhou_2025_datagovbench_benchmarking_ll}}, saver-response-leaf
+            ]
+          ]
+        ]
+        [
+          {Model and Policy State\saverRoadmapRef{sec:substrate-model-policy}}, saver-red-bg
+          [
+            {Fine-Tune$\rightarrow$Load$\rightarrow$Deploy; Jailbreak Transfer; Regression Gates\saverRoadmapRef{sec:adaptation-operations}}, saver-red-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Safety Regression~\saverRoadmapCite{lermen_2023_lora_fine_tuning_efficiently,qi2023finetuning_safety,liu_2025_a_survey_of_attacks_on_large}, Latent Triggers~\saverRoadmapCite{hong2024peta,gloaguen2025watch_your_steps,wang_2024_badagent_inserting_and_activ,peng_2024_jailbreaking_and_mitigation}, Unsafe Adapter Activation~\saverRoadmapCite{hong2024peta,lermen_2023_lora_fine_tuning_efficiently}, Adaptive Jailbreak Search~\saverRoadmapCite{liu2025autodan_turbo,yuan2026agenticred,shu_2025_attackeval_how_to_evaluate_t,schulhoff_2023_ignore_this_title_and_hackap,salem_2023_maatphor_automated_variant_a}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Activation Manifests~\saverRoadmapCite{hu2022lora}, Regression Tests~\saverRoadmapCite{banerjee2026severa,zhao2026faithful_self_evolvers,li_2024_the_wmdp_benchmark_measuring,andriushchenko2025agentharm,guo2024redcode,lee2026mobilesafetybench,pan2023machiavelli}, Deployment Gates~\saverRoadmapCite{banerjee2026severa,khan2025agentsafe_governance,wang2025openguardrails}, Domain Safety Benchmarks~\saverRoadmapCite{yuan2024rjudge,cao2025safelawbench,li_2024_legalagentbench_evaluating_l}}, saver-response-leaf
+            ]
+          ]
+          [
+            {Merge$\rightarrow$Inherit$\rightarrow$Update Preference; Lineage Loss; Model Repair\saverRoadmapRef{sec:adaptation-operations}}, saver-red-line
+            [
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Lineage Loss~\saverRoadmapCite{zhou2025backdoor_llm_survey,hu2022lora}, Hidden Behavior Reuse~\saverRoadmapCite{rando2024universal_jailbreak_backdoors,wang_2024_badagent_inserting_and_activ}, Adaptation Drift~\saverRoadmapCite{romero_2024_synergistic_integration_of_l}}, saver-violation-leaf
+            ]
+            [
+              {Response\saverRoadmapRef{sec:response-governance}: Model Unlearning~\saverRoadmapCite{li_2024_the_wmdp_benchmark_measuring}, Lineage Records~\saverRoadmapCite{hu2022lora}, Residual Safety Probes~\saverRoadmapCite{li_2024_the_wmdp_benchmark_measuring,shao2026misevolve,andriushchenko2025agentharm,guo2024redcode}, Governance Scorecards~\saverRoadmapCite{triguero_2023_general_purpose_artificial_i}, Formal Governance~\saverRoadmapCite{figurelli_2026_from_talking_to_blackbox_to,chen_2025_securegov_agent_a_governance,kumar_2026_a_multi_evaluator_behavioura}}, saver-response-leaf
+            ]
+          ]
+        ]
+      ]
+    \end{forest}%
+  }
+  \caption{Literature roadmap organized by the causal dependency in \SAVER{}: substrate, operation path, violation / exposure evidence, and response evidence. Exposure is folded into the incident leaves for legibility; the main text separates violation from exposure analytically.}
+  \Description{A full-width horizontal SAVER roadmap. Four colored substrate lanes branch into adaptation paths and then into paired violation-and-exposure and response evidence leaves, with section references and representative citations.}
+  \label{fig:saver-transition-roadmap}
+\end{figure*}

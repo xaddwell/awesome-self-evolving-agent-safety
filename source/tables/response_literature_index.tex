@@ -1,0 +1,70 @@
+\begin{table}[t]
+\centering
+\begin{minipage}{0.98\linewidth}
+\captionsetup{hypcap=false}
+\caption{Response, monitoring, and recovery literature. Current controls are strongest at local gating and monitoring, and thinner at descendant repair and contestable closure. Role labels identify the paper's contribution type before any lifecycle recovery claim is inferred.}
+\label{tab:response-literature-index}
+\centering
+\tiny
+\setlength{\tabcolsep}{1.1pt}
+\renewcommand{\arraystretch}{1.05}
+\SAVERTableRows
+\begin{tabular}{@{}p{0.155\linewidth}p{0.04\linewidth}p{0.14\linewidth}p{0.07\linewidth}p{0.075\linewidth}p{0.12\linewidth}p{0.37\linewidth}@{}}
+\toprule
+\rowcolor{saverResponseHead}
+\textbf{Method or Work} & \textbf{Year} & \textbf{\TableHeadRole} & \textbf{\TableHeadTarget} & \textbf{\TableHeadObject} & \textbf{Stage} & \textbf{Control Focus} \\
+\midrule
+Governed Memory~\cite{taheri2026governed_memory} & 2026 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMemory & Admission & Policy routed shared memory \\
+MemGovern~\cite{wang2026memgovern} & 2026 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMemory & Retrieval & Policy-governed experience recall \\
+SSGM~\cite{lam2026ssgm} & 2026 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMemory & Admission & Consolidation gate for evolving memory \\
+IPIGuard~\cite{an2025ipiguard} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Admission & Interaction learning guard over traces \\
+A-MemGuard~\cite{wei2025amemguard} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Admission & Persistent memory guard \\
+AM-Sentry~\cite{torres2026agentsremembermuchmemory} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Admission/\allowbreak Activation & Memory saving and retrieval screen \\
+MAPLE-Guard~\cite{xiong2026mapleguardmemoryawarelinkenforcement} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Lifecycle links & Write, retrieval, promotion, and reuse gates \\
+PoisonedEvolution gate~\cite{chen2026experienceinstructiontrajectorypoisoning} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Promotion & Preliminary provenance-diversity gate \\
+ChainGuard~\cite{zeng2026colluskilladversarialcrossskillcomposition} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectSkill & Admission & Candidate skill plus installed-skill context \\
+SafeEvolve~\cite{mao2026practicemakesunsafeskill} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectSkill & Promotion/\allowbreak Reuse & Candidate repair, attribution, and retirement \\
+EVOMAL defenses~\cite{wu2026evomalselfpoisoningselfevolvingcoding} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectSkill & Authoring/\allowbreak Write-back & Counter-prompt and signed quarantine \\
+PASB~\cite{mao2026agentsdontjustagree} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Admission & Commit-boundary diagnosis; no recovery test \\
+AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Admission/\allowbreak Activation & Persisted authority labels govern reuse \\
+SentinelMem~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Activation & Personalized risk-aware memory \\
+Detection-reflection~\cite{guo-etal-2026-personalization} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Activation & Context-sensitive intent risk reflection \\
+SRM~\cite{chitan2026srm} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Authorization & Trajectory-aware pre-execution risk memory \\
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Activation & Tool authority privilege control \\
+CaMeL~\cite{debenedetti2026defeating} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Activation & Capability-enforced control and data flow \\
+DRIFT~\cite{li2025drift} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Activation & Dynamic plan validation and injection isolation \\
+AID-Guard~\cite{tong2026aidguardstatefulauthorizationdelegated} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Activation/\allowbreak Recovery & Commit-time binding and ambiguity-safe successor control \\
+ControlValve~\cite{jha2026breaking} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Activation & Control-flow graph and contextual invocation rules \\
+Traversal-as-Policy~\cite{li2026traversalaspolicylogdistilledgatedbehavior} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Activation & Gated behavior tree route policy \\
+Task Shield~\cite{jia_2025_the_task_shield_enforcing_ta} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Activation & Task policy enforcement for tool action \\
+TrustAgent~\cite{hua_2024_trustagent_towards_safe_and} & 2024 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Planning & Trust control during agent planning \\
+GuardAgent~\cite{xiang2024guardagent} & 2024 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Monitoring & Guard reasoning at agent step \\
+R-Judge~\cite{yuan2024rjudge} & 2024 & \TableStudySafetyBenchmark & \TableTargetAgent & \TableObjectEvaluation & Monitoring & Safety recognition over trajectories \\
+MAGE~\cite{wang2026magesafeguardingllmagents} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Monitoring & Shadow memory in long horizon context \\
+AGENTVIGIL~\cite{wang2025agentvigil} & 2025 & \TableRoleRedTeam & \TableTargetAgent & \TableObjectRuntime & Monitoring & Agent trajectory monitoring \\
+AgentAuditor~\cite{luo2025agentauditor} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectGovernance & Monitoring & Execution trace audit \\
+OpenGuardrails~\cite{wang2025openguardrails} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Monitoring & Configurable agent runtime guardrails \\
+HarnessSafe~\cite{zhang2026harnesssafeevaluatingsafetypersistent} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectWorkflow & Monitoring/\allowbreak Containment & Furthest evidence-supported stopping stage \\
+SafeAgent~\cite{liu_2026_safeagent_a_runtime_protecti} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Containment & Runtime protection against harmful action \\
+LlamaFirewall~\cite{chennabasappa_2025_llamafirewall_an_open_source} & 2025 & \TableRoleDefense & \TableTargetLLMAgent & \TableObjectRuntime & Containment & Prompt and action flow guardrail \\
+AGrail~\cite{luo2025agrail} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectRuntime & Containment & Adaptive guardrail for agent runtime \\
+SafeSearch~\cite{dong2026safesearch} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Containment & Search agent safety control \\
+GLOVE~\cite{yin2026glove} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Verification & Memory environment realignment \\
+SEVerA~\cite{banerjee2026severa} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Verification & Verified reusable behavior synthesis \\
+Echoguard~\cite{kandala2026echoguard} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Verification & Agent memory verification \\
+Safe LoRA~\cite{hsu2024safe_lora} & 2024 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Model response & LoRA update mitigation \\
+LoRAShield~\cite{chen2025lorashielddatafreeeditingalignment} & 2025 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Model response & LoRA artifact alignment \\
+KVEraser~\cite{li2026kveraserlearningsteerkv} & 2026 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Model response & Cached context span erasure \\
+DARWIN-Guard~\cite{qi2026darwin} & 2026 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Feedback & Co-evolving adversarial guard updates \\
+BraveGuard~\cite{feng2026braveguard} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectModel & Feedback & Open-world trajectory supervision \\
+WMDP~\cite{li_2024_the_wmdp_benchmark_measuring} & 2024 & \TableStudyAttackBenchmark & \TableTargetLLM & \TableObjectModel & Model response & Unlearning behavior for malicious use \\
+EDDOps~\cite{xia_2024_evaluation_driven_developmen} & 2024 & \TableRoleGovernance & \TableTargetAgent & \TableObjectGovernance & Process & Evaluation operations over deployment process \\
+AGENTSAFE~\cite{khan2025agentsafe_governance} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectGovernance & Process & Agent lifecycle safety governance \\
+Trajectory assurance~\cite{lotfi2026securingagenticaiperaction} & 2026 & \TableRoleFrameworkGovernance & \TableTargetAgent & \TableObjectWorkflow & Process & System invariants over composed action trajectories \\
+SecureGov Agent~\cite{chen_2025_securegov_agent_a_governance} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectWorkflow & Process & Governance workflow agent \\
+DataGovBench~\cite{zhou_2025_datagovbench_benchmarking_ll} & 2025 & \TableStudyGovernanceBenchmark & \TableTargetAgent & \TableObjectData & Process & Data governance tasks \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{minipage}
+\end{table}

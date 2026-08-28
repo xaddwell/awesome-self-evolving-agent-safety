@@ -1,0 +1,85 @@
+\begin{table}[t]
+\centering
+\begin{minipage}{0.98\linewidth}
+\captionsetup{hypcap=false}
+\caption{Substrates carrying safety attributes in the current literature. Memory and tool carriers are best instrumented; workflow, shared artifact, and model state remain thinner. Role labels mark contribution function, not a claim that every row supports a full lifecycle record.}
+\label{tab:substrate-literature-index}
+\centering
+\tiny
+\setlength{\tabcolsep}{1.1pt}
+\renewcommand{\arraystretch}{1.05}
+\SAVERTableRows
+\begin{tabular}{@{}p{0.20\linewidth}p{0.04\linewidth}p{0.13\linewidth}p{0.08\linewidth}p{0.095\linewidth}p{0.42\linewidth}@{}}
+\toprule
+\rowcolor{saverSubstrateHead}
+\textbf{Method or Work} & \textbf{Year} & \textbf{\TableHeadRole} & \textbf{\TableHeadTarget} & \textbf{\TableHeadObject} & \textbf{Focus} \\
+\midrule
+\SAVERTableGroup{saverSubstrateHead}{6}{Foundational context and action boundary}
+LLM agent survey~\cite{luo2025llm_agent_survey} & 2025 & \TableRoleSurveyCapability & \TableTargetAgent & \TableObjectGeneral & Agent architecture: memory, tools, planning \\
+ReAct~\cite{yao2022react} & 2022 & \TableRoleCapability & \TableTargetLLMAgent & \TableObjectWorkflow & Reasoning and action context and admission hierarchy \\
+AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool outputs and active context \\
+\SAVERTableGroup{saverSubstrateHead}{6}{Memory, retrieval, and persistent state}
+Memory mechanisms~\cite{zhang_2025_a_survey_on_the_memory_mecha} & 2025 & \TableRoleSurveyCapability & \TableTargetLLMAgent & \TableObjectMemory & Episodic and semantic memory carriers \\
+Memory security~\cite{lin2026memory_security_survey} & 2026 & \TableRoleSurveySafety & \TableTargetAgent & \TableObjectMemory & Persistent memory state and threats \\
+MemGPT~\cite{packer2023memgpt} & 2023 & \TableRoleCapability & \TableTargetLLMAgent & \TableObjectMemory & Context and archival memory management \\
+SimpleMem~\cite{liu2026simplemem} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & Long-term agent memory \\
+A-Mem~\cite{xu_2025_a_mem_agentic_memory_for_llm} & 2025 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & Agentic memory repository \\
+Darwinian Memory~\cite{mi2026darwinian_memory} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & Evolving self maintained memory \\
+Panini~\cite{rajesh2026panini} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & Structured agent memory state \\
+Portable Agent Memory~\cite{ravindran2026portable_agent_memory} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & Transferable memory \\
+Voyager~\cite{wang2023voyager} & 2023 & \TableRoleCapability & \TableTargetAgent & \TableObjectSkill & Reusable skill library \\
+SkillJack~\cite{ying2026skilljackpersistentskillbackdoors} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Persistent backdoor in extracted skills \\
+PoisonedEvolution~\cite{chen2026experienceinstructiontrajectorypoisoning} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Trajectory evidence promoted into skill instruction \\
+SkillMisevo-Bench~\cite{mao2026practicemakesunsafeskill} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectSkill & Versioned skill state and clean-session reuse \\
+EVOMAL~\cite{wu2026evomalselfpoisoningselfevolvingcoding} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & Agent-authored executable skill descendants \\
+AgentPoison~\cite{chen2024agentpoison} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Poisoned memory and knowledge base retrieval \\
+Stealth memory injection~\cite{zhang2026clawsremembertellstealthy} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Email to persistent memory compromise \\
+GhostWriter~\cite{torres2026agentsremembermuchmemory} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Personal agent memory store poisoning \\
+MAPLE-Guard~\cite{xiong2026mapleguardmemoryawarelinkenforcement} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Private-to-shared memory links \\
+Persistent memory poisoning~\cite{sunil2026memory_poisoning_agents} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Long-term memory poisoning \\
+Zombie Agents~\cite{yang2026zombie_agents} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Dormant memory attack \\
+MemoryGraft~\cite{srivastava2025memorygraft} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Experience store poisoning \\
+EvoBreak~\cite{yan2026benignaloneharmfultogether} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & Complementary benign experience set \\
+Agent memory privacy~\cite{wang2025privacy_agent_memory} & 2025 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & User memory retention and leakage \\
+PerMemSafe~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Personalized memory safety context \\
+PS-Bench~\cite{guo-etal-2026-personalization} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Benign personal memory and intent inference \\
+PASB~\cite{mao2026agentsdontjustagree} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Committed claims in durable personal state \\
+AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Consolidated memories with source authority \\
+A-MemGuard~\cite{wei2025amemguard} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & Persistent memory guard \\
+\SAVERTableGroup{saverSubstrateHead}{6}{Tool and interface authority}
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Tool authority and privilege control \\
+MCPShield~\cite{zhou2026mcpshield} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & MCP protocol metadata and tool routes \\
+MCP Safety Audit~\cite{radosevich2025mcp_safety_audit} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectTool & MCP server audit boundary \\
+STAC~\cite{li2026stac} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool chain compromise \\
+LivePI~\cite{zhao2026livepi} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Live prompt injection in interactive context \\
+Prompt tool selection~\cite{shi2026prompt_tool_selection} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectTool & Tool description and connector choice drift \\
+IPIGuard~\cite{an2025ipiguard} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Learned interaction traces \\
+\SAVERTableGroup{saverSubstrateHead}{6}{Workflow, multi-agent, and shared state carriers}
+Traversal-as-Policy~\cite{li2026traversalaspolicylogdistilledgatedbehavior} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Gated behavior tree route policy \\
+Self-evolving agents~\cite{gao2025self_evolving_agents} & 2025 & \TableRoleSurveyCapability & \TableTargetAgent & \TableObjectWorkflow & Adaptive workflows and artifacts \\
+HarnessSafe~\cite{zhang2026harnesssafeevaluatingsafetypersistent} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectWorkflow & Cross-carrier harness state and boundaries \\
+Self-evolution survey~\cite{tao2024self_evolution_llm_survey} & 2024 & \TableRoleSurveyCapability & \TableTargetLLMAgent & \TableObjectGeneral & Self-evolution methods and lifecycle \\
+MADRA~\cite{wang2025madra} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMultiAgent & Safety aware delegation and debate state \\
+ACIArena~\cite{an-etal-2026-aciarena} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMultiAgent & Cascading injection over agent trust \\
+OpenClaw~\cite{yang2026openclaw_hospital} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectWorkflow & Hospital operating workflow \\
+Formal Agent Security~\cite{siu2026formalizing_agent_security} & 2026 & \TableRoleFrameworkFormal & \TableTargetAgent & \TableObjectWorkflow & Agent authority and security boundary \\
+LLM-MAS survey~\cite{he_2025_llm_based_multi_agent_system} & 2025 & \TableRoleSurveyCapability & \TableTargetAgent & \TableObjectMultiAgent & Delegated context and shared state \\
+MAS security~\cite{nguyen2026security_mas} & 2026 & \TableRoleSurveySafety & \TableTargetAgent & \TableObjectMultiAgent & Message boundary and multi-agent state \\
+Agents of Chaos~\cite{shapira2026agents_chaos} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMultiAgent & Live-lab communication and workflow state \\
+MAS code execution~\cite{triedman2025multi} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & Orchestrator control and communication state \\
+ControlValve~\cite{jha2026breaking} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & Permitted agent-invocation graph and rules \\
+\SAVERTableGroup{saverSubstrateHead}{6}{Model and policy state substrates}
+LoRA~\cite{hu2022lora} & 2022 & \TableRoleCapability & \TableTargetLLM & \TableObjectModel & Low rank adapter substrate \\
+PEFT survey~\cite{han2024peft_survey} & 2024 & \TableRoleSurveyCapability & \TableTargetLLM & \TableObjectModel & Parameter efficient update family \\
+Fine-tuning safety~\cite{qi2023finetuning_safety} & 2023 & \TableRoleSafety & \TableTargetLLM & \TableObjectModel & Fine-tuned checkpoint regression \\
+Safe LoRA~\cite{hsu2024safe_lora} & 2024 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & LoRA adapter mitigation \\
+KVEraser~\cite{li2026kveraserlearningsteerkv} & 2026 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & Cached context influence \\
+PEFT Trojan~\cite{hong2024peta} & 2024 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & PEFT adapter backdoor \\
+Feedback backdoors~\cite{rando2024universal_jailbreak_backdoors} & 2024 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Preference or feedback update backdoor \\
+Dormant behavior~\cite{gloaguen2025watch_your_steps} & 2025 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & Delayed activation in fine-tuned behavior \\
+Backdoor survey~\cite{zhou2025backdoor_llm_survey} & 2025 & \TableRoleSurveyAttack & \TableTargetLLM & \TableObjectModel & Backdoor safety issues in LLM parameters \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{minipage}
+\end{table}

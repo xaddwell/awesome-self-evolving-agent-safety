@@ -39,22 +39,28 @@ The page at [xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety](https://xadd
 ├── papers.html                 # Paper Reader (search + filters)
 ├── papers.json                 # 619 coded records (generated)
 ├── stats.json                  # Corpus aggregates (generated)
+├── tables.json                 # Classification tables (generated from LaTeX)
+├── roadmap.json                # Roadmap tree (generated from LaTeX)
 ├── assets/
 │   └── SAVER-Survey.pdf        # Paper PDF
 ├── data/
 │   └── saver_record_literature.csv   # Coding source of truth (same file that drives the manuscript Figure 2)
+├── source/
+│   ├── table_vocabulary.tex    # Table label macros (vendored from the manuscript)
+│   ├── roadmap.tex             # Roadmap TikZ source (vendored)
+│   └── tables/                 # The eight classification-table sources
 ├── tools/
-│   └── gen_papers_json.py      # CSV -> papers.json / stats.json generator
+│   └── gen_papers_json.py      # CSV + LaTeX -> papers/stats/tables/roadmap JSON
 ├── saver.bib                   # BibTeX entry
 └── README.md
 ```
 
 ## Updating the Data
 
-The coding CSV is the single source of truth. After updating it, regenerate the page data:
+The coding CSV and the vendored LaTeX sources are the single sources of truth. After updating them, regenerate the page data:
 
 ```bash
-python3 tools/gen_papers_json.py --csv data/saver_record_literature.csv --out .
+python3 tools/gen_papers_json.py
 ```
 
 ## Citation

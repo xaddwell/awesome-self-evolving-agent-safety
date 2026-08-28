@@ -1,0 +1,80 @@
+\begin{table}[t]
+\centering
+\begin{minipage}{0.98\linewidth}
+\captionsetup{hypcap=false}
+\caption{Adaptation and activation operations in the current literature. The evidence is strongest for add and activate operations, and thinner for migrate, propagate, and model-side modify operations. Role labels separate direct anchors from capability mechanisms reread through the transition lens.}
+\label{tab:adaptation-literature-index}
+\centering
+\tiny
+\setlength{\tabcolsep}{1.1pt}
+\renewcommand{\arraystretch}{1.05}
+\SAVERTableRows
+\begin{tabular}{@{}p{0.17\linewidth}p{0.04\linewidth}p{0.12\linewidth}p{0.075\linewidth}p{0.08\linewidth}p{0.105\linewidth}p{0.37\linewidth}@{}}
+\toprule
+\rowcolor{saverAdaptationHead}
+\textbf{Method or Work} & \textbf{Year} & \textbf{\TableHeadRole} & \textbf{\TableHeadTarget} & \textbf{\TableHeadObject} & \textbf{Operation} & \textbf{\TableHeadInfluenceShift} \\
+\midrule
+\SAVERTableGroup{saverAdaptationHead}{7}{Capability mechanics: add, abstract, migrate}
+Reflexion~\cite{shinn2023reflexion} & 2023 & \TableRoleCapability & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Add} & Feedback becomes decision evidence \\
+MemGPT~\cite{packer2023memgpt} & 2023 & \TableRoleCapability & \TableTargetLLMAgent & \TableObjectMemory & \TableAdaptationOp{Add/Migrate} & Context becomes managed memory \\
+Voyager~\cite{wang2023voyager} & 2023 & \TableRoleCapability & \TableTargetAgent & \TableObjectSkill & \TableAdaptationOp{Migrate} & Experience becomes callable skill \\
+SimpleMem~\cite{liu2026simplemem} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add} & Interaction becomes durable memory \\
+Panini~\cite{rajesh2026panini} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add} & Experience becomes structured memory \\
+Experience Evolving Memory~\cite{li2026experience_evolving_memory} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Abstract} & Episode becomes reusable procedure \\
+\SAVERTableGroup{saverAdaptationHead}{7}{Unsafe writes and abstraction drift}
+AgentPoison~\cite{chen2024agentpoison} & 2024 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Poisoned write becomes memory with authority \\
+Stealth memory injection~\cite{zhang2026clawsremembertellstealthy} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Email payload becomes hidden memory influence \\
+GhostWriter~\cite{torres2026agentsremembermuchmemory} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Hidden payload becomes recalled memory \\
+PASB~\cite{mao2026agentsdontjustagree} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Accepted claim becomes durable personal state \\
+AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Abstract} & Consolidation drops source-use constraints \\
+Zombie Agents~\cite{yang2026zombie_agents} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Dormant memory becomes state conditioned on trigger \\
+MemoryGraft~\cite{srivastava2025memorygraft} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Poisoned experience becomes evidence \\
+OEP~\cite{wang2026oep} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Abstract} & Experience becomes unsafe reusable rule \\
+Experience-Driven Safety~\cite{zhao2026experience_driven_safety} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Abstract} & Experience update creates policy drift \\
+EvoBreak~\cite{yan2026benignaloneharmfultogether} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Abstract/Activate} & Benign experiences compose into unsafe influence \\
+AgenticEval~\cite{wang2026agenticeval} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectEvaluation & \TableAdaptationOp{Abstract} & Adaptive state becomes task suite denominator \\
+MemEvoBench~\cite{xie2026memevobench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Abstract} & Evolving memory becomes metric denominator \\
+PerMemSafe~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Activate} & Personalized memory becomes safety denominator \\
+PS-Bench~\cite{guo-etal-2026-personalization} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Activate} & Benign memory changes inferred intent \\
+\SAVERTableGroup{saverAdaptationHead}{7}{Control, activation, and repair operations}
+GLOVE~\cite{yin2026glove} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Modify} & Memory is realigned against environment \\
+SRM~\cite{chitan2026srm} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Modify} & Session safety becomes memory signal \\
+MemGovern~\cite{wang2026memgovern} & 2026 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Modify} & Recall is revised by policy \\
+SSGM~\cite{lam2026ssgm} & 2026 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Activate} & Stored memory passes through gate \\
+Progent~\cite{shi2025progent} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & \TableAdaptationOp{Activate} & Tool authority becomes explicit decision \\
+CaMeL~\cite{debenedetti2026defeating} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & \TableAdaptationOp{Activate} & Trusted control flow gates tool authority \\
+DRIFT~\cite{li2025drift} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & \TableAdaptationOp{Activate} & Plan deviations trigger privilege validation \\
+ControlValve~\cite{jha2026breaking} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Activate} & Agent invocation must follow permitted graph \\
+MAGE~\cite{wang2026magesafeguardingllmagents} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Activate} & Shadow memory becomes safety signal \\
+Privacy Agent Memory~\cite{wang2025privacy_agent_memory} & 2025 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Forget} & Sensitive influence is scoped or withdrawn \\
+Memory poisoning~\cite{sunil2026memory_poisoning_agents} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Add/Activate} & Poisoned query creates later retrieval influence \\
+OpenClaw~\cite{yang2026openclaw_hospital} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Activate} & Retrieved longitudinal state enters workflow context \\
+\SAVERTableGroup{saverAdaptationHead}{7}{Propagation, migration, and route drift}
+Collective Misremembering~\cite{xu2026when} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & \TableAdaptationOp{Propagate} & Drift spreads across agents \\
+ACIArena~\cite{an-etal-2026-aciarena} & 2026 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectMultiAgent & \TableAdaptationOp{Propagate} & Cascading injection crosses agent trust \\
+HarnessSafe~\cite{zhang2026harnesssafeevaluatingsafetypersistent} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Migrate} & Influence crosses carrier and harness boundaries \\
+MAPLE-Guard~\cite{xiong2026mapleguardmemoryawarelinkenforcement} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Propagate} & Gates private-to-shared memory reuse \\
+Agents of Chaos~\cite{shapira2026agents_chaos} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectMultiAgent & \TableAdaptationOp{Propagate} & Unsafe practices cross agents in a live setting \\
+MAS code execution~\cite{triedman2025multi} & 2025 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & \TableAdaptationOp{Activate} & Untrusted content redirects agent invocation \\
+Embedding defense failure~\cite{zhang2026embedding_defenses_fail} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMemory & \TableAdaptationOp{Propagate} & Shared memory filter is bypassed \\
+MADRA~\cite{wang2025madra} & 2025 & \TableRoleGovernance & \TableTargetAgent & \TableObjectMultiAgent & \TableAdaptationOp{Propagate/Modify} & Risk assessments are exchanged and revised before gating \\
+Devil's Moltbook~\cite{wang2026devil_moltbook} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectMultiAgent & \TableAdaptationOp{Propagate} & Exposure shifts agent society state \\
+Traversal-as-Policy~\cite{li2026traversalaspolicylogdistilledgatedbehavior} & 2026 & \TableRoleDefense & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Migrate/Activate} & Logs become workflow policy \\
+Library Drift~\cite{zhang2026library_drift} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectSkill & \TableAdaptationOp{Migrate/Modify} & Skill library reroutes tasks \\
+SkillJack~\cite{ying2026skilljackpersistentskillbackdoors} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & \TableAdaptationOp{Migrate} & Poisoned trajectory becomes persistent skill \\
+PoisonedEvolution~\cite{chen2026experienceinstructiontrajectorypoisoning} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & \TableAdaptationOp{Migrate} & Recurring trajectory evidence becomes instruction \\
+SkillMisevo-Bench~\cite{mao2026practicemakesunsafeskill} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectSkill & \TableAdaptationOp{Migrate/Activate} & Skill authoring, retrieval, and carryover gates \\
+EVOMAL~\cite{wu2026evomalselfpoisoningselfevolvingcoding} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectSkill & \TableAdaptationOp{Propagate/Activate} & Authored copies re-enter the retrievable library \\
+Tool-Drift~\cite{dabas2026tool_drift} & 2026 & \TableRoleSafety & \TableTargetAgent & \TableObjectTool & \TableAdaptationOp{Activate/Modify} & Tool choice state reroutes \\
+JITRL~\cite{li2026jitrl} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectWorkflow & \TableAdaptationOp{Modify/Activate} & Runtime learning updates policy \\
+RQGM~\cite{iacob2026redqueengodelmachine} & 2026 & \TableRoleCapability & \TableTargetAgent & \TableObjectEvaluation & \TableAdaptationOp{Modify} & Evaluator utility becomes state scoped by epoch \\
+\SAVERTableGroup{saverAdaptationHead}{7}{Model update operations}
+Fine-tuning safety~\cite{qi2023finetuning_safety} & 2023 & \TableRoleSafety & \TableTargetLLM & \TableObjectModel & \TableAdaptationOp{Modify} & Fine-tuning changes behavior \\
+Safe LoRA~\cite{hsu2024safe_lora} & 2024 & \TableRoleDefense & \TableTargetLLM & \TableObjectModel & \TableAdaptationOp{Modify} & Adapter constrains behavior \\
+PEFT Trojan~\cite{hong2024peta} & 2024 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & \TableAdaptationOp{Add/Activate} & Adapter trigger becomes deployed safety issue \\
+Dormant behavior~\cite{gloaguen2025watch_your_steps} & 2025 & \TableRoleAttack & \TableTargetLLM & \TableObjectModel & \TableAdaptationOp{Activate} & Fine-tuned behavior waits for context \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{minipage}
+\end{table}
