@@ -1,0 +1,23 @@
+# Safety in Self-Evolving Agents: A Survey
+
+> A transition-centered survey of safety in self-evolving agents, organized by the SAVER framework (S×A → V→E→R) over 619 coded papers.
+
+This repository accompanies the survey paper "Safety in Self-Evolving Agents: A Survey" (2026, preprint).
+It provides the project page, the coded literature surface, and the roadmap and classification tables of the manuscript.
+
+GitHub: https://github.com/xaddwell/awesome-self-evolving-agent-safety
+Project Page: https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/
+Paper Reader: https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html
+Paper PDF: https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/assets/SAVER-Survey.pdf
+
+## SAVER Taxonomy
+
+Substrate (4 families): Workflow (288), Memory (195), Tools & Skills (98), Model (38).
+Adaptation (7 operations): Add, Abstract, Activate, Modify, Forget, Propagate, Migrate.
+Outcome (10 terminal families): six Violation families (Provenance Loss, Authority Escalation, Privacy & Purpose, Persistent Descendants, Operational Integrity, Model Safety Regression) and four Response stages (Preventive Governance, Transition & Activation, Monitoring & Containment, Recovery & Contestability).
+
+## Key Facts
+
+- 619 coded records = 579 unique registry works + 40 reviewed paper-card supplements; 518 carry usable time metadata from 2023 through 7 August 2026.
+- Data pipeline: data/saver_record_literature.csv (+ vendored LaTeX in source/) -> tools/gen_papers_json.py -> papers.json, stats.json, tables.json, roadmap.json -> index.html and papers.html render everything client-side.
+- To add or correct a paper: open an issue with the Paper Submission template, proposing title, link, and SAVER coding (substrate / adaptation / outcome family).
