@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety in Self-Evolving Agents: A Survey</title>
+<meta name="description" content="SAVER: a transition-centered survey of safety in self-evolving agents. We trace how reusable influence persists, moves, and changes role across carriers, and ask whether safety survives state adaptation.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  .serif { font-family: ui-serif, Georgia, "Times New Roman", serif; }
+  pre.bibtex { white-space: pre-wrap; word-break: break-word; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+
+  <!-- Title -->
+  <header class="text-center mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight">Safety in Self-Evolving Agents: A Survey</h1>
+    <p class="mt-3 text-lg text-gray-600">A transition-centered survey framework that traces how reusable influence persists, moves, and changes role across carriers</p>
+    <div class="mt-4 flex flex-wrap justify-center gap-2 text-sm">
+      <a href="https://github.com/xaddwell/Awesome-Self-Evolving-Agent-Safety"><img src="https://img.shields.io/github/stars/xaddwell/Awesome-Self-Evolving-Agent-Safety?style=flat&label=Stars&color=2563eb" alt="GitHub stars"></a>
+      <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-gray-600">2026 · Preprint</span>
+    </div>
+  </header>
+
+  <!-- Authors -->
+  <section class="text-center text-sm text-gray-700 mb-6">
+    <p class="leading-relaxed">
+      <span class="font-semibold">Jiahao Chen</span><sup>1</sup>, Zhou Feng<sup>1</sup>, Oubo Ma<sup>1</sup>, Yichen Yan<sup>1</sup>, Ruixiao Lin<sup>1</sup>, Hangtao Zhang<sup>2</sup>, Linkang Du<sup>3</sup>, Yiming Li<sup>8</sup>, Hengyu An<sup>1</sup>, Jun Liu<sup>13</sup>, Junhao Li<sup>1</sup>, Naen Xu<sup>1</sup>, Mengyao Du<sup>4</sup>, Yuanyi Song<sup>5</sup>, Chunyi Zhou<sup>1</sup>, Tianyu Du<sup>1</sup>, Yuan Su<sup>1</sup>, Zehao Jin<sup>6</sup>, Qianli Ma<sup>7</sup>, Leyi Qi<sup>8</sup>, Yiming Wang<sup>1</sup>, Zhihui Fu<sup>2</sup>, Jun Wang<sup>2</sup>, Zhe Ma<sup>9</sup>, Yuwen Pu<sup>11</sup>, Jinfeng Li<sup>12</sup>, Shouling Ji<sup>1</sup>
+    </p>
+    <p class="mt-2 text-gray-600 leading-relaxed">
+      <sup>1</sup>Zhejiang University &nbsp;·&nbsp;
+      <sup>2</sup>Huazhong University of Science and Technology &nbsp;·&nbsp;
+      <sup>3</sup>Xi'an Jiaotong University &nbsp;·&nbsp;
+      <sup>4</sup>National University of Defense Technology &nbsp;·&nbsp;
+      <sup>5</sup>Shanghai Jiaotong University &nbsp;·&nbsp;
+      <sup>6</sup>Georgia Institute of Technology &nbsp;·&nbsp;
+      <sup>7</sup>University of Science and Technology of China &nbsp;·&nbsp;
+      <sup>8</sup>Nanyang Technological University &nbsp;·&nbsp;
+      <sup>9</sup>OPPO Research Institute &nbsp;·&nbsp;
+      <sup>11</sup>Chongqing University &nbsp;·&nbsp;
+      <sup>12</sup>Alibaba Group &nbsp;·&nbsp;
+      <sup>13</sup>Rakuten Group
+    </p>
+    <p class="mt-2 text-gray-500">Correspondence: xaddwell@zju.edu.cn</p>
+  </section>
+
+  <!-- Links -->
+  <section class="flex flex-wrap justify-center gap-3 mb-10">
+    <a href="assets/SAVER-Survey.pdf" class="rounded-lg bg-blue-600 px-5 py-2 text-white font-medium hover:bg-blue-700">Paper (PDF)</a>
+    <a href="https://github.com/xaddwell/Awesome-Self-Evolving-Agent-Safety" class="rounded-lg bg-gray-800 px-5 py-2 text-white font-medium hover:bg-gray-900">GitHub</a>
+    <a href="#citation" class="rounded-lg bg-white border border-gray-300 px-5 py-2 text-gray-700 font-medium hover:bg-gray-100">BibTeX</a>
+  </section>
+
+  <!-- Abstract -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-3">Abstract</h2>
+    <p class="text-justify leading-relaxed text-gray-800">
+      Large language models (LLMs) have demonstrated remarkable capabilities yet remain fundamentally static: their parameters cannot adapt to novel tasks, evolving knowledge domains, or dynamic interaction contexts. As LLM-based agents are increasingly deployed in open-ended, interactive environments, this static nature has become a critical bottleneck, motivating a paradigm shift from scaling static models to self-evolving agents that reason, act, and continually learn from data, interactions, and experience. Such agents evolve models, memory, tools, and architecture at intra-test-time or inter-test-time stages, guided by scalar rewards, textual feedback, and single-agent or multi-agent designs.
+    </p>
+    <p class="mt-3 text-justify leading-relaxed text-gray-800">
+      This shift fundamentally changes the safety problem: when experience becomes reusable state, past events become future causes, and information that was harmless in one context may later influence decisions with greater persistence, authority, or scope. Unlike LLM and agent safety, which asks whether a response is aligned or an action is authorized, self-evolving agent safety asks whether safety properties survive across state adaptations. Existing surveys characterize agent safety through components, evolution mechanisms, or lifecycles, but rarely explain how the same influence changes its safety implications when it crosses substrate boundaries.
+    </p>
+    <p class="mt-3 text-justify leading-relaxed text-gray-800">
+      To address this gap, we present <b>SAVER</b>, a transition-centered framework that analyzes self-evolving agent safety through the relation <b>S</b>×<b>A</b>→<b>V</b>→<b>E</b>→<b>R</b>: <b>Substrate</b> identifies where reusable influence resides, <b>Adaptation</b> captures how its role changes, <b>Violation</b> characterizes the failed safety attributes, <b>Exposure</b> identifies where the failure becomes observable, and <b>Response</b> evaluates whether the influence can be contained or recovered. SAVER treats the substrate-adaptation transition as the fundamental analysis unit and traces safety attribute violations, exposure surfaces, and response mechanisms across memory, tool and workflow, multi-agent, and model-side research.
+    </p>
+  </section>
+
+  <!-- Overview -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-3">Overview</h2>
+    <figure class="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+      <img src="assets/img/fig_overview.png" alt="SAVER survey overview" class="w-full h-auto">
+      <figcaption class="mt-3 text-sm text-gray-600 leading-relaxed">
+        <b>Overview of the transition-centered survey structure.</b> The central ring couples Substrate and Adaptation as <b>S</b>×<b>A</b>, then traces Violation, Exposure, and Response as <b>V</b>→<b>E</b>→<b>R</b>. The surrounding panels preview the substrate, operation, safety-attribute, exposure-surface, and governance taxonomies. Selection and evolution semantics explain which transitions recur and how their cumulative effects can move the safety boundary.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Key insights -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-3">Key Insights</h2>
+    <ol class="list-decimal list-outside ml-5 space-y-2 text-gray-800 leading-relaxed">
+      <li>Many safety failures originate not from intrinsically harmful information, but from <b>unsafe transitions</b> that elevate the persistence, authority, or scope of otherwise legitimate state.</li>
+      <li>Existing research is effective at controlling unsafe admission and visible failures, yet lacks mechanisms for tracking <b>influence lineage</b> across migration, propagation, and recovery.</li>
+      <li>Future evaluations should move beyond endpoint-based metrics toward <b>lifecycle-level evidence</b> that verifies whether unsafe influence can be traced, contained, and prevented from re-emerging after continued adaptation.</li>
+    </ol>
+  </section>
+
+  <!-- Figures -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-3">Figures</h2>
+
+    <figure class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+      <img src="assets/img/fig_literature_flow.png" alt="Temporal distribution and SAVER flow of the literature" class="w-full h-auto">
+      <figcaption class="mt-3 text-sm text-gray-600 leading-relaxed">
+        <b>Temporal distribution and SAVER flow of the literature through 7 August 2026.</b> Left: Substrate trends and totals. Center: flows through Adaptation to compact labels for the six Violation families or four Response stages; ribbon width encodes count and nodes omit numbers. Right: terminal-family totals and quarterly bubble volume.
+      </figcaption>
+    </figure>
+
+    <figure class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+      <div class="max-w-xl mx-auto">
+        <img src="assets/img/fig_roadmap.png" alt="SAVER literature roadmap" class="w-full h-auto">
+      </div>
+      <figcaption class="mt-3 text-sm text-gray-600 leading-relaxed">
+        <b>Literature roadmap organized by the causal dependency in SAVER:</b> substrate, operation path, violation/exposure evidence, and response evidence. Exposure is folded into the incident leaves for legibility; the main text separates violation from exposure analytically.
+      </figcaption>
+    </figure>
+
+    <figure class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+      <img src="assets/img/fig_transmutation.png" alt="Cross substrate transmutation" class="w-full h-auto">
+      <figcaption class="mt-3 text-sm text-gray-600 leading-relaxed">
+        <b>Cross substrate transmutation.</b> The same sentence carries different authority depending on its carrier: from untrusted environment text to prompt context, durable memory, callable skill, and finally external effect.
+      </figcaption>
+    </figure>
+
+    <figure class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+      <img src="assets/img/fig_output2state.png" alt="From output safety to adaptive state safety" class="w-full h-auto">
+      <figcaption class="mt-3 text-sm text-gray-600 leading-relaxed">
+        <b>From output safety to adaptive state safety.</b> The three panels show how the unit of analysis expands from a single response, to action mediated by tools, to a reusable state transition that must carry safety attributes across sessions.
+      </figcaption>
+    </figure>
+
+    <figure class="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+      <img src="assets/img/fig_lattice.png" alt="Safety attribute laundering" class="w-full h-auto">
+      <figcaption class="mt-3 text-sm text-gray-600 leading-relaxed">
+        <b>Safety attribute laundering.</b> Upward authority movement or outward scope expansion requires an explicit gate; without one, a low-authority observation can become workflow guidance or action authority.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Citation -->
+  <section class="mb-10" id="citation">
+    <h2 class="text-2xl font-bold mb-3">Citation</h2>
+    <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+      <pre class="bibtex text-sm text-gray-100">@article{chen2026saver,
+  title={Safety in Self-Evolving Agents: A Survey},
+  author={Chen, Jiahao and Feng, Zhou and Ma, Oubo and Yan, Yichen and Lin, Ruixiao and Zhang, Hangtao and Du, Linkang and Li, Yiming and An, Hengyu and Liu, Jun and Li, Junhao and Xu, Naen and Du, Mengyao and Song, Yuanyi and Zhou, Chunyi and Du, Tianyu and Su, Yuan and Jin, Zehao and Ma, Qianli and Qi, Leyi and Wang, Yiming and Fu, Zhihui and Wang, Jun and Ma, Zhe and Pu, Yuwen and Li, Jinfeng and Ji, Shouling},
+  year={2026},
+  note={Preprint}
+}</pre>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm text-gray-500 border-t border-gray-200 pt-6">
+    <p>© 2026 · Safety in Self-Evolving Agents: A Survey</p>
+    <p class="mt-1"><a href="https://github.com/xaddwell/Awesome-Self-Evolving-Agent-Safety" class="text-blue-600 hover:underline">Repository</a> · <a href="https://xaddwell.github.io/" class="text-blue-600 hover:underline">xaddwell.github.io</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
