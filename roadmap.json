@@ -1,0 +1,418 @@
+{
+ "name": "SAVER Roadmap",
+ "kind": "root",
+ "color": "#9BA4B5",
+ "refs": [],
+ "children": [
+  {
+   "name": "Prompt, Context, Memory, Retrieval",
+   "kind": "lane",
+   "color": "#527CDF",
+   "refs": [],
+   "children": [
+    {
+     "name": "Write→Abstract→Retrieve; Memory Attacks; Admission Checks",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Memory Poisoning, Stealth Injection, Fragmented Bypass, Stale Retrieval, Privacy Extraction, Long Horizon Memory Drift",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "chen2024agentpoison",
+        "torres2026agentsremembermuchmemory",
+        "rao2026fragfusebypassingaccesscontrol",
+        "sunil2026memory_poisoning_agents",
+        "pulipaka2026hidden_memory",
+        "yang2026zombie_agents",
+        "zhang2026memmorph",
+        "wang2025privacy_agent_memory",
+        "zhang_2024_privacyasst_safeguarding_use",
+        "yan_2025_on_protecting_the_data_priva",
+        "liu2026simplemem",
+        "mi2026darwinian_memory",
+        "rajesh2026panini"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Admission Gating, Deletion Checks, Residual Probes, Memory Evaluation",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "lam2026ssgm",
+        "taheri2026governed_memory",
+        "kandala2026echoguard",
+        "pulipaka2026persistbench",
+        "kannabhiran_2026_consensus_validated_memory_i",
+        "shao2026misevolve",
+        "wang2026agenticeval",
+        "hu_2025_evaluating_memory_in_llm_age",
+        "luo_2026_from_storage_to_experience_a",
+        "lupascu2026elephantbroker"
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "Promote→Migrate→Activate; Stale State Attacks; Activation Gates",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Scope Drift, Delayed Activation, Instruction Laundering, Environment Drift",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "wang2026oep",
+        "zhao2026experience_driven_safety",
+        "jiang_2026_agentlab",
+        "xie2026memevobench",
+        "zhao2026amabench",
+        "yang2026zombie_agents",
+        "shao2026misevolve",
+        "wang2026oep",
+        "rao2026fragfusebypassingaccesscontrol",
+        "xing_2024_understanding_the_weakness_o",
+        "liao2026redteamcua"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Migration Logs, Activation Authorization, Rollback Handles, Replay Logs",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "ravindran2026portable_agent_memory",
+        "hatalis_2024_memory_matters_the_need_to_i",
+        "pink_2025_position_episodic_memory_is",
+        "zhao2026faithful_self_evolvers",
+        "chitan2026srm",
+        "jewell_2026_pre_execution_self_review_ca",
+        "deng_2026_taming_openclaw",
+        "souza_2025_llm_agents_for_interactive_w"
+       ],
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Tool, API, Skill, Workflow State",
+   "kind": "lane",
+   "color": "#86D4CD",
+   "refs": [],
+   "children": [
+    {
+     "name": "Authorize→Call→Persist Output; Tool Hijack; Privilege Checks",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Indirect Prompt Injection (IPI), Tool Misuse, Privilege Escalation, Cross Modal Injection, Cyber Offense Tasks",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "debenedetti2024agentdojo",
+        "zhan_2024_injecagent_benchmarking_indi",
+        "zhao2026livepi",
+        "greshake_2023_not_what_you_ve_signed_up_fo",
+        "hines_2024_defending_against_indirect_p",
+        "joseph_2025_prompt_injection_in_large_la",
+        "shi2026prompt_tool_selection",
+        "dong2026safesearch",
+        "zhou2026mcpshield",
+        "radosevich2025mcp_safety_audit",
+        "li2026stac",
+        "rao2026fragfusebypassingaccesscontrol",
+        "fang_2024_llm_agents_can_autonomously",
+        "lee_2025_mind_mapping_prompt_injectio",
+        "wang_2025_manipulating_multimodal_agen",
+        "zhang_2024_a_study_on_prompt_injection",
+        "anurin_2024_catastrophic_cyber_capabilit",
+        "bhatt_2024_cyberseceval_2_a_wide_rangin",
+        "muzsai_2024_hacksynth_llm_agent_and_eval"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Least Privilege Gates, Runtime Guards, Tool Audit Trails, Injection Detectors, SOC Orchestration",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "shi2025progent",
+        "siu2026formalizing_agent_security",
+        "zhou2026mcpshield",
+        "radosevich2025mcp_safety_audit",
+        "xiang2024guardagent",
+        "liu_2026_safeagent_a_runtime_protecti",
+        "chennabasappa_2025_llamafirewall_an_open_source",
+        "hua_2024_trustagent_towards_safe_and",
+        "podpora_2025_llm_firewall_using_validator",
+        "wang2025openguardrails",
+        "luo2025agrail",
+        "jia_2025_the_task_shield_enforcing_ta",
+        "an2025ipiguard",
+        "luo2025agentauditor",
+        "syros2026saga",
+        "chen_2025_defending_against_prompt_inj",
+        "prakash_2026_hybrid_real_time_framework_f",
+        "jain_2025_comprehensive_analysis_of_ma",
+        "panterino_2024_dynamic_moving_target_defens",
+        "alqahtani_2026_secure_autonomous_cyber_defe",
+        "ismail_2025_toward_robust_security_orche",
+        "molleti_2024_automated_threat_detection_a"
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "Compile→Reuse→Route; Skill Drift; Rollback Handles",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Boundary Drift, Stale Permission, Skill Overgeneralization, Route Coordination Drift, Planning Drift",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "zhang2026library_drift",
+        "li2026stac",
+        "wang2023voyager",
+        "jewell_2026_pre_execution_self_review_ca",
+        "shinn2023reflexion",
+        "li2026experience_evolving_memory",
+        "renze_2024_self_reflection_in_llm_agent",
+        "yang_2025_autohma_llm_efficient_task_c",
+        "zhang_2025_webpilot_a_versatile_and_aut",
+        "he_2025_plan_then_execute_an_empiric",
+        "zhuang_2025_llm_agents_can_be_choice_sup"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Versioned Artifacts, Change Records, Contextual Security Constraints, Workflow Provenance, Governance Layers",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "xia_2024_evaluation_driven_developmen",
+        "liu2025webcoach",
+        "siu2026formalizing_agent_security",
+        "souza_2025_llm_agents_for_interactive_w",
+        "mittal_2025_practical_integration_of_lar",
+        "figurelli_2026_from_talking_to_blackbox_to",
+        "chen_2025_securegov_agent_a_governance",
+        "kumar_2026_a_multi_evaluator_behavioura"
+       ],
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Shared Artifacts and Agent State",
+   "kind": "lane",
+   "color": "#E9A859",
+   "refs": [],
+   "children": [
+    {
+     "name": "Delegate→Propagate→Uptake; Shared Memory Attacks; Propagation Control",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Shared Memory Poisoning, Provenance Dilution, Agent To Agent Spread, Coordination Failure, Social Trust Drift",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "xu2026when",
+        "zhang2026embedding_defenses_fail",
+        "li_2023_camel_communicative_agents_f",
+        "lee_2026_prompt_infection_llm_to_llm",
+        "an-etal-2026-aciarena",
+        "wang2026devil_moltbook",
+        "mosquera_2025_can_llm_augmented_autonomous",
+        "gao_2025_contextual_trust_evaluation",
+        "yuan_2023_robust_multi_agent_coordinat",
+        "haez_2026_socio_normative_trustworthin",
+        "volta_2026_experimental_campaign_for_po",
+        "zhuang_2025_llm_agents_can_be_choice_sup"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Recipient Scoped Traces, Propagation Stops, Handoff Policies, Coordination Audits",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "taheri2026governed_memory",
+        "ravindran2026portable_agent_memory",
+        "siu2026formalizing_agent_security",
+        "khan2025agentsafe_governance",
+        "yu_2022_security_preserving_multi_ag",
+        "harrison_2026_protocol_mediated_execution",
+        "fernandez_2026_protocol_layer_governance_fo",
+        "gao_2025_contextual_trust_evaluation",
+        "dorri_2018_multi_agent_systems_a_survey",
+        "yang_2025_autohma_llm_efficient_task_c"
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "Copy→Reinterpret→Publish; Artifact Leakage; Contestability",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Artifact Leakage, Scope Widening, Cross Team Reuse, Data Federation Leakage",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "wang2025privacy_agent_memory",
+        "taheri2026governed_memory",
+        "reddy_2025_echoleak_the_first_real_worl",
+        "rathod_2025_privacy_and_security_challen",
+        "taheri2026governed_memory",
+        "ravindran2026portable_agent_memory",
+        "bamil_2026_a_unified_evaluation_and_gov",
+        "karim_2025_ai_agents_meet_blockchain_a",
+        "geren_2025_blockchain_for_large_languag",
+        "yang_2025_synergizing_intelligence_and"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Access Partitions, Retention Limits, Contestability Paths, Data Governance Benchmarks",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "taheri2026governed_memory",
+        "khan2025agentsafe_governance",
+        "pulipaka2026persistbench",
+        "wang2025privacy_agent_memory",
+        "rathod_2025_privacy_and_security_challen",
+        "ravindran2026portable_agent_memory",
+        "siu2026formalizing_agent_security",
+        "bamil_2026_a_unified_evaluation_and_gov",
+        "zhou_2025_datagovbench_benchmarking_ll"
+       ],
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Model and Policy State",
+   "kind": "lane",
+   "color": "#E2707C",
+   "refs": [],
+   "children": [
+    {
+     "name": "Fine-Tune→Load→Deploy; Jailbreak Transfer; Regression Gates",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Safety Regression, Latent Triggers, Unsafe Adapter Activation, Adaptive Jailbreak Search",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "lermen_2023_lora_fine_tuning_efficiently",
+        "qi2023finetuning_safety",
+        "liu_2025_a_survey_of_attacks_on_large",
+        "hong2024peta",
+        "gloaguen2025watch_your_steps",
+        "wang_2024_badagent_inserting_and_activ",
+        "peng_2024_jailbreaking_and_mitigation",
+        "hong2024peta",
+        "lermen_2023_lora_fine_tuning_efficiently",
+        "liu2025autodan_turbo",
+        "yuan2026agenticred",
+        "shu_2025_attackeval_how_to_evaluate_t",
+        "schulhoff_2023_ignore_this_title_and_hackap",
+        "salem_2023_maatphor_automated_variant_a"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Activation Manifests, Regression Tests, Deployment Gates, Domain Safety Benchmarks",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "hu2022lora",
+        "banerjee2026severa",
+        "zhao2026faithful_self_evolvers",
+        "li_2024_the_wmdp_benchmark_measuring",
+        "andriushchenko2025agentharm",
+        "guo2024redcode",
+        "lee2026mobilesafetybench",
+        "pan2023machiavelli",
+        "banerjee2026severa",
+        "khan2025agentsafe_governance",
+        "wang2025openguardrails",
+        "yuan2024rjudge",
+        "cao2025safelawbench",
+        "li_2024_legalagentbench_evaluating_l"
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "name": "Merge→Inherit→Update Preference; Lineage Loss; Model Repair",
+     "kind": "path",
+     "color": "#9BA4B5",
+     "refs": [],
+     "children": [
+      {
+       "name": "Violation→Exposure: Lineage Loss, Hidden Behavior Reuse, Adaptation Drift",
+       "kind": "violation",
+       "color": "#E2707C",
+       "refs": [
+        "zhou2025backdoor_llm_survey",
+        "hu2022lora",
+        "rando2024universal_jailbreak_backdoors",
+        "wang_2024_badagent_inserting_and_activ",
+        "romero_2024_synergistic_integration_of_l"
+       ],
+       "children": []
+      },
+      {
+       "name": "Response: Model Unlearning, Lineage Records, Residual Safety Probes, Governance Scorecards, Formal Governance",
+       "kind": "response",
+       "color": "#2F7F73",
+       "refs": [
+        "li_2024_the_wmdp_benchmark_measuring",
+        "hu2022lora",
+        "li_2024_the_wmdp_benchmark_measuring",
+        "shao2026misevolve",
+        "andriushchenko2025agentharm",
+        "guo2024redcode",
+        "triguero_2023_general_purpose_artificial_i",
+        "figurelli_2026_from_talking_to_blackbox_to",
+        "chen_2025_securegov_agent_a_governance",
+        "kumar_2026_a_multi_evaluator_behavioura"
+       ],
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -273,6 +273,51 @@
   .lat-desc { flex: 1; font-size: 0.76rem; color: var(--text-muted); background: var(--bg-alt); border-radius: 8px; padding: 0.4rem 0.7rem; }
   .lat-gate { width: 100%; margin-left: 130px; display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
   .lat-gate .line { flex: 1; border-top: 1px dashed var(--border); }
+
+  /* ---------- classification tables ---------- */
+  .ct-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.9rem; overflow: hidden; }
+  .ct-summary { cursor: pointer; display: flex; align-items: baseline; gap: 0.7rem; padding: 0.8rem 1.1rem; list-style: none; }
+  .ct-summary::-webkit-details-marker { display: none; }
+  .ct-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; flex: 1; }
+  .ct-cnt { color: var(--text-muted); font-size: 0.76rem; font-family: 'JetBrains Mono', monospace; }
+  .ct-body { padding: 0 0.9rem 0.9rem; }
+  .ct-scroll { overflow: auto; max-height: 560px; border: 1px solid var(--border); border-radius: 10px; }
+  table.ct { border-collapse: collapse; width: 100%; font-size: 0.78rem; line-height: 1.45; }
+  table.ct th, table.ct td { padding: 0.38rem 0.55rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  table.ct thead th {
+    position: sticky; top: 0; z-index: 2;
+    background: var(--bg-card); font-size: 0.72rem; letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--border);
+  }
+  table.ct thead th[style*="--hc"] { background: color-mix(in srgb, var(--hc, #E9EEF5) 62%, var(--bg-card)); }
+  table.ct tr.tgroup td {
+    background: color-mix(in srgb, var(--hc, #E9EEF5) 34%, var(--bg-card));
+    font-weight: 600; font-size: 0.76rem; letter-spacing: 0.02em;
+  }
+  table.ct td[style*="--hc"] { background: color-mix(in srgb, var(--hc, #E9EEF5) 30%, var(--bg-card)); }
+  .role { color: color-mix(in srgb, var(--rc, #7A8B94) 72%, var(--text)); font-weight: 600; white-space: nowrap; }
+  .target { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+  .chip { display: inline-block; background: color-mix(in srgb, var(--cc, #E9EFF2) 42%, transparent); border: 1px solid color-mix(in srgb, var(--cc, #E9EFF2) 62%, transparent); color: var(--text); padding: 0 6px; border-radius: 5px; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+  .cov { font-size: 0.85rem; color: var(--accent); }
+  .tref { font-size: 0.66rem; color: var(--accent); margin-left: 0.15rem; }
+  .ct-caption { font-size: 0.78rem; color: var(--text-muted); margin: 0.55rem 0.1rem 0; line-height: 1.6; }
+
+  /* ---------- roadmap tree ---------- */
+  #roadmapChart { width: 100%; height: 720px; }
+
+  /* ---------- overflow / contrast hardening ---------- */
+  p, li, td, figcaption, .viz-sub, .fn-label, .lat-desc, .scope-lead { overflow-wrap: anywhere; }
+  .fn-row { grid-template-columns: minmax(130px, 200px) 1fr auto; }
+  .fn-label { font-size: 0.78rem; line-height: 1.4; }
+  .viz-legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center; font-size: 0.74rem; color: var(--text-muted); margin-top: 0.4rem; font-family: 'JetBrains Mono', monospace; }
+  .viz-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 0.3rem; }
+  @media (max-width: 640px) {
+    .fn-row { grid-template-columns: 1fr; gap: 4px; }
+    .fn-label { text-align: left; }
+    .lat-name { width: auto; text-align: left; }
+    .lat-level { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+    .lat-gate { margin-left: 0; }
+  }
 </style>
 </head>
 <body>
@@ -283,7 +328,9 @@
     <div class="nav-links">
       <a class="nav-link" href="#overview">Overview</a>
       <a class="nav-link" href="#glance">At a Glance</a>
+      <a class="nav-link" href="#roadmap">Roadmap</a>
       <a class="nav-link" href="#papers">Papers</a>
+      <a class="nav-link" href="#tables">Tables</a>
       <a class="nav-link" href="papers.html">Paper Reader</a>
       <a class="nav-link" href="#citation">Citation</a>
       <a class="nav-link" href="https://github.com/xaddwell/awesome-self-evolving-agent-safety" target="_blank" rel="noopener">GitHub</a>
@@ -432,7 +479,17 @@
     <div class="viz-grid">
       <div class="viz-card viz-full"><h3>Papers per Year</h3><p class="viz-sub">coded records with usable time metadata, 2023 through 7 August 2026</p><div id="vz-year" class="viz-chart"></div></div>
       <div class="viz-card"><h3>Taxonomy — click a layer to drill in</h3><p class="viz-sub">Substrate → Adaptation → terminal family</p><div id="vz-sun" class="viz-chart viz-tall"></div></div>
-      <div class="viz-card"><h3>SAVER Flow</h3><p class="viz-sub">Substrate → Adaptation → Violation / Response</p><div id="vz-sankey" class="viz-chart viz-tall"></div></div>
+      <div class="viz-card"><h3>SAVER Flow</h3><p class="viz-sub">Substrate → Adaptation → Violation / Response</p><div id="vz-sankey" class="viz-chart viz-tall"></div>
+        <div class="viz-legend">
+          <span><i style="background:#527CDF"></i>Memory</span>
+          <span><i style="background:#E9A859"></i>Workflow</span>
+          <span><i style="background:#86D4CD"></i>Tools &amp; Skills</span>
+          <span><i style="background:#E2707C"></i>Model</span>
+          <span><i style="background:#9BA4B5"></i>Adaptation operation</span>
+          <span><i style="background:#E2707C"></i>Violation</span>
+          <span><i style="background:#2F7F73"></i>Response</span>
+        </div>
+      </div>
       <div class="viz-card"><h3>Record Origin</h3><p class="viz-sub">registry works vs. reviewed paper-card supplements</p><div id="vz-donut" class="viz-chart"></div></div>
       <div class="viz-card"><h3>Terminal Families</h3><p class="viz-sub">six Violation families and four Response stages</p><div id="vz-bar" class="viz-chart viz-tall"></div></div>
     </div>
@@ -514,6 +571,27 @@
         <figcaption>Upward authority movement requires an explicit gate; without one, a low-authority observation can quietly become workflow guidance or action authority.</figcaption>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="inner">
+    <h2 class="sh">Literature Roadmap</h2>
+    <p class="scope-lead">The survey's roadmap, drawn as an interactive tree from the same data as the paper figure: four substrate lanes → recurrent operation paths → violation/exposure and response leaves. Hover a leaf to see its reference papers; click lanes and paths to expand or collapse.</p>
+    <div class="viz-card">
+      <div id="roadmapChart"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSIFICATION TABLES -->
+<section id="tables">
+  <div class="inner">
+    <h2 class="sh">Classification Tables</h2>
+    <p class="scope-lead">The paper's literature-index and coverage tables, converted to live HTML directly from the manuscript LaTeX sources — no screenshots. Reference markers link to the arXiv pages of the cited works.</p>
+    <div id="tableBlocks"><p class="empty">Loading tables…</p></div>
+    <noscript><p class="empty">The classification tables render from <code>tables.json</code> with JavaScript.</p></noscript>
   </div>
 </section>
 
@@ -720,15 +798,15 @@
     });
     renderPapers(); gotoPapers();
   }
+  function chartColors() {
+    var dark = document.documentElement.classList.contains('dark');
+    return dark
+      ? { text: '#E8EAF2', muted: '#98A0B5', border: '#424246', card: '#212529', accent: '#3B82F6' }
+      : { text: '#111628', muted: '#4A5468', border: '#C9CEDD', card: '#FFFFFF', accent: '#2563EB' };
+  }
   function renderCharts() {
     if (!PAPERS || typeof echarts === 'undefined') return;
-    var c = {
-      text: getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#E8EAF2',
-      muted: getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim() || '#98A0B5',
-      border: getComputedStyle(document.documentElement).getPropertyValue('--border').trim() || '#424246',
-      card: getComputedStyle(document.documentElement).getPropertyValue('--bg-card').trim() || '#212529',
-      accent: '#3B82F6'
-    };
+    var c = chartColors();
     function axis(extra) {
       var base = { axisLine: { lineStyle: { color: c.border } }, axisLabel: { color: c.muted }, splitLine: { lineStyle: { color: 'rgba(127,127,127,0.12)' } } };
       for (var k in (extra || {})) base[k] = extra[k];
@@ -773,9 +851,15 @@
     insts['vz-sun'].setOption({
       tooltip: { formatter: function (p) { return p.name + ': ' + (p.value || ''); } },
       series: [{
-        type: 'sunburst', radius: ['8%', '95%'], data: sunData, label: { color: '#fff', fontSize: 10, minAngle: 10 },
+        type: 'sunburst', radius: ['8%', '95%'], data: sunData,
+        label: { color: c.text, fontSize: 10, minAngle: 10, textShadowBlur: 4, textShadowColor: 'rgba(0,0,0,0.55)' },
         itemStyle: { borderColor: c.card, borderWidth: 2 }, emphasis: { focus: 'ancestor' },
-        levels: [{}, { r0: '8%', r: '42%', label: { rotate: 'radial' } }, { r0: '42%', r: '68%', label: { align: 'right', fontSize: 9 } }, { r0: '68%', r: '92%', label: { align: 'right', fontSize: 8, color: c.muted } }]
+        levels: [
+          {},
+          { r0: '8%', r: '42%', label: { rotate: 'radial' } },
+          { r0: '42%', r: '68%', label: { align: 'right', fontSize: 9 } },
+          { r0: '68%', r: '92%', label: { align: 'right', fontSize: 8, color: c.muted } }
+        ]
       }]
     }, true);
 
@@ -797,10 +881,15 @@
       return { source: parts[0], target: parts[1], value: links[k] };
     });
     insts['vz-sankey'].setOption({
-      tooltip: { trigger: 'item' },
-      series: [{ type: 'sankey', data: sn, links: sl, left: 8, right: 24, top: 12, bottom: 12,
-        nodeWidth: 14, nodeGap: 10, lineStyle: { color: 'gradient', opacity: 0.32, curveness: 0.5 },
-        label: { color: c.text, fontSize: 10 }, emphasis: { focus: 'adjacency' } }]
+      tooltip: { trigger: 'item', formatter: function (p) { return p.dataType === 'edge' ? p.data.source + ' → ' + p.data.target + ': ' + p.data.value : p.name + ': ' + (p.value || ''); } },
+      series: [{
+        type: 'sankey', data: sn, links: sl, left: 8, right: 90, top: 12, bottom: 12,
+        nodeWidth: 16, nodeGap: 12,
+        lineStyle: { color: 'gradient', opacity: 0.32, curveness: 0.5 },
+        label: { show: true, position: 'right', color: c.text, fontSize: 11, fontWeight: 600 },
+        emphasis: { focus: 'adjacency' },
+        nodeAlign: 'justify'
+      }]
     }, true);
 
     /* record origin donut */
@@ -846,7 +935,107 @@
     el.innerHTML = items.join('') || '<li class="empty">Related works will appear here.</li>';
   }
 
-  /* ---------- SAVER diagram ---------- */
+  /* ---------- roadmap tree ---------- */
+  var ROADMAP = null;
+  var roadmapInst = null;
+  function renderRoadmap() {
+    var el = document.getElementById('roadmapChart');
+    if (!el || !ROADMAP || typeof echarts === 'undefined') return;
+    if (!roadmapInst) roadmapInst = echarts.init(el);
+    var c = chartColors();
+    function paperRef(k) {
+      var p = PAPERS.filter(function (x) { return x.citation_key === k; })[0];
+      if (!p) return esc(k);
+      var href = p.arxiv_id ? 'https://arxiv.org/abs/' + p.arxiv_id : (p.url || '#');
+      return '<a href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + '</a> <span style="opacity:.6">(' + (p.year || 'n.d.') + ')</span>';
+    }
+    function toNode(n) {
+      var c2 = chartColors();
+      var dark = document.documentElement.classList.contains('dark');
+      var leafColor = n.kind === 'violation' ? (dark ? '#EF8D99' : '#C0392B') : (dark ? '#4FC3B4' : '#1F6F63');
+      var item = {
+        name: n.name,
+        itemStyle: { color: n.color || '#9BA4B5', borderColor: c2.card },
+        symbolSize: 0,
+        label: { color: c2.text, fontSize: 11, position: 'right' },
+        lineStyle: { color: n.color || '#9BA4B5', width: 1.4 }
+      };
+      if (n.kind === 'lane') { item.label = { color: n.color || c2.text, fontSize: 12, fontWeight: 700 }; }
+      if (n.kind === 'path') { item.label = { color: c2.text, fontSize: 11, fontWeight: 600, position: 'right' }; }
+      if (n.kind === 'violation' || n.kind === 'response') {
+        item.label = { color: leafColor, fontSize: 10.5, position: 'right' };
+        var refs = (n.refs || []).map(paperRef).join('<br>');
+        item.tooltip = { formatter: '<div style="max-width:420px"><b>' + esc(n.name) + '</b><br><br>' + refs + '</div>' };
+      }
+      if (n.children && n.children.length) item.children = n.children.map(toNode);
+      return item;
+    }
+    roadmapInst.setOption({
+      tooltip: { confine: true },
+      series: [{
+        type: 'tree', data: [toNode(ROADMAP)], orient: 'LR', layout: 'orthogonal',
+        top: '2%', left: '1%', bottom: '2%', right: '16%',
+        symbol: 'emptyCircle', symbolSize: 0, roam: true,
+        expandAndCollapse: true, initialTreeDepth: 2,
+        edgeShape: 'curve', edgeForkPosition: '55%',
+        label: { position: 'right', fontSize: 11, color: c.text },
+        leaves: { label: { position: 'right', fontSize: 10.5 } },
+        emphasis: { focus: 'descendant' },
+        animationDuration: 450, animationDurationUpdate: 500
+      }]
+    }, true);
+  }
+
+  /* ---------- classification tables ---------- */
+  var TABLES = null;
+  var TABLE_TITLES = {
+    substrate_literature_index: 'Substrates — state carriers in the literature',
+    adaptation_literature_index: 'Adaptation — state-change operations',
+    violation_literature_index: 'Violations — safety attribute failures',
+    violation_exposure_literature_index: 'Violation → Exposure bridge',
+    response_literature_index: 'Response — governance and recovery',
+    evaluation_literature_index: 'Evaluation and benchmarks',
+    lifecycle_coverage_matrix: 'Lifecycle coverage of adjacent surveys',
+    benchmark_saver_coverage_matrix: 'Benchmark coverage along the reusable-state lifecycle'
+  };
+  function refsHtml(refs) {
+    if (!refs || !refs.length) return '';
+    return refs.map(function (k) {
+      var p = PAPERS.filter(function (x) { return x.citation_key === k; })[0];
+      if (p && p.arxiv_id) return '<a class="tref" href="https://arxiv.org/abs/' + p.arxiv_id + '" target="_blank" rel="noopener" title="' + esc(p.title) + ' (' + (p.year || 'n.d.') + ')">[' + p.arxiv_id + ']</a>';
+      if (p && p.url) return '<a class="tref" href="' + esc(p.url) + '" target="_blank" rel="noopener" title="' + esc(p.title) + '">[ref]</a>';
+      return '<span class="tref" title="' + esc(k) + '">[' + esc(k) + ']</span>';
+    }).join('');
+  }
+  function renderTables() {
+    var box = document.getElementById('tableBlocks');
+    if (!box || !TABLES) return;
+    box.innerHTML = TABLES.map(function (t) {
+      var rows = '';
+      if (t.header) {
+        rows += '<thead><tr>' + t.header.cells.map(function (h) {
+          return '<th' + (h.head ? ' style="--hc:' + h.head + '"' : '') + '>' + h.html + refsHtml(h.refs) + '</th>';
+        }).join('') + '</tr></thead>';
+      }
+      rows += '<tbody>';
+      t.rows.forEach(function (r) {
+        if (r.type === 'group') {
+          rows += '<tr class="tgroup"><td colspan="' + (r.span || 1) + '" style="--hc:' + r.color + '">' + r.text + '</td></tr>';
+        } else {
+          rows += '<tr>' + r.cells.map(function (cell) {
+            return '<td' + (cell.colspan > 1 ? ' colspan="' + cell.colspan + '"' : '') + (cell.head ? ' style="--hc:' + cell.head + '"' : '') + '>' + cell.html + refsHtml(cell.refs) + '</td>';
+          }).join('') + '</tr>';
+        }
+      });
+      rows += '</tbody>';
+      return '<details class="ct-block" id="tab-' + esc(t.id) + '">'
+        + '<summary class="ct-summary"><span class="ct-title">' + esc(TABLE_TITLES[t.id] || t.id) + '</span><span class="ct-cnt">' + t.rows.length + ' rows</span></summary>'
+        + '<div class="ct-body"><div class="ct-scroll"><table class="ct">' + rows + '</table></div>'
+        + '<p class="ct-caption">' + t.caption + '</p></div></details>';
+    }).join('');
+  }
+
+
   (function () {
     var DEFS = {
       s: { k: 'S · Substrate', q: 'Where does the reusable influence reside?', d: 'The carrier and its authority regime: prompt context, memory entry, retrieval chunk, tool binding, workflow rule, shared artifact, adapter, or policy state.' },
@@ -901,16 +1090,25 @@
   });
 
   function boot() {
-    var jobs = [fetch('papers.json').then(function (r) { return r.json(); }), fetch('stats.json').then(function (r) { return r.json(); }).catch(function () { return null; })];
+    var jobs = [
+      fetch('papers.json').then(function (r) { return r.json(); }),
+      fetch('stats.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('tables.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('roadmap.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+    ];
     Promise.all(jobs).then(function (res) {
       PAPERS = res[0];
+      TABLES = res[2];
+      ROADMAP = res[3];
       renderPapers(); renderReading(); renderCharts(); renderFunnel(res[1]);
+      renderRoadmap(); renderTables();
       var stCoded = document.getElementById('stCoded'); if (stCoded) stCoded.textContent = fmt(PAPERS.length);
     }).catch(function () {
       var el = document.getElementById('paperBlocks');
       if (el) el.innerHTML = '<p class="empty">Failed to load papers.json.</p>';
     });
-    window.addEventListener('resize', function () { Object.keys(insts).forEach(function (k) { insts[k].resize(); }); });
+    window.addEventListener('resize', function () { Object.keys(insts).forEach(function (k) { insts[k].resize(); }); if (roadmapInst) roadmapInst.resize(); });
+    new MutationObserver(function () { renderCharts(); renderRoadmap(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   }
   boot();
 })();
