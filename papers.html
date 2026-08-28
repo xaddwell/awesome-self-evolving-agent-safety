@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Reader — Safety in Self-Evolving Agents</title>
+<meta name="description" content="Browse the 619 coded papers of the self-evolving agent safety survey, filterable by SAVER substrate, adaptation operation, outcome family, and origin.">
+<meta property="og:title" content="Paper Reader — Safety in Self-Evolving Agents Survey">
+<meta property="og:description" content="Browse the 619 coded papers of the self-evolving agent safety survey with SAVER filters.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFBFE; --bg-alt: #F0F2F8; --bg-card: #FFFFFF; --bg-code: #F3F4F9;
+    --accent: #2563EB; --accent-rgb: 37, 99, 235;
+    --text: #111628; --text-muted: #4B5466; --border: #DDE0ED;
+    --row-hover: rgba(37, 99, 235, 0.06);
+    --c-model: #C24755; --c-memory: #4067C4; --c-workflow: #C98A3D; --c-tools: #4BA79D;
+    --c-violation: #D95B66; --c-response: #2F7F73;
+    --shadow-card: 0 10px 32px rgba(17, 22, 40, 0.10);
+  }
+  .dark {
+    --bg: #282C34; --bg-alt: #2D323B; --bg-card: #212529; --bg-code: #2C3237;
+    --accent: #3B82F6; --accent-rgb: 59, 130, 246;
+    --text: #E8EAF2; --text-muted: #98A0B5; --border: #424246;
+    --row-hover: rgba(59, 130, 246, 0.08);
+    --c-model: #E2707C; --c-memory: #527CDF; --c-workflow: #E9A859; --c-tools: #86D4CD;
+    --shadow-card: 0 14px 36px rgba(0, 0, 0, 0.38);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0.85rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .nav-brand { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.98rem; color: var(--accent); }
+  .nav-links { display: flex; align-items: center; gap: 1.1rem; }
+  .nav-link { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
+  .nav-link:hover { color: var(--accent); text-decoration: none; }
+  .icon-btn { background: none; border: 1px solid var(--border); border-radius: 8px; color: var(--text-muted); cursor: pointer; padding: 5px 9px; font-size: 0.8rem; font-family: inherit; }
+  .icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 2.4rem 1.5rem 4rem; }
+  header.hero { margin-bottom: 1.6rem; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: 1.85rem; font-weight: 700; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
+  .hero-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0; max-width: 760px; }
+
+  .controls { margin: 1.6rem 0 1.2rem; }
+  .search-row { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+  .search-input {
+    flex: 1; min-width: 260px; background: var(--bg-card); color: var(--text);
+    border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 1rem; font-size: 0.95rem; font-family: inherit;
+  }
+  .search-input:focus { outline: none; border-color: var(--accent); }
+  .stats { color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+  .sort-sel { border: 1px solid var(--border); background: var(--bg-card); color: var(--text); border-radius: 10px; padding: 0.55rem 0.7rem; font-size: 0.85rem; font-family: inherit; cursor: pointer; }
+
+  .filter-groups { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+  .fg-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.06em; }
+  .pills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .pill {
+    border: 1px solid var(--border); background: var(--bg-card); color: var(--text-muted);
+    border-radius: 999px; padding: 0.28rem 0.8rem; font-size: 0.78rem; font-weight: 500;
+    cursor: pointer; font-family: 'JetBrains Mono', monospace; transition: all .15s;
+  }
+  .pill:hover { border-color: var(--pill-c, var(--accent)); color: var(--pill-c, var(--accent)); }
+  .pill.active { background: var(--pill-c, var(--accent)); border-color: var(--pill-c, var(--accent)); color: #fff; }
+
+  .cards { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.4rem; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0.95rem 1.15rem; border-left: 3px solid var(--lc, var(--accent));
+  }
+  .card.hidden { display: none; }
+  .card-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; margin: 0 0 0.3rem; line-height: 1.4; }
+  .card-title a { color: var(--text); }
+  .card-title a:hover { color: var(--lc, var(--accent)); text-decoration: none; }
+  .card-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; font-family: 'JetBrains Mono', monospace; }
+  .badge {
+    display: inline-block; font-size: 0.7rem; font-weight: 600; font-family: 'JetBrains Mono', monospace;
+    padding: 1px 7px; border-radius: 4px; margin-right: 0.4rem;
+    background: color-mix(in srgb, var(--bc, var(--accent)) 14%, transparent); color: var(--bc, var(--accent));
+    border: 1px solid color-mix(in srgb, var(--bc, var(--accent)) 35%, transparent);
+  }
+  .badge.muted { background: var(--bg-alt); color: var(--text-muted); border-color: var(--border); }
+  .empty { text-align: center; color: var(--text-muted); padding: 3rem 1rem; }
+  footer { padding: 2rem 1.5rem 3rem; text-align: center; color: var(--text-muted); font-size: 0.82rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">SAVER · Paper Reader</a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="index.html#glance">At a Glance</a>
+      <a class="nav-link" href="https://github.com/xaddwell/awesome-self-evolving-agent-safety" target="_blank" rel="noopener">GitHub</a>
+      <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>Paper Reader</h1>
+    <p class="hero-sub">The 619 coded records of the self-evolving agent safety survey. Every record carries its <b>SAVER</b> coding — substrate, adaptation operation, and outcome family — plus its registry origin. Filter by any field, combine filters freely, and open the linked source.</p>
+  </header>
+
+  <div class="controls">
+    <div class="search-row">
+      <input id="q" class="search-input" type="search" placeholder="Search title, citation key, arXiv id…" aria-label="Search papers" autocomplete="off">
+      <span class="stats" id="stats">619 papers</span>
+      <select id="sort" class="sort-sel" aria-label="Sort papers">
+        <option value="title">Title A–Z</option>
+        <option value="date-desc" selected>Newest first</option>
+        <option value="date-asc">Oldest first</option>
+      </select>
+    </div>
+    <div class="filter-groups">
+      <div class="fg-label">Substrate</div>
+      <div class="pills" id="fSubstrate"></div>
+      <div class="fg-label">Adaptation</div>
+      <div class="pills" id="fAdaptation"></div>
+      <div class="fg-label">Outcome</div>
+      <div class="pills" id="fOutcome"></div>
+      <div class="fg-label">Terminal family</div>
+      <div class="pills" id="fDetail"></div>
+      <div class="fg-label">Origin</div>
+      <div class="pills" id="fOrigin"></div>
+    </div>
+  </div>
+
+  <div class="cards" id="cards"></div>
+  <noscript><p class="empty">This reader renders from <code>papers.json</code> with JavaScript.</p></noscript>
+</div>
+
+<footer>
+  <p>© 2026 · Safety in Self-Evolving Agents: A Survey · <a href="index.html">Project page</a></p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var THEME_KEY = 'saver-theme';
+  var root = document.documentElement;
+  var btn = document.getElementById('themeBtn');
+  function applyTheme(t) {
+    if (t === 'light') { root.classList.remove('dark'); btn.textContent = '☾'; }
+    else { root.classList.add('dark'); btn.textContent = '☀'; }
+    try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
+  applyTheme(saved || 'dark');
+  if (btn) btn.addEventListener('click', function () {
+    applyTheme(root.classList.contains('dark') ? 'light' : 'dark');
+  });
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (ch) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+    });
+  }
+  function fmt(n) { return (n || 0).toLocaleString('en-US'); }
+
+  var SUB_COLOR = { 'Model': 'var(--c-model)', 'Memory': 'var(--c-memory)', 'Workflow': 'var(--c-workflow)', 'Tools & Skills': 'var(--c-tools)' };
+  var SUB_HEX = { 'Model': '#E2707C', 'Memory': '#527CDF', 'Workflow': '#E9A859', 'Tools & Skills': '#86D4CD' };
+  var SUB_ORDER = ['Workflow', 'Memory', 'Tools & Skills', 'Model'];
+  var ADAPT_ORDER = ['Add', 'Abstract', 'Activate', 'Modify', 'Forget', 'Propagate', 'Migrate'];
+  var VIOLATIONS = ['Provenance Loss', 'Authority Escalation', 'Privacy & Purpose', 'Persistent Descendants', 'Operational Integrity', 'Model Safety Regression'];
+  var RESPONSES = ['Preventive Governance', 'Transition & Activation', 'Monitoring & Containment', 'Recovery & Contestability'];
+
+  var PAPERS = [];
+  var q = '';
+  var sortMode = 'date-desc';
+  var filters = { substrate: null, adaptation: null, outcome: null, detail: null, origin: null };
+
+  function href(p) {
+    if (p.url && /^https?:\/\//.test(p.url)) return p.url;
+    if (p.arxiv_id) return 'https://arxiv.org/abs/' + p.arxiv_id;
+    if (p.doi && /^10\./.test(p.doi)) return 'https://doi.org/' + p.doi;
+    return '#';
+  }
+  function meta(p) {
+    var parts = [];
+    if (p.arxiv_id) parts.push('arXiv ' + p.arxiv_id);
+    if (p.doi && /^10\./.test(p.doi)) parts.push('doi:' + p.doi);
+    if (p.citation_key) parts.push(p.citation_key);
+    return parts.join(' · ') || 'no identifier';
+  }
+
+  function renderFilters() {
+    function group(field, order) {
+      var counts = {};
+      PAPERS.forEach(function (p) { var v = p[field]; if (v) counts[v] = (counts[v] || 0) + 1; });
+      var keys = order ? order.filter(function (k) { return counts[k]; }) : Object.keys(counts).sort();
+      keys = keys.concat(Object.keys(counts).filter(function (k) { return keys.indexOf(k) < 0; }));
+      return keys;
+    }
+    function paint(el, field, keys, colorOf) {
+      el.innerHTML = '<button class="pill active" data-v="">All</button>' + keys.map(function (k) {
+        return '<button class="pill" data-v="' + esc(k) + '"' + (colorOf ? ' style="--pill-c:' + colorOf(k) + '"' : '') + '>' + esc(k) + ' (' + fmt(PAPERS.filter(function (p) { return p[field] === k; }).length) + ')</button>';
+      }).join('');
+      el.querySelectorAll('.pill').forEach(function (b) {
+        b.addEventListener('click', function () {
+          el.querySelectorAll('.pill').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          filters[field] = b.getAttribute('data-v') || null;
+          renderCards();
+        });
+      });
+    }
+    paint(document.getElementById('fSubstrate'), 'substrate', group('substrate', SUB_ORDER), function (k) { return SUB_COLOR[k] || 'var(--accent)'; });
+    paint(document.getElementById('fAdaptation'), 'adaptation', group('adaptation', ADAPT_ORDER));
+    paint(document.getElementById('fOutcome'), 'outcome', group('outcome', null), function (k) { return k === 'Violation' ? 'var(--c-violation)' : 'var(--c-response)'; });
+    paint(document.getElementById('fDetail'), 'outcome_detail', group('outcome_detail', VIOLATIONS.concat(RESPONSES)));
+    paint(document.getElementById('fOrigin'), 'record_origin', group('record_origin', ['registry', 'reviewed_card']));
+  }
+
+  function matches(p) {
+    if (filters.substrate && p.substrate !== filters.substrate) return false;
+    if (filters.adaptation && p.adaptation !== filters.adaptation) return false;
+    if (filters.outcome && p.outcome !== filters.outcome) return false;
+    if (filters.detail && p.outcome_detail !== filters.detail) return false;
+    if (filters.origin && p.record_origin !== filters.origin) return false;
+    if (!q) return true;
+    var hay = (p.title + ' ' + (p.citation_key || '') + ' ' + (p.arxiv_id || '') + ' ' + (p.doi || '')).toLowerCase();
+    return q.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
+  }
+
+  function renderCards() {
+    var box = document.getElementById('cards');
+    var stats = document.getElementById('stats');
+    var list = PAPERS.filter(matches);
+    if (sortMode === 'date-desc') list.sort(function (a, b) { return (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title); });
+    else if (sortMode === 'date-asc') list.sort(function (a, b) { return (a.year || 0) - (b.year || 0) || a.title.localeCompare(b.title); });
+    else list.sort(function (a, b) { return a.title.localeCompare(b.title); });
+    stats.textContent = fmt(list.length) + ' / ' + fmt(PAPERS.length) + ' papers';
+
+    box.innerHTML = list.slice(0, 300).map(function (p) {
+      var lc = SUB_COLOR[p.substrate] || 'var(--accent)';
+      return '<div class="card" style="--lc:' + lc + '">'
+        + '<h3 class="card-title"><a href="' + esc(href(p)) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a></h3>'
+        + '<div class="card-meta">' + esc(meta(p)) + ' · ' + (p.year || 'n.d.') + '</div>'
+        + '<div>'
+        + '<span class="badge" style="--bc:' + (SUB_HEX[p.substrate] || '#3B82F6') + '">' + esc(p.substrate || '?') + '</span>'
+        + '<span class="badge muted">' + esc(p.adaptation || '?') + '</span>'
+        + '<span class="badge" style="--bc:' + (p.outcome === 'Violation' ? 'var(--c-violation)' : 'var(--c-response)') + '">' + esc(p.outcome || '?') + '</span>'
+        + '<span class="badge muted">' + esc(p.outcome_detail || '?') + '</span>'
+        + (p.record_origin === 'reviewed_card' ? '<span class="badge" style="--bc:#8B5CF6">card</span>' : '<span class="badge" style="--bc:#3B82F6">registry</span>')
+        + '</div></div>';
+    }).join('')
+    + (list.length > 300 ? '<p class="empty">Showing first 300 of ' + fmt(list.length) + ' matches — refine the filters above.</p>' : '')
+    + (list.length === 0 ? '<p class="empty">No papers match the current filters.</p>' : '');
+  }
+
+  document.getElementById('q').addEventListener('input', function () { q = this.value.trim().toLowerCase(); renderCards(); });
+  document.getElementById('sort').addEventListener('change', function () { sortMode = this.value; renderCards(); });
+
+  fetch('papers.json').then(function (r) { return r.json(); }).then(function (d) {
+    PAPERS = d;
+    renderFilters();
+    renderCards();
+  }).catch(function () {
+    document.getElementById('cards').innerHTML = '<p class="empty">Failed to load papers.json.</p>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 # Awesome Self-Evolving Agent Safety
 
-A survey repository for **"Safety in Self-Evolving Agents: A Survey"** — a transition-centered study of how reusable influence persists, moves, and changes role across carriers in self-evolving agents.
+Project page and repository for **"Safety in Self-Evolving Agents: A Survey"** — a transition-centered study of how reusable influence persists, moves, and changes role across carriers in self-evolving agents, organized by the **SAVER** framework (`S×A → V→E→R`).
 
-[![Stars](https://img.shields.io/github/stars/xaddwell/Awesome-Self-Evolving-Agent-Safety?style=flat&label=Stars&color=2563eb)](https://github.com/xaddwell/Awesome-Self-Evolving-Agent-Safety)
+[![Stars](https://img.shields.io/github/stars/xaddwell/Awesome-Self-Evolving-Agent-Safety?style=flat&label=Stars&color=2563eb)](https://github.com/xaddwell/awesome-self-evolving-agent-safety)
 [![Homepage](https://img.shields.io/badge/Homepage-xaddwell.github.io-blue)](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/)
 
 ## Paper
@@ -11,36 +11,50 @@ A survey repository for **"Safety in Self-Evolving Agents: A Survey"** — a tra
 - **Authors:** Jiahao Chen, Zhou Feng, Oubo Ma, Yichen Yan, Ruixiao Lin, Hangtao Zhang, Linkang Du, Yiming Li, Hengyu An, Jun Liu, Junhao Li, Naen Xu, Mengyao Du, Yuanyi Song, Chunyi Zhou, Tianyu Du, Yuan Su, Zehao Jin, Qianli Ma, Leyi Qi, Yiming Wang, Zhihui Fu, Jun Wang, Zhe Ma, Yuwen Pu, Jinfeng Li, Shouling Ji
 - **PDF:** [`assets/SAVER-Survey.pdf`](assets/SAVER-Survey.pdf)
 
-## Overview
+## What Is SAVER?
 
-Self-evolving agents turn observations, feedback, and execution traces into reusable state that shapes later behavior. SAVER is a transition-centered framework that analyzes this safety problem through the relation **S×A → V→E→R**: Substrate and Adaptation identify the carrier-operation pair that changes reusable state, while Violation, Exposure, and Response connect an internal safety failure to observable evidence and the mechanism claimed to contain or repair it.
+Self-evolving agents turn observations, feedback, and execution traces into reusable state that shapes later behavior. SAVER analyzes this safety problem through one relation:
 
-![Overview](assets/img/fig_overview.png)
+- **S · Substrate** — where does the reusable influence reside?
+- **A · Adaptation** — how does its role change?
+- **V · Violation** — which safety attribute fails to travel?
+- **E · Exposure** — where does the failure become observable?
+- **R · Response** — what can contain or repair it?
 
-## Key Insights
+## Interactive Project Page
 
-1. Many safety failures originate not from harmful information, but from unsafe transitions that elevate the persistence, authority, or scope of otherwise legitimate state.
-2. Existing research is effective at controlling unsafe admission and visible failures, yet lacks mechanisms for tracking influence lineage across migration, propagation, and recovery.
-3. Future evaluations should move beyond endpoint-based metrics toward lifecycle-level evidence that unsafe influence is traced, contained, and prevented from re-emerging after continued adaptation.
+The page at [xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/) renders everything live from `papers.json`:
 
-## Figures
-
-- **Temporal distribution and SAVER flow of the literature** through 7 August 2026 — [`assets/img/fig_literature_flow.png`](assets/img/fig_literature_flow.png)
-- **SAVER literature roadmap** (substrate → operation path → violation/exposure and response evidence) — [`assets/img/fig_roadmap.png`](assets/img/fig_roadmap.png)
-- **Cross substrate transmutation** — [`assets/img/fig_transmutation.png`](assets/img/fig_transmutation.png)
-- **From output safety to adaptive state safety** — [`assets/img/fig_output2state.png`](assets/img/fig_output2state.png)
-- **Safety attribute laundering lattice** — [`assets/img/fig_lattice.png`](assets/img/fig_lattice.png)
+- corpus funnel (screened registry → unique works → coded pool → Figure 2 window);
+- papers-per-year trend, SAVER taxonomy sunburst, SAVER flow sankey, record-origin donut, and terminal-family bars (ECharts);
+- a clickable SAVER relation diagram;
+- a searchable, collapsible paper index grouped by substrate lane and adaptation operation;
+- a full **Paper Reader** ([`papers.html`](papers.html)) with multi-field filters.
 
 ## Repository Structure
 
 ```
 .
-├── index.html              # Project page (mirrored on xaddwell.github.io)
+├── index.html                  # Project page
+├── papers.html                 # Paper Reader (search + filters)
+├── papers.json                 # 619 coded records (generated)
+├── stats.json                  # Corpus aggregates (generated)
 ├── assets/
-│   ├── SAVER-Survey.pdf    # Paper PDF
-│   ├── saver.bib           # BibTeX entry
-│   └── img/                # Figure images exported from the LaTeX sources
+│   └── SAVER-Survey.pdf        # Paper PDF
+├── data/
+│   └── saver_record_literature.csv   # Coding source of truth (same file that drives the manuscript Figure 2)
+├── tools/
+│   └── gen_papers_json.py      # CSV -> papers.json / stats.json generator
+├── saver.bib                   # BibTeX entry
 └── README.md
+```
+
+## Updating the Data
+
+The coding CSV is the single source of truth. After updating it, regenerate the page data:
+
+```bash
+python3 tools/gen_papers_json.py --csv data/saver_record_literature.csv --out .
 ```
 
 ## Citation
@@ -56,4 +70,4 @@ Self-evolving agents turn observations, feedback, and execution traces into reus
 
 ## License
 
-The figure assets and paper PDF in this repository are derived from the survey manuscript and are provided for presentation purposes. Contact the corresponding author (xaddwell@zju.edu.cn) for reuse beyond citation.
+The page code in this repository is MIT-style free to adapt; the paper PDF, figure content, and coded data are derived from the survey manuscript and are provided for presentation and citation purposes. Contact the corresponding author (xaddwell@zju.edu.cn) for reuse beyond citation.

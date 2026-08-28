@@ -1,0 +1,60 @@
+{
+ "coded_records": 619,
+ "registry_works": 579,
+ "reviewed_cards": 40,
+ "screened_records": 583,
+ "canonicalized_duplicates": 4,
+ "usable_time_metadata": 518,
+ "time_window": "2023 through 7 August 2026",
+ "substrate_counts": {
+  "Tools & Skills": 98,
+  "Memory": 195,
+  "Workflow": 288,
+  "Model": 38
+ },
+ "adaptation_counts": {
+  "Add": 81,
+  "Modify": 285,
+  "Activate": 102,
+  "Abstract": 54,
+  "Propagate": 80,
+  "Forget": 2,
+  "Migrate": 15
+ },
+ "outcome_counts": {
+  "Response": 234,
+  "Violation": 385
+ },
+ "outcome_detail_counts": {
+  "Monitoring & Containment": 137,
+  "Persistent Descendants": 9,
+  "Privacy & Purpose": 72,
+  "Authority Escalation": 70,
+  "Provenance Loss": 88,
+  "Operational Integrity": 127,
+  "Transition & Activation": 18,
+  "Preventive Governance": 59,
+  "Model Safety Regression": 19,
+  "Recovery & Contestability": 20
+ },
+ "violation_families": [
+  "Provenance Loss",
+  "Authority Escalation",
+  "Privacy & Purpose",
+  "Persistent Descendants",
+  "Operational Integrity",
+  "Model Safety Regression"
+ ],
+ "response_stages": [
+  "Preventive Governance",
+  "Transition & Activation",
+  "Monitoring & Containment",
+  "Recovery & Contestability"
+ ],
+ "substrate_colors": {
+  "Model": "#E2707C",
+  "Memory": "#527CDF",
+  "Workflow": "#E9A859",
+  "Tools & Skills": "#86D4CD"
+ }
+}
