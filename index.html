@@ -247,9 +247,10 @@
   .info-card h3 { margin: 0 0 0.4rem; font-family: 'Space Grotesk', sans-serif; font-size: 1rem; }
   .info-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
   pre.bibtex { background: var(--bg-code); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; line-height: 1.7; white-space: pre-wrap; }
-  .figure-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; align-items: start; }
+  .figure-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
   .fig-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: var(--shadow-card); min-width: 0; }
   .fig-wide { grid-column: 1 / -1; }
+  @media (max-width: 760px) { .figure-row { grid-template-columns: 1fr; } }
   .fig-panel h3 { margin: 0 0 0.7rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; overflow-wrap: anywhere; }
   .fig-panel figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.8rem; line-height: 1.6; overflow-wrap: anywhere; }
 
@@ -270,16 +271,16 @@
   .xm-bar { flex: 1; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #64748b, #4067C4, #527CDF, #2F9E8F, #E2707C); }
   @media (max-width: 560px) { .xm-arr { display: none; } .xm-step { flex-basis: 100%; } }
 
-  .o2s { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.4rem; justify-content: center; padding: 0.8rem 0; }
+  .o2s { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.7rem 0; }
   .o2s-step {
-    flex: 1 1 190px; min-width: 0; max-width: 100%; text-align: center;
-    border: 1px solid var(--border); border-top: 3px solid var(--sc, #64748b); border-radius: 8px;
-    background: var(--bg-alt); padding: 0.7rem 0.6rem;
+    min-width: 0; max-width: 100%;
+    border: 1px solid var(--border); border-left: 3px solid var(--sc, #64748b); border-radius: 0 8px 8px 0;
+    background: var(--bg-alt); padding: 0.6rem 0.8rem;
+    display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap;
   }
-  .o2s-q { display: block; font-weight: 700; font-size: 0.84rem; overflow-wrap: anywhere; }
-  .o2s-a { display: block; color: var(--text-muted); font-size: 0.74rem; margin-top: 0.2rem; overflow-wrap: anywhere; }
-  .o2s-arr { align-self: center; color: var(--text-muted); font-size: 1rem; flex: 0 0 auto; }
-  @media (max-width: 560px) { .o2s-arr { display: none; } .o2s-step { flex-basis: 100%; } }
+  .o2s-q { font-weight: 700; font-size: 0.84rem; overflow-wrap: anywhere; }
+  .o2s-a { color: var(--text-muted); font-size: 0.74rem; overflow-wrap: anywhere; }
+  .o2s-arr { text-align: center; color: var(--text-muted); font-size: 0.9rem; line-height: 0.4; }
 
   .lattice { display: flex; flex-direction: column; gap: 0.35rem; }
   .lat-level { display: flex; align-items: stretch; gap: 0.7rem; min-width: 0; }
@@ -549,9 +550,9 @@
         <h3>From Output Safety to Adaptive State Safety</h3>
         <div class="o2s">
           <div class="o2s-step" style="--sc:#64748b"><span class="o2s-q">Response safety</span><span class="o2s-a">Is this response acceptable?</span></div>
-          <div class="o2s-arr">→</div>
+          <div class="o2s-arr">↓</div>
           <div class="o2s-step" style="--sc:#527CDF"><span class="o2s-q">Agent safety</span><span class="o2s-a">Is this action authorized?</span></div>
-          <div class="o2s-arr">→</div>
+          <div class="o2s-arr">↓</div>
           <div class="o2s-step" style="--sc:#E2707C"><span class="o2s-q">Adaptive state safety</span><span class="o2s-a">Do safety attributes survive the state transition?</span></div>
         </div>
         <figcaption>The unit of analysis expands from a single response, to action mediated by tools, to a reusable state transition that must carry safety attributes across sessions.</figcaption>
@@ -604,9 +605,9 @@
 <section id="glance">
   <div class="inner">
     <h2 class="sh">At a Glance</h2>
-    <p class="scope-lead">All charts render live from <code>papers.json</code>, the single data surface generated from the manuscript's coded literature. Click a taxonomy node or a family bar to filter the papers below.</p>
+    <p class="scope-lead">All charts render live from <code>papers.json</code>, the single data surface generated from the manuscript's coded literature. Click a taxonomy node or a family bar to open the Paper Reader with the matching filter. The year trend shows the self-evolving-agent window (2023 onward); foundational and adjacent works predating 2023 remain part of the coded pool but are excluded from that window.</p>
     <div class="viz-grid">
-      <div class="viz-card viz-full"><h3>Papers per Year</h3><p class="viz-sub">coded records with usable time metadata, 2023 through 7 August 2026</p><div id="vz-year" class="viz-chart"></div></div>
+      <div class="viz-card viz-full"><h3>Papers per Year</h3><p class="viz-sub">518 coded records with usable time metadata, 2023 through 7 August 2026 — the self-evolving-agent window of the corpus</p><div id="vz-year" class="viz-chart"></div></div>
       <div class="viz-card"><h3>Taxonomy — click a layer to drill in</h3><p class="viz-sub">Substrate → Adaptation → terminal family</p><div id="vz-sun" class="viz-chart viz-tall"></div></div>
       <div class="viz-card"><h3>SAVER Flow</h3><p class="viz-sub">Substrate → Adaptation → Violation / Response</p><div id="vz-sankey" class="viz-chart viz-tall"></div>
         <div class="viz-legend">
@@ -803,9 +804,9 @@
       return base;
     }
 
-    /* papers per year */
+    /* papers per year — self-evolving-agent window (2023+), matching Figure 2 */
     var yc = {};
-    PAPERS.forEach(function (p) { if (p.year >= 2017) yc[p.year] = (yc[p.year] || 0) + 1; });
+    PAPERS.forEach(function (p) { if (p.year >= 2023) yc[p.year] = (yc[p.year] || 0) + 1; });
     var ys = Object.keys(yc).sort();
     insts['vz-year'].setOption({
       grid: { left: 44, right: 20, top: 18, bottom: 28 }, tooltip: { trigger: 'axis' },
