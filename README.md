@@ -23,7 +23,7 @@
 
 <sup>1</sup>&nbsp;Zhejiang University &nbsp;·&nbsp; <sup>2</sup>&nbsp;Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup>&nbsp;Xi'an Jiaotong University &nbsp;·&nbsp; <sup>4</sup>&nbsp;National University of Defense Technology &nbsp;·&nbsp; <sup>5</sup>&nbsp;Shanghai Jiaotong University &nbsp;·&nbsp; <sup>6</sup>&nbsp;Georgia Institute of Technology &nbsp;·&nbsp; <sup>7</sup>&nbsp;University of Science and Technology of China &nbsp;·&nbsp; <sup>8</sup>&nbsp;Nanyang Technological University &nbsp;·&nbsp; <sup>9</sup>&nbsp;OPPO Research Institute &nbsp;·&nbsp; <sup>11</sup>&nbsp;Chongqing University &nbsp;·&nbsp; <sup>12</sup>&nbsp;Alibaba Group &nbsp;·&nbsp; <sup>13</sup>&nbsp;Rakuten Group
 
-✉ Correspondence: xaddwell@zju.edu.cn
+✉ Correspondence: sji@zju.edu.cn
 
 </div>
 
@@ -119,7 +119,7 @@ python3 tools/gen_papers_json.py
 
 ## Contribute
 
-We welcome corrections and new papers. Please open an issue using the [Paper Submission](https://github.com/xaddwell/awesome-self-evolving-agent-safety/issues/new?template=paper-submission.md) template with the paper title, link, and your proposed SAVER coding (substrate / adaptation / outcome family). Changes are reconciled against `data/saver_record_literature.csv`, the same surface that drives the manuscript figures. For feedback on the survey itself, contact xaddwell@zju.edu.cn.
+We welcome corrections and new papers. Please open an issue using the [Paper Submission](https://github.com/xaddwell/awesome-self-evolving-agent-safety/issues/new?template=paper-submission.md) template with the paper title, link, and your proposed SAVER coding (substrate / adaptation / outcome family). Changes are reconciled against `data/saver_record_literature.csv`, the same surface that drives the manuscript figures. For feedback on the survey itself, contact sji@zju.edu.cn.
 
 ## Star History
 
