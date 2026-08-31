@@ -71,6 +71,7 @@
   .nav-inner {
     max-width: 1180px; margin: 0 auto; padding: 0.85rem 1.5rem;
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    position: relative;
   }
   .nav-brand { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.98rem; color: var(--accent); }
   .nav-links { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
@@ -78,6 +79,28 @@
   .nav-link:hover { color: var(--accent); text-decoration: none; }
   .icon-btn { background: none; border: 1px solid var(--border); border-radius: 8px; color: var(--text-muted); cursor: pointer; padding: 5px 9px; font-size: 0.8rem; font-family: inherit; }
   .icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* hamburger */
+  .nav-toggle {
+    display: none; flex-direction: column; gap: 4px; background: none;
+    border: 1px solid var(--border); border-radius: 8px; padding: 8px; cursor: pointer;
+  }
+  .nav-toggle span { display: block; width: 18px; height: 2px; background: var(--text-muted); border-radius: 1px; transition: transform .2s var(--expo-out), opacity .2s; }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  @media (max-width: 860px) {
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+      display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      flex-direction: column; align-items: stretch; gap: 0;
+      padding: 0.3rem 1.4rem 0.9rem; box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+    }
+    .nav-links.open { display: flex; }
+    .nav-link { display: block; padding: 0.78rem 0.1rem; border-bottom: 1px solid var(--border); font-size: 0.98rem; }
+    .nav-links .icon-btn { margin-top: 0.7rem; align-self: flex-start; }
+  }
 
   .inner { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
   section { padding: 3.2rem 0 2.6rem; border-bottom: 1px solid var(--border); }
@@ -424,6 +447,42 @@
     .reveal { opacity: 1; transform: none; }
   }
 
+  /* ---------- mobile layout polish ---------- */
+  @media (max-width: 860px) {
+    .inner { padding: 0 1.1rem; }
+    section { padding: 2.4rem 0 2rem; }
+    .sh { font-size: 1.32rem; }
+    .scope-lead { font-size: 0.9rem; }
+  }
+  @media (max-width: 640px) {
+    .hero-inner { padding: 2.5rem 1.1rem 2.3rem; }
+    .hero-title { font-size: 1.7rem; }
+    .hero-sub { font-size: 1.02rem; }
+    .hero-lead { font-size: 0.88rem; }
+    .authors-block { font-size: 0.8rem; line-height: 1.85; }
+    .affils-block { font-size: 0.7rem; line-height: 1.75; }
+    .badge-pill { font-size: 0.7rem; padding: 0.22rem 0.65rem; }
+    .cta-row { gap: 0.55rem; }
+    .cta-btn { padding: 0.55rem 1rem; font-size: 0.86rem; }
+    .stats-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem 0.3rem; padding: 0.9rem 0.7rem; margin-top: -1.6rem; }
+    .stat-num { font-size: 1.22rem; }
+    .stat-label { font-size: 0.64rem; }
+    .saver-flow { flex-direction: column; align-items: stretch; gap: 0.3rem; }
+    .saver-arrow { display: inline-block; transform: rotate(90deg); text-align: center; }
+    .saver-arrow::after { display: none; }
+    .saver-stage .k { font-size: 1rem; }
+    .viz-chart { height: 250px; }
+    .viz-tall { height: 320px; }
+    .viz-grid { gap: 0.7rem; }
+    .fn-val { font-size: 0.76rem; }
+    .ct-scroll { max-height: 440px; }
+    table.ct { font-size: 0.7rem; }
+    table.ct th, table.ct td { padding: 0.3rem 0.4rem; }
+    .rm-trunk { height: 14px; }
+    .bibtex { font-size: 0.7rem; }
+    footer { font-size: 0.75rem; }
+  }
+
   /* ---------- classification tables ---------- */
   .ct-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.9rem; overflow: hidden; }
   .ct-summary { cursor: pointer; display: flex; align-items: baseline; gap: 0.7rem; padding: 0.8rem 1.1rem; list-style: none; }
@@ -472,7 +531,7 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="#">SAVER · Safety in Self-Evolving Agents</a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a class="nav-link" href="#overview">Overview</a>
       <a class="nav-link" href="#mechanisms">Mechanisms</a>
       <a class="nav-link" href="#glance">At a Glance</a>
@@ -483,6 +542,7 @@
       <a class="nav-link" href="https://github.com/xaddwell/awesome-self-evolving-agent-safety" target="_blank" rel="noopener">GitHub</a>
       <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle theme">☀</button>
     </div>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -808,6 +868,24 @@
   if (btn) btn.addEventListener('click', function () {
     applyTheme(root.classList.contains('dark') ? 'light' : 'dark');
   });
+
+  /* hamburger menu */
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      var open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (ch) {
