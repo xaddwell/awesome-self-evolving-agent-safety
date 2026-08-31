@@ -173,7 +173,7 @@
           [
             {Write$\rightarrow$Abstract$\rightarrow$Retrieve; Memory Attacks; Admission Checks\saverRoadmapRef{sec:adaptation-operations}}, saver-blue-line
             [
-              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Memory Poisoning, Stealth Injection, Fragmented Bypass~\saverRoadmapCite{chen2024agentpoison,torres2026agentsremembermuchmemory,rao2026fragfusebypassingaccesscontrol,sunil2026memory_poisoning_agents,pulipaka2026hidden_memory,yang2026zombie_agents}, Stale Retrieval~\saverRoadmapCite{zhang2026memmorph}, Privacy Extraction~\saverRoadmapCite{wang2025privacy_agent_memory,zhang_2024_privacyasst_safeguarding_use,yan_2025_on_protecting_the_data_priva}, Long Horizon Memory Drift~\saverRoadmapCite{liu2026simplemem,mi2026darwinian_memory,rajesh2026panini}}, saver-violation-leaf
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Memory Poisoning, Stealth Injection, Fragmented Bypass~\saverRoadmapCite{chen2024agentpoison,torres2026agentsremembermuchmemory,rao2026fragfusebypassingaccesscontrol,sunil2026memory_poisoning_agents,pulipaka2026hidden_memory,yang2026zombie_agents}, Stale Retrieval~\saverRoadmapCite{zhang2026memmorph}, Privacy Extraction~\saverRoadmapCite{wang2025privacy_agent_memory,zhang_2024_privacyasst_safeguarding_use,yan_2025_on_protecting_the_data_priva,lin2026sope}, Long Horizon Memory Drift~\saverRoadmapCite{liu2026simplemem,mi2026darwinian_memory,rajesh2026panini}}, saver-violation-leaf
             ]
             [
               {Response\saverRoadmapRef{sec:response-governance}: Admission Gating~\saverRoadmapCite{lam2026ssgm,taheri2026governed_memory,kandala2026echoguard}, Deletion Checks~\saverRoadmapCite{pulipaka2026persistbench,kannabhiran_2026_consensus_validated_memory_i}, Residual Probes~\saverRoadmapCite{shao2026misevolve,wang2026agenticeval}, Memory Evaluation~\saverRoadmapCite{hu_2025_evaluating_memory_in_llm_age,luo_2026_from_storage_to_experience_a,lupascu2026elephantbroker}}, saver-response-leaf
@@ -245,7 +245,7 @@
           [
             {Merge$\rightarrow$Inherit$\rightarrow$Update Preference; Lineage Loss; Model Repair\saverRoadmapRef{sec:adaptation-operations}}, saver-red-line
             [
-              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Lineage Loss~\saverRoadmapCite{zhou2025backdoor_llm_survey,hu2022lora}, Hidden Behavior Reuse~\saverRoadmapCite{rando2024universal_jailbreak_backdoors,wang_2024_badagent_inserting_and_activ}, Adaptation Drift~\saverRoadmapCite{romero_2024_synergistic_integration_of_l}}, saver-violation-leaf
+              {Violation\saverRoadmapRef{sec:invariant-violations}$\rightarrow$Exposure\saverRoadmapRef{sec:exposure-surfaces}: Lineage Loss~\saverRoadmapCite{zhou2025backdoor_llm_survey,hu2022lora}, Hidden Behavior Reuse~\saverRoadmapCite{rando2024universal_jailbreak_backdoors,wang_2024_badagent_inserting_and_activ,chen2026customization}, Adaptation Drift~\saverRoadmapCite{romero_2024_synergistic_integration_of_l}}, saver-violation-leaf
             ]
             [
               {Response\saverRoadmapRef{sec:response-governance}: Model Unlearning~\saverRoadmapCite{li_2024_the_wmdp_benchmark_measuring}, Lineage Records~\saverRoadmapCite{hu2022lora}, Residual Safety Probes~\saverRoadmapCite{li_2024_the_wmdp_benchmark_measuring,shao2026misevolve,andriushchenko2025agentharm,guo2024redcode}, Governance Scorecards~\saverRoadmapCite{triguero_2023_general_purpose_artificial_i}, Formal Governance~\saverRoadmapCite{figurelli_2026_from_talking_to_blackbox_to,chen_2025_securegov_agent_a_governance,kumar_2026_a_multi_evaluator_behavioura}}, saver-response-leaf
@@ -255,7 +255,6 @@
       ]
     \end{forest}%
   }
-  \caption{Literature roadmap organized by the causal dependency in \SAVER{}: substrate, operation path, violation / exposure evidence, and response evidence. Exposure is folded into the incident leaves for legibility; the main text separates violation from exposure analytically.}
-  \Description{A full-width horizontal SAVER roadmap. Four colored substrate lanes branch into adaptation paths and then into paired violation-and-exposure and response evidence leaves, with section references and representative citations.}
+  \caption{A full-width horizontal \SAVER{} roadmap. Exposure is folded into the incident leaves for legibility.}
   \label{fig:saver-transition-roadmap}
 \end{figure*}

@@ -4412,6 +4412,55 @@
     "type": "row",
     "cells": [
      {
+      "html": "When Context Gets Root",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "he2026contextgetsrootprivilege"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#A8D5BE\">Migrate</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Tool content gains a higher context role",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
       "html": "MAPLE-Guard",
       "colspan": 1,
       "head": "",
@@ -5606,6 +5655,55 @@
      },
      {
       "html": "Source authority erased during consolidation",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
+      "html": "When Context Gets Root",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "he2026contextgetsrootprivilege"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Authority / provenance",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Harness elevates the model-facing source role",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -9386,6 +9484,55 @@
     "type": "row",
     "cells": [
      {
+      "html": "When Context Gets Root",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "he2026contextgetsrootprivilege"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Multi-agent",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Elevated context role → unauthorized action",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
       "html": "Agents of Chaos",
       "colspan": 1,
       "head": "",
@@ -11340,6 +11487,55 @@
      },
      {
       "html": "Dynamic plan validation and injection isolation",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
+      "html": "State-bound authorization",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "zhang2026agentiauthorizedearned"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#6D93AC\">Framework (Formal)</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Transition/Activation",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Grant continuity and immutable effect ceiling",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -14818,6 +15014,61 @@
      },
      {
       "html": "328 executable cases",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
+      "html": "When Context Gets Root",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "he2026contextgetsrootprivilege"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C2914B\">Benchmark</span>Attack",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Instruction privilege escalation",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Migrate/Violation/Exposure",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "13 objectives; six harnesses",
       "colspan": 1,
       "head": "",
       "refs": []

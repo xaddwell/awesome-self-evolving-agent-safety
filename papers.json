@@ -8192,6 +8192,22 @@
   "confidence": "high"
  },
  {
+  "id": "aid-guard-stateful-authorization-for-delegated-agent-effects",
+  "title": "AID-Guard: Stateful Authorization for Delegated Agent Effects",
+  "year": 2026,
+  "citation_key": "tong2026aidguardstatefulauthorizationdelegated",
+  "arxiv_id": "2608.21159v1",
+  "doi": "10.48550/arXiv.2608.21159",
+  "url": "https://arxiv.org/abs/2608.21159",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Transition & Activation",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "low"
+ },
+ {
   "id": "architecting-agentic-communities-using-design-patterns",
   "title": "Architecting Agentic Communities using Design Patterns",
   "year": 2026,
@@ -8206,6 +8222,22 @@
   "record_origin": "registry",
   "source_status": "full_text",
   "confidence": "low"
+ },
+ {
+  "id": "are-you-still-the-agent-i-authorized-earned-authority-under-a-fixed-ceiling-for-evolving-agents",
+  "title": "Are You Still the Agent I Authorized? Earned Authority under a Fixed Ceiling for Evolving Agents",
+  "year": 2026,
+  "citation_key": "zhang2026agentiauthorizedearned",
+  "arxiv_id": "2607.23586v1",
+  "doi": "10.48550/arXiv.2607.23586",
+  "url": "https://arxiv.org/abs/2607.23586",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Transition & Activation",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "high"
  },
  {
   "id": "behind-evomap-characterizing-a-self-evolving-agent-to-agent-collaboration-networ",
@@ -8301,6 +8333,22 @@
   "outcome_detail": "Preventive Governance",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "colluskill-adversarial-cross-skill-composition-for-evading-agent-skill-scanners",
+  "title": "ColluSkill: Adversarial Cross-Skill Composition for Evading Agent Skill Scanners",
+  "year": 2026,
+  "citation_key": "zeng2026colluskilladversarialcrossskillcomposition",
+  "arxiv_id": "2608.09732v1",
+  "doi": "10.48550/arXiv.2608.09732",
+  "url": "https://arxiv.org/abs/2608.09732",
+  "substrate": "Tools & Skills",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
   "confidence": "low"
  },
  {
@@ -8558,6 +8606,22 @@
   "record_origin": "registry",
   "source_status": "full_text",
   "confidence": "low"
+ },
+ {
+  "id": "evomal-self-poisoning-in-self-evolving-coding-agents",
+  "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+  "year": 2026,
+  "citation_key": "wu2026evomalselfpoisoningselfevolvingcoding",
+  "arxiv_id": "2608.25776v1",
+  "doi": "10.48550/arXiv.2608.25776",
+  "url": "https://arxiv.org/abs/2608.25776",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "medium"
  },
  {
   "id": "experimental-campaign-for-political-behaviour-in-llm-agents-experimental-insight",
@@ -9152,6 +9216,22 @@
   "confidence": "low"
  },
  {
+  "id": "openai-hugging-face-agent-intrusion-july-2026",
+  "title": "OpenAI--Hugging Face Agent Intrusion, July 2026",
+  "year": 2026,
+  "citation_key": "wang2026exploitgym",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "low"
+ },
+ {
   "id": "pedestrian-aware-llm-driven-behavioral-planning-for-autonomous-vehicles",
   "title": "Pedestrian-Aware LLM-Driven Behavioral Planning for Autonomous Vehicles",
   "year": 2026,
@@ -9243,6 +9323,22 @@
   "adaptation": "Migrate",
   "outcome": "Violation",
   "outcome_detail": "Provenance Loss",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "low"
+ },
+ {
+  "id": "practice-makes-unsafe-skill-misevolution-in-self-improving-llm-agents",
+  "title": "Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents",
+  "year": 2026,
+  "citation_key": "mao2026practicemakesunsafeskill",
+  "arxiv_id": "2608.12851v1",
+  "doi": "10.48550/arXiv.2608.12851",
+  "url": "https://arxiv.org/abs/2608.12851",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
   "confidence": "low"

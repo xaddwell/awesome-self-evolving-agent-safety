@@ -5,11 +5,11 @@
 [![Website](https://img.shields.io/badge/Website-Project%20Page-blue.svg)](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Papers](https://img.shields.io/badge/Papers-619-blue.svg)](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html)
+[![Papers](https://img.shields.io/badge/Papers-625-blue.svg)](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/xaddwell/awesome-self-evolving-agent-safety/pulls)
 [![GitHub stars](https://img.shields.io/github/stars/xaddwell/awesome-self-evolving-agent-safety?style=social)](https://github.com/xaddwell/awesome-self-evolving-agent-safety)
 
-**A transition-centered survey of safety in self-evolving agents: how reusable influence persists, moves, and changes role across carriers — organized by the SAVER framework (`S×A → V→E→R`) over 619 coded papers.**
+**A transition-centered survey of safety in self-evolving agents: how reusable influence persists, moves, and changes role across carriers — organized by the SAVER framework (`S×A → V→E→R`) over 625 coded papers.**
 
 [[Website]](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/) · [[Paper Reader]](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html) · [[Paper (PDF)]](assets/SAVER-Survey.pdf)
 
@@ -51,8 +51,8 @@ The coded pool follows the survey's systematic scoping protocol (see the paper's
 | ----- | ----: |
 | Screened bibliographic records (14 June 2026 snapshot) | 583 |
 | Unique registry works (4 duplicates canonicalized) | 579 |
-| **Coded pool** (registry + 40 reviewed paper-card supplements) | **619** |
-| Records in the Figure 2 window (2023 – 7 Aug 2026) | 518 |
+| **Coded pool** (registry + 46 reviewed paper-card supplements) | **625** |
+| Records in the Figure 2 window (2023 – 7 Aug 2026) | 524 |
 
 ## Taxonomy
 
@@ -62,9 +62,9 @@ All counts and links are driven by `papers.json`, generated from [`data/saver_re
 
 | Family | Papers | Reader link |
 | ------ | -----: | ----------- |
-| Workflow (rules · planners · shared artifacts) | 288 | [open](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html?substrate=Workflow) |
+| Workflow (rules · planners · shared artifacts) | 293 | [open](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html?substrate=Workflow) |
 | Memory (context · long-term · retrieval) | 195 | [open](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html?substrate=Memory) |
-| Tools & Skills (bindings · skill libraries · MCP) | 98 | [open](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html?substrate=Tools%20%26%20Skills) |
+| Tools & Skills (bindings · skill libraries · MCP) | 99 | [open](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html?substrate=Tools%20%26%20Skills) |
 | Model (parameters · adapters · policy) | 38 | [open](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html?substrate=Model) |
 
 ### Adaptation operations
@@ -92,7 +92,7 @@ All counts and links are driven by `papers.json`, generated from [`data/saver_re
 .
 ├── index.html                  # Project page
 ├── papers.html                 # Paper Reader (search + filters)
-├── papers.json                 # 619 coded records (generated)
+├── papers.json                 # 625 coded records (generated)
 ├── stats.json                  # Corpus aggregates (generated)
 ├── tables.json                 # Classification tables (generated from LaTeX)
 ├── roadmap.json                # Roadmap tree (generated from LaTeX)
