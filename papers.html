@@ -50,7 +50,21 @@
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     position: relative;
   }
-  .nav-brand { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.98rem; color: var(--accent); }
+  .nav-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.08rem;
+    letter-spacing: 0.08em;
+    background: linear-gradient(100deg, var(--accent) 20%, #2DD4BF 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    filter: drop-shadow(0 0 7px color-mix(in srgb, var(--accent) 38%, transparent));
+    transition: filter .25s var(--expo-out);
+  }
+  .nav-brand:hover { filter: drop-shadow(0 0 12px color-mix(in srgb, var(--accent) 60%, transparent)); text-decoration: none; }
   .nav-links { display: flex; align-items: center; gap: 1.1rem; }
   .nav-link { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
   .nav-link:hover { color: var(--accent); text-decoration: none; }
