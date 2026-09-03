@@ -151,7 +151,9 @@
   .cta-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 22px rgba(var(--accent-rgb), 0.35); }
   .cta-ghost { border: 1px solid var(--border); color: var(--text); background: var(--bg-card); }
   .cta-ghost:hover { border-color: var(--accent); color: var(--accent); }
-  .authors-block { font-size: 0.95rem; color: var(--text); line-height: 2; max-width: 900px; margin: 0 auto; }
+  .authors-block { font-size: 0.95rem; color: var(--text); max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.3rem; }
+  .au-line { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 0.55rem; row-gap: 0.15rem; line-height: 1.7; }
+  .au { white-space: nowrap; }
   .authors-block a { color: var(--text); border-bottom: 1px dotted var(--border); }
   .authors-block a:hover { color: var(--accent); text-decoration: none; border-bottom-color: var(--accent); }
   .authors-block sup { color: var(--accent); font-size: 0.72em; }
@@ -586,11 +588,10 @@
       </a>
     </div>
     <div class="authors-block">
-      <a href="https://xaddwell.github.io/" target="_blank" rel="noopener">Jiahao Chen</a><sup>1</sup>, Zhou Feng<sup>1</sup>, Oubo Ma<sup>1</sup>, Yichen Yan<sup>1</sup>, Ruixiao Lin<sup>1</sup><br>
-      Hangtao Zhang<sup>2</sup>, Linkang Du<sup>3</sup>, Hengyu An<sup>1</sup>, Yong Yang<sup>1</sup>, Jun Liu<sup>13</sup>, Junhao Li<sup>1</sup><br>
-      Naen Xu<sup>1</sup>, Chunyi Zhou<sup>1</sup>, Yuan Su<sup>1</sup>, Zehao Jin<sup>6</sup>, Qianli Ma<sup>7</sup>, Leyi Qi<sup>8</sup>, Yiming Wang<sup>1</sup>, Zhe Ma<sup>10</sup>, Yuwen Pu<sup>11</sup>, Mengyao Du<sup>4</sup>, Yuanyi Song<sup>5</sup>, Enhao Huang<sup>1</sup>, Zhihui Fu<sup>9</sup>, Jun Wang<sup>9</sup>, Jinfeng Li<sup>12</sup>, Yuefeng Chen<sup>12</sup>, Hui Xue<sup>12</sup>, Yiming Li<sup>8</sup>, Tianyu Du<sup>1</sup>, Shouling Ji<sup>1</sup>
-      <br>
-      <span class="author-note">✉ Corresponding author: sji@zju.edu.cn</span>
+      <div class="au-line"><span class="au"><a href="https://xaddwell.github.io/" target="_blank" rel="noopener">Jiahao Chen</a><sup>1</sup>,</span> <span class="au">Zhou Feng<sup>1</sup>,</span> <span class="au">Oubo Ma<sup>1</sup>,</span> <span class="au">Yichen Yan<sup>1</sup>,</span> <span class="au">Ruixiao Lin<sup>1</sup></span></div>
+      <div class="au-line"><span class="au">Hangtao Zhang<sup>2</sup>,</span> <span class="au">Linkang Du<sup>3</sup>,</span> <span class="au">Hengyu An<sup>1</sup>,</span> <span class="au">Yong Yang<sup>1</sup>,</span> <span class="au">Jun Liu<sup>13</sup>,</span> <span class="au">Junhao Li<sup>1</sup></span></div>
+      <div class="au-line"><span class="au">Naen Xu<sup>1</sup>,</span> <span class="au">Chunyi Zhou<sup>1</sup>,</span> <span class="au">Yuan Su<sup>1</sup>,</span> <span class="au">Zehao Jin<sup>6</sup>,</span> <span class="au">Qianli Ma<sup>7</sup>,</span> <span class="au">Leyi Qi<sup>8</sup>,</span> <span class="au">Yiming Wang<sup>1</sup>,</span> <span class="au">Zhe Ma<sup>10</sup>,</span> <span class="au">Yuwen Pu<sup>11</sup>,</span> <span class="au">Mengyao Du<sup>4</sup>,</span> <span class="au">Yuanyi Song<sup>5</sup>,</span> <span class="au">Enhao Huang<sup>1</sup>,</span> <span class="au">Zhihui Fu<sup>9</sup>,</span> <span class="au">Jun Wang<sup>9</sup>,</span> <span class="au">Jinfeng Li<sup>12</sup>,</span> <span class="au">Yuefeng Chen<sup>12</sup>,</span> <span class="au">Hui Xue<sup>12</sup>,</span> <span class="au">Yiming Li<sup>8</sup>,</span> <span class="au">Tianyu Du<sup>1</sup>,</span> <span class="au">Shouling Ji<sup>1</sup></span></div>
+      <div class="au-line"><span class="author-note">✉ Corresponding author: sji@zju.edu.cn</span></div>
     </div>
     <div class="affils-block">
       <sup>1</sup>&nbsp;Zhejiang University &nbsp;·&nbsp;
