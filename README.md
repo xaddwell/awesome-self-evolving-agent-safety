@@ -19,7 +19,9 @@
 
 <div align="center">
 
-<a href="https://xaddwell.github.io/" target="_blank" rel="noopener">Jiahao Chen</a><sup>1</sup>, Zhou Feng<sup>1</sup>, Oubo Ma<sup>1</sup>, Yichen Yan<sup>1</sup>, Ruixiao Lin<sup>1</sup>, Hangtao Zhang<sup>2</sup>, Linkang Du<sup>3</sup>, Yiming Li<sup>8</sup>, Hengyu An<sup>1</sup>, Yong Yang<sup>1</sup>, Jun Liu<sup>13</sup>, Junhao Li<sup>1</sup>, Naen Xu<sup>1</sup>, Mengyao Du<sup>4</sup>, Yuanyi Song<sup>5</sup>, Chunyi Zhou<sup>1</sup>, Yuan Su<sup>1</sup>, Zehao Jin<sup>6</sup>, Qianli Ma<sup>7</sup>, Leyi Qi<sup>8</sup>, Yiming Wang<sup>1</sup>, Zhihui Fu<sup>9</sup>, Jun Wang<sup>9</sup>, Zhe Ma<sup>10</sup>, Yuwen Pu<sup>11</sup>, Jinfeng Li<sup>12</sup>, Yuefeng Chen<sup>12</sup>, Hui Xue<sup>12</sup>, Tianyu Du<sup>1</sup>, Shouling Ji<sup>1</sup>
+Jiahao Chen</a><sup>1</sup>, Zhou Feng<sup>1</sup>, Oubo Ma<sup>1</sup>, Yichen Yan<sup>1</sup>, Ruixiao Lin<sup>1</sup><br>
+Hangtao Zhang<sup>2</sup>, Linkang Du<sup>3</sup>, Hengyu An<sup>1</sup>, Yong Yang<sup>1</sup>, Jun Liu<sup>13</sup>, Junhao Li<sup>1</sup><br>
+Naen Xu<sup>1</sup>, Chunyi Zhou<sup>1</sup>, Yuan Su<sup>1</sup>, Zehao Jin<sup>6</sup>, Qianli Ma<sup>7</sup>, Leyi Qi<sup>8</sup>, Yiming Wang<sup>1</sup>, Zhe Ma<sup>10</sup>, Yuwen Pu<sup>11</sup>, Mengyao Du<sup>4</sup>, Yuanyi Song<sup>5</sup>, Enhao Huang<sup>1</sup>, Zhihui Fu<sup>9</sup>, Jun Wang<sup>9</sup>, Jinfeng Li<sup>12</sup>, Yuefeng Chen<sup>12</sup>, Hui Xue<sup>12</sup>, Yiming Li<sup>8</sup>, Tianyu Du<sup>1</sup>, Shouling Ji<sup>1</sup>
 
 <sup>1</sup>&nbsp;Zhejiang University &nbsp;·&nbsp; <sup>2</sup>&nbsp;Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup>&nbsp;Xi'an Jiaotong University &nbsp;·&nbsp; <sup>4</sup>&nbsp;National University of Defense Technology &nbsp;·&nbsp; <sup>5</sup>&nbsp;Shanghai Jiaotong University &nbsp;·&nbsp; <sup>6</sup>&nbsp;Georgia Institute of Technology &nbsp;·&nbsp; <sup>7</sup>&nbsp;University of Science and Technology of China &nbsp;·&nbsp; <sup>8</sup>&nbsp;Nanyang Technological University &nbsp;·&nbsp; <sup>9</sup>&nbsp;OPPO Research Institute &nbsp;·&nbsp; <sup>10</sup>&nbsp;Tianjin University &nbsp;·&nbsp; <sup>11</sup>&nbsp;Chongqing University &nbsp;·&nbsp; <sup>12</sup>&nbsp;Alibaba Group &nbsp;·&nbsp; <sup>13</sup>&nbsp;Rakuten Group
 
@@ -130,7 +132,7 @@ We welcome corrections and new papers. Please open an issue using the [Paper Sub
 ```bibtex
 @article{chen2026saver,
   title={Safety in Self-Evolving Agents: A Survey},
-  author={Chen, Jiahao and Feng, Zhou and Ma, Oubo and Yan, Yichen and Lin, Ruixiao and Zhang, Hangtao and Du, Linkang and Li, Yiming and An, Hengyu and Yang, Yong and Liu, Jun and Li, Junhao and Xu, Naen and Du, Mengyao and Song, Yuanyi and Zhou, Chunyi and Su, Yuan and Jin, Zehao and Ma, Qianli and Qi, Leyi and Wang, Yiming and Fu, Zhihui and Wang, Jun and Ma, Zhe and Pu, Yuwen and Li, Jinfeng and Chen, Yuefeng and Xue, Hui and Du, Tianyu and Ji, Shouling},
+  author={Chen, Jiahao and Feng, Zhou and Ma, Oubo and Yan, Yichen and Lin, Ruixiao and Zhang, Hangtao and Du, Linkang and An, Hengyu and Yang, Yong and Liu, Jun and Li, Junhao and Xu, Naen and Zhou, Chunyi and Su, Yuan and Jin, Zehao and Ma, Qianli and Qi, Leyi and Wang, Yiming and Ma, Zhe and Pu, Yuwen and Du, Mengyao and Song, Yuanyi and Huang, Enhao and Fu, Zhihui and Wang, Jun and Li, Jinfeng and Chen, Yuefeng and Xue, Hui and Li, Yiming and Du, Tianyu and Ji, Shouling},
   year={2026},
   note={Preprint}
 }
