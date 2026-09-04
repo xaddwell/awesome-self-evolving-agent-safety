@@ -190,7 +190,7 @@
   .fn-row { display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: 14px; }
   .fn-label { font-weight: 600; font-size: 0.84rem; text-align: right; color: var(--text); }
   .fn-track { height: 26px; border-radius: 7px; background: rgba(127,127,127,0.13); overflow: hidden; }
-  .fn-bar { height: 100%; border-radius: 7px; min-width: 4px; transition: width .7s var(--expo-out); }
+  .fn-bar { height: 100%; border-radius: 7px; min-width: 4px; transform-origin: left; animation: fnGrow .8s var(--expo-out) backwards; }
   .fn-val { font-family: 'JetBrains Mono', monospace; font-size: 0.84rem; white-space: nowrap; }
   .fn-pct { opacity: 0.58; margin-left: 7px; }
   .funnel-cap { text-align: center; color: var(--text-muted); font-size: 0.78rem; margin: 12px 4px 0; }
@@ -397,6 +397,7 @@
   .hero-bg::before, .hero-bg::after { content: ''; position: absolute; border-radius: 50%; filter: blur(72px); opacity: 0.55; }
   .hero-bg::before { width: 440px; height: 440px; left: -90px; top: -160px; background: color-mix(in srgb, var(--accent) 24%, transparent); animation: floatA 16s ease-in-out infinite alternate; }
   .hero-bg::after { width: 400px; height: 400px; right: -100px; bottom: -180px; background: color-mix(in srgb, #2F7F73 22%, transparent); animation: floatB 20s ease-in-out infinite alternate; }
+  @keyframes fnGrow { from { transform: scaleX(0); } }
   @keyframes floatA { to { transform: translate(70px, 50px) scale(1.15); } }
   @keyframes floatB { to { transform: translate(-60px, -40px) scale(1.1); } }
   .hero-spot {
@@ -568,8 +569,8 @@
     <div class="hero-spot" id="heroSpot"></div>
     <span class="badge-pill bp-accent">Preprint 2026</span>
     <span class="badge-pill">Awesome</span>
-    <span class="badge-pill">625 Coded Papers</span>
-    <span class="badge-pill">583 Screened Records</span>
+    <span class="badge-pill">625 Surveyed Papers</span>
+    <span class="badge-pill">31 Authors</span>
     <h1 class="hero-title">Safety in Self-Evolving Agents<span class="hero-sub">A Survey of Risks, Attacks, and Governance</span></h1>
     <p class="hero-lead">
       Self-evolving agents turn observations, feedback, and execution traces into reusable state that shapes later behavior.
@@ -612,8 +613,8 @@
 </header>
 
 <div class="stats-strip" id="statsStrip">
-  <div class="stat-item"><span class="stat-num" id="stCoded">625</span><span class="stat-label">Coded Papers</span></div>
-  <div class="stat-item"><span class="stat-num" id="stScreened">583</span><span class="stat-label">Screened Records</span></div>
+  <div class="stat-item"><span class="stat-num" id="stCoded">625</span><span class="stat-label">Surveyed Papers</span></div>
+  <div class="stat-item"><span class="stat-num" id="stScreened">583</span><span class="stat-label">Screened Corpus</span></div>
   <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Substrate Families</span></div>
   <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Adaptation Ops</span></div>
   <div class="stat-item"><span class="stat-num">10</span><span class="stat-label">Terminal Families</span></div>
@@ -758,11 +759,11 @@
 <section id="glance">
   <div class="inner">
     <h2 class="sh">At a Glance</h2>
-    <p class="scope-lead">All charts render live from <code>papers.json</code>, the single data surface generated from the manuscript's coded literature. Click a taxonomy node or a family bar to open the Paper Reader with the matching filter. The year trend shows the self-evolving-agent window (2023 onward); foundational and adjacent works predating 2023 remain part of the coded pool but are excluded from that window.</p>
+    <p class="scope-lead">All charts render live from <code>papers.json</code>, the coding surface of the manuscript. To avoid machine-initial labeling noise, every chart here uses only the <b>126 medium/high-confidence codings</b>; the Paper Reader browses the full pool and hides the 499 low-confidence records by default (Confidence filter). Click a taxonomy node or a family bar to open the reader with the matching filter. The year trend is restricted to the Figure 1 window (2023 onward).</p>
     <div class="viz-grid">
       <div class="viz-card viz-full"><h3>Papers per Year</h3><p class="viz-sub">524 coded records with usable time metadata, 2023 through 7 August 2026 — the self-evolving-agent window of the corpus</p><div id="vz-year" class="viz-chart"></div></div>
-      <div class="viz-card"><h3>Taxonomy — click a layer to drill in</h3><p class="viz-sub">Substrate → Adaptation → terminal family</p><div id="vz-sun" class="viz-chart viz-tall"></div></div>
-      <div class="viz-card"><h3>SAVER Flow</h3><p class="viz-sub">Substrate → Adaptation → Violation / Response</p><div id="vz-sankey" class="viz-chart viz-tall"></div>
+      <div class="viz-card"><h3>Taxonomy — click a layer to drill in</h3><p class="viz-sub">Substrate → Adaptation → terminal family (medium/high confidence)</p><div id="vz-sun" class="viz-chart viz-tall"></div></div>
+      <div class="viz-card"><h3>SAVER Flow</h3><p class="viz-sub">Substrate → Adaptation → Violation / Response (medium/high confidence)</p><div id="vz-sankey" class="viz-chart viz-tall"></div>
         <div class="viz-legend">
           <span><i style="background:#527CDF"></i>Memory</span>
           <span><i style="background:#E9A859"></i>Workflow</span>
@@ -773,8 +774,8 @@
           <span><i style="background:#2F7F73"></i>Response</span>
         </div>
       </div>
-      <div class="viz-card"><h3>Record Origin</h3><p class="viz-sub">registry works vs. reviewed paper-card supplements</p><div id="vz-donut" class="viz-chart"></div></div>
-      <div class="viz-card"><h3>Terminal Families</h3><p class="viz-sub">six Violation families and four Response stages</p><div id="vz-bar" class="viz-chart viz-tall"></div></div>
+      <div class="viz-card"><h3>Record Origin</h3><p class="viz-sub">registry works vs. reviewed paper-card supplements (medium/high confidence)</p><div id="vz-donut" class="viz-chart"></div></div>
+      <div class="viz-card"><h3>Terminal Families</h3><p class="viz-sub">six Violation families and four Response stages (medium/high confidence)</p><div id="vz-bar" class="viz-chart viz-tall"></div></div>
     </div>
   </div>
 </section>
@@ -832,7 +833,7 @@
     <h2 class="sh">News</h2>
     <div class="card-list">
       <div class="info-card"><h3>2026-08 · Project page launched</h3><p>Repository and interactive project page published, driven by the manuscript's coded literature surface (625 coded records; 524 with usable time metadata through 7 August 2026).</p></div>
-      <div class="info-card"><h3>2026-08 · Corpus snapshot</h3><p>The coding pool behind Figure 2 of the paper is frozen at its 7 August 2026 cutoff; new integrations keep the same SAVER coding contract.</p></div>
+      <div class="info-card"><h3>2026-08 · Corpus snapshot</h3><p>The coding pool behind Figure 1 of the paper is frozen at its 7 August 2026 cutoff; new integrations keep the same SAVER coding contract.</p></div>
     </div>
   </div>
 </section>
@@ -926,6 +927,20 @@
   var RESPONSES = ['Preventive Governance', 'Transition & Activation', 'Monitoring & Containment', 'Recovery & Contestability'];
 
   var PAPERS = null;
+  var REFMAP = null;
+  function refInfo(key) {
+    var p = null;
+    if (REFMAP && REFMAP[key]) {
+      var m = REFMAP[key];
+      p = { title: m.title || key, year: m.year, arxiv_id: m.arxiv_id, url: m.url, doi: m.doi, key: key };
+    } else {
+      var q = PAPERS.filter(function (x) { return x.citation_key === key; })[0];
+      if (q) p = { title: q.title, year: q.year, arxiv_id: q.arxiv_id, url: q.url, doi: q.doi, key: key };
+    }
+    if (!p) p = { title: key, year: null, arxiv_id: '', url: '', doi: '', key: key };
+    p.href = p.arxiv_id ? 'https://arxiv.org/abs/' + p.arxiv_id : (p.url || '');
+    return p;
+  }
 
   function paperHref(p) {
     if (p.url && /^https?:\/\//.test(p.url)) return p.url;
@@ -940,22 +955,16 @@
     var stages = [
       { name: 'Screened registry (14 Jun 2026)', v: stats.screened_records, c: '#93B4F7' },
       { name: 'Unique registry works (4 duplicates canonicalized)', v: stats.registry_works, c: '#60A5FA' },
-      { name: 'Coded pool (+ reviewed paper cards)', v: stats.coded_records, c: '#3B82F6' },
-      { name: 'In Figure 2 window (2023–7 Aug 2026)', v: stats.usable_time_metadata, c: '#2563EB' }
+      { name: 'Surveyed pool (registry + reviewed paper cards)', v: stats.coded_records, c: '#3B82F6' },
+      { name: 'In Figure 1 window (2023–7 Aug 2026)', v: stats.usable_time_metadata, c: '#2563EB' },
+      { name: 'Medium/high-confidence codings', v: (stats.confidence_medium_high || 0), c: '#2F7F73' }
     ];
     var top = stages[0].v || 1;
-    box.innerHTML = stages.map(function (st) {
+    box.innerHTML = stages.map(function (st, idx) {
       var pct = 100 * st.v / top;
-      return '<div class="fn-row"><div class="fn-label">' + esc(st.name) + '</div><div class="fn-track"><div class="fn-bar" data-w="' + pct.toFixed(2) + '" style="width:0;background:' + st.c + '"></div></div><div class="fn-val">' + fmt(st.v) + '<span class="fn-pct">' + Math.round(pct) + '%</span></div></div>';
+      return '<div class="fn-row"><div class="fn-label">' + esc(st.name) + '</div><div class="fn-track"><div class="fn-bar" style="width:' + Math.max(pct, 1.4).toFixed(2) + '%;background:' + st.c + ';animation-delay:' + (0.09 * idx) + 's"></div></div><div class="fn-val">' + fmt(st.v) + '<span class="fn-pct">' + Math.round(pct) + '%</span></div></div>';
     }).join('');
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        box.querySelectorAll('.fn-bar').forEach(function (b, i) {
-          setTimeout(function () { b.style.width = Math.max(+b.getAttribute('data-w'), 1.4) + '%'; }, 120 * i);
-        });
-      });
-    });
-    if (cap) cap.textContent = 'Corpus audit counts from the survey protocol appendix; the coded pool drives every chart and list on this page.';
+    if (cap) cap.textContent = 'Corpus audit counts from the survey protocol appendix. Codings are machine-initial: ' + fmt(stats.confidence_low || 0) + ' of ' + fmt(stats.coded_records) + ' records are low-confidence and are excluded from the charts and the Paper Reader default view.';
   }
 
   /* ---------- ECharts ---------- */
@@ -976,15 +985,18 @@
   function renderCharts() {
     if (!PAPERS || typeof echarts === 'undefined') return;
     var c = chartColors();
+    // Charts use the medium/high-confidence subset only; machine-initial low-confidence
+    // codings remain browsable in the Paper Reader via the Confidence filter.
+    var VIS = PAPERS.filter(function (p) { return p.confidence && p.confidence !== 'low'; });
     function axis(extra) {
       var base = { axisLine: { lineStyle: { color: c.border } }, axisLabel: { color: c.muted }, splitLine: { lineStyle: { color: 'rgba(127,127,127,0.12)' } } };
       for (var k in (extra || {})) base[k] = extra[k];
       return base;
     }
 
-    /* papers per year — self-evolving-agent window (2023+), matching Figure 2 */
+    /* papers per year — self-evolving-agent window (2023+), matching Figure 1 */
     var yc = {};
-    PAPERS.forEach(function (p) { if (p.year >= 2023) yc[p.year] = (yc[p.year] || 0) + 1; });
+    VIS.forEach(function (p) { if (p.year >= 2023) yc[p.year] = (yc[p.year] || 0) + 1; });
     var ys = Object.keys(yc).sort();
     insts['vz-year'].setOption({
       grid: { left: 44, right: 20, top: 18, bottom: 28 }, tooltip: { trigger: 'axis' },
@@ -998,7 +1010,7 @@
 
     /* sunburst: substrate -> adaptation -> outcome_detail */
     var sun = {};
-    PAPERS.forEach(function (p) {
+    VIS.forEach(function (p) {
       if (!p.substrate || !p.adaptation || !p.outcome_detail) return;
       sun[p.substrate] = sun[p.substrate] || {};
       sun[p.substrate][p.adaptation] = sun[p.substrate][p.adaptation] || {};
@@ -1035,7 +1047,7 @@
     /* sankey: substrate -> adaptation -> outcome */
     var ln = {}, links = {}, nodes = [];
     function nid(name) { return name; }
-    PAPERS.forEach(function (p) {
+    VIS.forEach(function (p) {
       if (!p.substrate || !p.adaptation || !p.outcome) return;
       links[p.substrate + '|' + p.adaptation] = (links[p.substrate + '|' + p.adaptation] || 0) + 1;
       links[p.adaptation + '|' + p.outcome] = (links[p.adaptation + '|' + p.outcome] || 0) + 1;
@@ -1063,7 +1075,7 @@
 
     /* record origin donut */
     var origin = { registry: 0, reviewed_card: 0 };
-    PAPERS.forEach(function (p) { if (p.record_origin === 'reviewed_card') origin.reviewed_card++; else origin.registry++; });
+    VIS.forEach(function (p) { if (p.record_origin === 'reviewed_card') origin.reviewed_card++; else origin.registry++; });
     insts['vz-donut'].setOption({
       tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' }, legend: { bottom: 0, textStyle: { color: c.muted } },
       series: [{
@@ -1078,7 +1090,7 @@
 
     /* terminal families bar */
     var fams = {};
-    PAPERS.forEach(function (p) { if (p.outcome_detail) fams[p.outcome_detail] = (fams[p.outcome_detail] || 0) + 1; });
+    VIS.forEach(function (p) { if (p.outcome_detail) fams[p.outcome_detail] = (fams[p.outcome_detail] || 0) + 1; });
     var famOrder = VIOLATIONS.concat(RESPONSES);
     var top = famOrder.map(function (f) { return [f, fams[f] || 0]; }).filter(function (t) { return t[1] > 0; }).sort(function (a, b) { return b[1] - a[1]; });
     insts['vz-bar'].setOption({
@@ -1098,8 +1110,9 @@
     var keys = ['gao2025self_evolving_agents', 'tao2024self_evolution_llm_survey', 'lin2026memory_security_survey', 'zhang2026harnesssafeevaluatingsafetypersistent', 'lotfi2026securingagenticaiperaction', 'qi2026trustworthy_agentic_ai'];
     var items = [];
     keys.forEach(function (k) {
-      var p = PAPERS.filter(function (x) { return x.citation_key === k; })[0];
-      if (p) items.push('<li><a href="' + esc(paperHref(p)) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a> <span style="color:var(--text-muted)">(' + (p.year || 'n.d.') + ')</span></li>');
+      var p = refInfo(k);
+      if (p.href) items.push('<li><a href="' + esc(p.href) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a> <span style="color:var(--text-muted)">(' + (p.year || 'n.d.') + ')</span></li>');
+      else items.push('<li>' + esc(p.title) + ' <span style="color:var(--text-muted)">(' + (p.year || 'n.d.') + ')</span></li>');
     });
     el.innerHTML = items.join('') || '<li class="empty">Related works will appear here.</li>';
   }
@@ -1111,10 +1124,9 @@
     if (!box || !ROADMAP) return;
 
     function paperLink(k) {
-      var p = PAPERS.filter(function (x) { return x.citation_key === k; })[0];
-      if (!p) return null;
-      var href = p.arxiv_id ? 'https://arxiv.org/abs/' + p.arxiv_id : (p.url || '#');
-      return { href: href, title: p.title, year: p.year };
+      var p = refInfo(k);
+      if (!p.href) return null;
+      return { href: p.href, title: p.title, year: p.year };
     }
     function refsHtml(refs) {
       if (!refs || !refs.length) return '';
@@ -1165,9 +1177,11 @@
   function refsHtml(refs) {
     if (!refs || !refs.length) return '';
     return refs.map(function (k) {
-      var p = PAPERS.filter(function (x) { return x.citation_key === k; })[0];
-      if (p && p.arxiv_id) return '<a class="tref" href="https://arxiv.org/abs/' + p.arxiv_id + '" target="_blank" rel="noopener" title="' + esc(p.title) + ' (' + (p.year || 'n.d.') + ')">[' + p.arxiv_id + ']</a>';
-      if (p && p.url) return '<a class="tref" href="' + esc(p.url) + '" target="_blank" rel="noopener" title="' + esc(p.title) + '">[ref]</a>';
+      var p = refInfo(k);
+      if (p.href) {
+        var lbl = p.arxiv_id ? p.arxiv_id : 'ref';
+        return '<a class="tref" href="' + esc(p.href) + '" target="_blank" rel="noopener" title="' + esc(p.title) + ' (' + (p.year || 'n.d.') + ')">[' + esc(lbl) + ']</a>';
+      }
       return '<span class="tref" title="' + esc(k) + '">[' + esc(k) + ']</span>';
     }).join('');
   }
@@ -1225,7 +1239,7 @@
   (function () {
     var io = null;
     function revealInit() {
-      var els = document.querySelectorAll('.viz-card, .fig-panel, .info-card, .ct-block, .rm-lane, .fn-row, section h2');
+      var els = document.querySelectorAll('.viz-card, .fig-panel, .info-card, .ct-block, .rm-lane, section h2');
       var fresh = [];
       els.forEach(function (el) {
         if (!el.classList.contains('reveal')) { el.classList.add('reveal'); fresh.push(el); }
@@ -1312,12 +1326,14 @@
       fetch('papers.json').then(function (r) { return r.json(); }),
       fetch('stats.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('tables.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('roadmap.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+      fetch('roadmap.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('refmap.json').then(function (r) { return r.json(); }).catch(function () { return null; })
     ];
     Promise.all(jobs).then(function (res) {
       PAPERS = res[0];
       TABLES = res[2];
       ROADMAP = res[3];
+      REFMAP = res[4];
       renderReading(); renderCharts(); renderFunnel(res[1]);
       renderRoadmap(); renderTables();
       if (window.__revealInit) window.__revealInit();

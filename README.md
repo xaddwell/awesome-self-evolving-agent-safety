@@ -54,11 +54,12 @@ The coded pool follows the survey's systematic scoping protocol (see the paper's
 | Screened bibliographic records (14 June 2026 snapshot) | 583 |
 | Unique registry works (4 duplicates canonicalized) | 579 |
 | **Coded pool** (registry + 46 reviewed paper-card supplements) | **625** |
-| Records in the Figure 2 window (2023 – 7 Aug 2026) | 524 |
+| Records in the Figure 1 window (2023 – 7 Aug 2026) | 524 |
+| Medium/high-confidence codings (low-confidence: 499) | 126 |
 
 ## Taxonomy
 
-All counts and links are driven by `papers.json`, generated from [`data/saver_record_literature.csv`](data/saver_record_literature.csv) — the same coding surface that drives the manuscript figures.
+All counts and links are driven by `papers.json`, generated from [`data/saver_record_literature.csv`](data/saver_record_literature.csv) — the same coding surface that drives manuscript Figure 1. **Codings are machine-initial**: 499 of the 625 records are low-confidence. The website charts use only the 126 medium/high-confidence records, and the Paper Reader hides low-confidence records by default (Confidence filter), so machine labels are never presented as hand-verified curation.
 
 ### Substrate families
 
@@ -98,13 +99,14 @@ All counts and links are driven by `papers.json`, generated from [`data/saver_re
 ├── stats.json                  # Corpus aggregates (generated)
 ├── tables.json                 # Classification tables (generated from LaTeX)
 ├── roadmap.json                # Roadmap tree (generated from LaTeX)
+├── refmap.json                 # Bib key -> paper metadata resolution map (generated)
 ├── assets/
 │   └── SAVER-Survey.pdf        # Paper PDF
 ├── data/
 │   └── saver_record_literature.csv   # Coding source of truth
-├── source/                     # Vendored LaTeX sources (tables + roadmap)
+├── source/                     # Vendored LaTeX sources (tables + roadmap + references.bib)
 ├── tools/
-│   └── gen_papers_json.py      # CSV + LaTeX → JSON generator
+│   └── gen_papers_json.py      # CSV + LaTeX + BibTeX → JSON generator
 ├── saver.bib                   # BibTeX entry
 ├── CITATION.cff                # GitHub citation metadata
 ├── llms.txt                    # Repo summary for LLM agents

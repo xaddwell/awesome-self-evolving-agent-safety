@@ -18,6 +18,6 @@ Outcome (10 terminal families): six Violation families (Provenance Loss, Authori
 
 ## Key Facts
 
-- 625 coded records = 579 unique registry works + 46 reviewed paper-card supplements; 524 carry usable time metadata from 2023 through 7 August 2026.
-- Data pipeline: data/saver_record_literature.csv (+ vendored LaTeX in source/) -> tools/gen_papers_json.py -> papers.json, stats.json, tables.json, roadmap.json -> index.html and papers.html render everything client-side.
+- 625 coded records = 579 unique registry works + 46 reviewed paper-card supplements; 524 carry usable time metadata from 2023 through 7 August 2026. Codings are machine-initial: 499 low-confidence vs 126 medium/high; the website charts and the Paper Reader default view use only the medium/high subset.
+- Data pipeline: data/saver_record_literature.csv (+ vendored LaTeX and references.bib in source/) -> tools/gen_papers_json.py -> papers.json, stats.json, tables.json, roadmap.json, refmap.json -> index.html and papers.html render everything client-side. refmap.json resolves every LaTeX citation key against BibTeX metadata, so table/roadmap reference markers never dangle.
 - To add or correct a paper: open an issue with the Paper Submission template, proposing title, link, and SAVER coding (substrate / adaptation / outcome family).

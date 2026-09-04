@@ -5,5 +5,7 @@
  "screened_records": 583,
  "canonicalized_duplicates": 4,
  "usable_time_metadata": 524,
- "time_window": "2023 through 7 August 2026"
+ "time_window": "2023 through 7 August 2026",
+ "confidence_low": 499,
+ "confidence_medium_high": 126
 }

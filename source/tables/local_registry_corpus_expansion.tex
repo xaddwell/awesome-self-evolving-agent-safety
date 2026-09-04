@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\caption{Screened corpus expansion map beyond the core mechanism anchors. The table lists representative anchors for each coverage band rather than treating every screened record as a main-text mechanism claim.}
+\label{tab:screened-corpus-expansion}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.4pt}
+\renewcommand{\arraystretch}{1.08}
+\SAVERTableRows
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}@{}}
+\toprule
+\rowcolor{saverNeutralHead}
+\textbf{Coverage Band} & \textbf{Cells Covered} & \textbf{Representative Anchors} & \textbf{Claim Boundary} \\
+\midrule
+\textbf{Security, Privacy, Governance} & Cyber evaluation; injection; firewalling; privacy; data governance & CyberSecEval 2~\cite{bhatt_2024_cyberseceval_2_a_wide_rangin}; AttackEval~\cite{shu_2025_attackeval_how_to_evaluate_t}; Not What You've Signed Up For~\cite{greshake_2023_not_what_you_ve_signed_up_fo}; EchoLeak~\cite{reddy_2025_echoleak_the_first_real_worl}; DataGovBench~\cite{zhou_2025_datagovbench_benchmarking_ll} & Adjacent vocabulary for threats, privacy, and data audit \\
+\textbf{Benchmarks, Red Teams, Guardrails} & General agent tasks; harm probes; unsafe choices; automated red teams; platform guardrails & AgentBench~\cite{liu_2023_agentbench_evaluating_llms_a}; AgentHarm~\cite{andriushchenko2025agentharm}; RedCode~\cite{guo2024redcode}; MobileSafetyBench~\cite{lee2026mobilesafetybench}; AgenticRed~\cite{yuan2026agenticred}; OpenGuardrails~\cite{wang2025openguardrails} & Denominator context, not a leaderboard \\
+\textbf{Memory And Tool State} & Persistent memory; forgetting; memory governance; MCP/tool routes; dependency safety & Zombie Agents~\cite{yang2026zombie_agents}; MemoryGraft~\cite{srivastava2025memorygraft}; SSGM~\cite{lam2026ssgm}; GLOVE~\cite{yin2026glove}; MCPShield~\cite{zhou2026mcpshield}; STAC~\cite{li2026stac}; IPIGuard~\cite{an2025ipiguard} & Direct when state later changes reasoning or action \\
+\textbf{Workflow And Propagation} & Skills; procedural reuse; library drift; multi-agent uptake; shared context; OS/GUI settings & Library Drift~\cite{zhang2026library_drift}; Tool-Drift~\cite{dabas2026tool_drift}; AgenticEval~\cite{wang2026agenticeval}; MemEvoBench~\cite{xie2026memevobench}; collective misremembering~\cite{xu2026when}; RedTeamCUA~\cite{liao2026redteamcua} & Thin evidence for ownership and repair \\
+\textbf{Model-Side And Adaptive Workflow Leads} & Distillation and model update; reusable workflows; evaluator state & Knowledge distillation survey~\cite{xu_2024_a_survey_on_knowledge_distil}; CAMEL~\cite{li_2023_camel_communicative_agents_f}; WebPilot~\cite{zhang_2025_webpilot_a_versatile_and_aut}; AgentLab~\cite{jiang_2026_agentlab} & Central only inside an agent behavior loop \\
+\bottomrule
+\end{tabular}
+\SAVERTableReset
+\end{table}

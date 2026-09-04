@@ -16344,66 +16344,30 @@
   "caption": "Evaluation literature for adaptive state safety. Most benchmarks expose one lifecycle slice; HarnessSafe, SkillMisevo-Bench, and EVOMAL provide complementary connected traces across cross-carrier, skill-specific, and descendant-propagation lifecycles, while the denominator column states what each row can safely measure."
  },
  {
-  "id": "lifecycle_coverage_matrix",
+  "id": "local_registry_corpus_expansion",
   "header": {
    "type": "row",
    "cells": [
     {
-     "html": "<b>Family</b>",
+     "html": "<b>Coverage Band</b>",
      "colspan": 1,
      "head": "",
      "refs": []
     },
     {
-     "html": "<b>Object</b>",
+     "html": "<b>Cells Covered</b>",
      "colspan": 1,
      "head": "",
      "refs": []
     },
     {
-     "html": "<b>Admit</b>",
+     "html": "<b>Representative Anchors</b>",
      "colspan": 1,
      "head": "",
      "refs": []
     },
     {
-     "html": "<b>Move</b>",
-     "colspan": 1,
-     "head": "",
-     "refs": []
-    },
-    {
-     "html": "<b>Act.</b>",
-     "colspan": 1,
-     "head": "",
-     "refs": []
-    },
-    {
-     "html": "<b>Expose</b>",
-     "colspan": 1,
-     "head": "",
-     "refs": []
-    },
-    {
-     "html": "<b>Contain</b>",
-     "colspan": 1,
-     "head": "",
-     "refs": []
-    },
-    {
-     "html": "<b>Rollback</b>",
-     "colspan": 1,
-     "head": "",
-     "refs": []
-    },
-    {
-     "html": "<b>Delete</b>",
-     "colspan": 1,
-     "head": "",
-     "refs": []
-    },
-    {
-     "html": "<b>Contest</b>",
+     "html": "<b>Claim Boundary</b>",
      "colspan": 1,
      "head": "",
      "refs": []
@@ -16415,63 +16379,31 @@
     "type": "row",
     "cells": [
      {
-      "html": "Conversation safety",
+      "html": "<b>Security, Privacy, Governance</b>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Cyber evaluation; injection; firewalling; privacy; data governance",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "CyberSecEval 2 ; AttackEval ; Not What You've Signed Up For ; EchoLeak ; DataGovBench",
       "colspan": 1,
       "head": "",
       "refs": [
-       "dong2024conversation_safety_survey"
+       "bhatt_2024_cyberseceval_2_a_wide_rangin",
+       "shu_2025_attackeval_how_to_evaluate_t",
+       "greshake_2023_not_what_you_ve_signed_up_fo",
+       "reddy_2025_echoleak_the_first_real_worl",
+       "zhou_2025_datagovbench_benchmarking_ll"
       ]
      },
      {
-      "html": "Output",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
+      "html": "Adjacent vocabulary for threats, privacy, and data audit",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -16482,63 +16414,32 @@
     "type": "row",
     "cells": [
      {
-      "html": "Agent threat surveys",
+      "html": "<b>Benchmarks, Red Teams, Guardrails</b>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "General agent tasks; harm probes; unsafe choices; automated red teams; platform guardrails",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "AgentBench ; AgentHarm ; RedCode ; MobileSafetyBench ; AgenticRed ; OpenGuardrails",
       "colspan": 1,
       "head": "",
       "refs": [
-       "deng_2024_ai_agents_under_threat_a_sur"
+       "liu_2023_agentbench_evaluating_llms_a",
+       "andriushchenko2025agentharm",
+       "guo2024redcode",
+       "lee2026mobilesafetybench",
+       "yuan2026agenticred",
+       "wang2025openguardrails"
       ]
      },
      {
-      "html": "Threats",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
+      "html": "Denominator context, not a leaderboard",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -16549,63 +16450,33 @@
     "type": "row",
     "cells": [
      {
-      "html": "Trustworthy agentic AI",
+      "html": "<b>Memory And Tool State</b>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Persistent memory; forgetting; memory governance; MCP/tool routes; dependency safety",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Zombie Agents ; MemoryGraft ; SSGM ; GLOVE ; MCPShield ; STAC ; IPIGuard",
       "colspan": 1,
       "head": "",
       "refs": [
-       "qi2026trustworthy_agentic_ai"
+       "yang2026zombie_agents",
+       "srivastava2025memorygraft",
+       "lam2026ssgm",
+       "yin2026glove",
+       "zhou2026mcpshield",
+       "li2026stac",
+       "an2025ipiguard"
       ]
      },
      {
-      "html": "Governance",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
+      "html": "Direct when state later changes reasoning or action",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -16616,63 +16487,32 @@
     "type": "row",
     "cells": [
      {
-      "html": "Self-evolving LLMs",
+      "html": "<b>Workflow And Propagation</b>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Skills; procedural reuse; library drift; multi-agent uptake; shared context; OS/GUI settings",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Library Drift ; Tool-Drift ; AgenticEval ; MemEvoBench ; collective misremembering ; RedTeamCUA",
       "colspan": 1,
       "head": "",
       "refs": [
-       "tao2024self_evolution_llm_survey"
+       "zhang2026library_drift",
+       "dabas2026tool_drift",
+       "wang2026agenticeval",
+       "xie2026memevobench",
+       "xu2026when",
+       "liao2026redteamcua"
       ]
      },
      {
-      "html": "Updates",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
+      "html": "Thin evidence for ownership and repair",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -16683,329 +16523,30 @@
     "type": "row",
     "cells": [
      {
-      "html": "Self-evolution safety",
+      "html": "<b>Model-Side And Adaptive Workflow Leads</b>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Distillation and model update; reusable workflows; evaluator state",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Knowledge distillation survey ; CAMEL ; WebPilot ; AgentLab",
       "colspan": 1,
       "head": "",
       "refs": [
-       "lin2026safetyselfevolvingllmagent"
+       "xu_2024_a_survey_on_knowledge_distil",
+       "li_2023_camel_communicative_agents_f",
+       "zhang_2025_webpilot_a_versatile_and_aut",
+       "jiang_2026_agentlab"
       ]
      },
      {
-      "html": "Module stage cells",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "Memory mechanisms",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "zhang_2025_a_survey_on_the_memory_mecha"
-      ]
-     },
-     {
-      "html": "Carriers",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "Memory security",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "lin2026memory_security_survey"
-      ]
-     },
-     {
-      "html": "Memory safety",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "Agent evaluation",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "mohammadi_2025_evaluation_and_benchmarking"
-      ]
-     },
-     {
-      "html": "Benchmarks",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "<b>This survey</b>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<b>Transitions</b>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
+      "html": "Central only inside an agent behavior loop",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -17013,69 +16554,27 @@
     ]
    }
   ],
-  "caption": "Lifecycle coverage of adjacent surveys against the reusable-state lifecycle. Columns use the same stage order as the benchmark matrix: admit, move, activate, expose, contain, roll back, delete, and contest. The symbols mark observed coverage, not proof of end-to-end governance, <span class=\"cov\" title=\"direct\">✓</span>direct, <span class=\"cov\" title=\"partial\">◐</span>partial, <span class=\"cov\" title=\"mostly absent\">○</span>mostly absent."
+  "caption": "Screened corpus expansion map beyond the core mechanism anchors. The table lists representative anchors for each coverage band rather than treating every screened record as a main-text mechanism claim."
  },
  {
-  "id": "benchmark_saver_coverage_matrix",
+  "id": "verified_quantitative_seed_landscape",
   "header": {
    "type": "row",
    "cells": [
     {
-     "html": "<b>Family</b>",
+     "html": "<b>Record</b>",
      "colspan": 1,
      "head": "",
      "refs": []
     },
     {
-     "html": "<b>Admit</b>",
+     "html": "<b>Keep With The Value</b>",
      "colspan": 1,
-     "head": "#E6EEFF",
+     "head": "",
      "refs": []
     },
     {
-     "html": "<b>Move</b>",
-     "colspan": 1,
-     "head": "#E7F5EF",
-     "refs": []
-    },
-    {
-     "html": "<b>Act.</b>",
-     "colspan": 1,
-     "head": "#E7F5EF",
-     "refs": []
-    },
-    {
-     "html": "<b>Expose</b>",
-     "colspan": 1,
-     "head": "#F0E8FA",
-     "refs": []
-    },
-    {
-     "html": "<b>Contain</b>",
-     "colspan": 1,
-     "head": "#E4F3F1",
-     "refs": []
-    },
-    {
-     "html": "<b>Rollback</b>",
-     "colspan": 1,
-     "head": "#E4F3F1",
-     "refs": []
-    },
-    {
-     "html": "<b>Delete</b>",
-     "colspan": 1,
-     "head": "#E4F3F1",
-     "refs": []
-    },
-    {
-     "html": "<b>Contest</b>",
-     "colspan": 1,
-     "head": "#E4F3F1",
-     "refs": []
-    },
-    {
-     "html": "<b>Boundary</b>",
+     "html": "<b>Avoid</b>",
      "colspan": 1,
      "head": "",
      "refs": []
@@ -17087,64 +16586,19 @@
     "type": "row",
     "cells": [
      {
-      "html": "AgentDojo / InjecAgent",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "debenedetti2024agentdojo",
-       "zhan_2024_injecagent_benchmarking_indi"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
+      "html": "Paper-local metric",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
+      "html": "Opportunity set; transition slice; metric object",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Tool-mediated injection and exposure; no response or cleanup denominator.",
+      "html": "Cross-paper leaderboard claims",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -17155,63 +16609,19 @@
     "type": "row",
     "cells": [
      {
-      "html": "ACIArena",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "an-etal-2026-aciarena"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
+      "html": "Artifact status",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
+      "html": "Dataset, benchmark, code, or trace availability",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Cascading injection across profiles, messages, and agents; response and repair unmeasured.",
+      "html": "Mixing peer-reviewed and preprint rows as equal evidence",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -17222,679 +16632,19 @@
     "type": "row",
     "cells": [
      {
-      "html": "HarnessSafe",
+      "html": "Claim boundary",
       "colspan": 1,
       "head": "",
-      "refs": [
-       "zhang2026harnesssafeevaluatingsafetypersistent"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Connected carrier-to-violation trace and stopping stage; no selection or post-incident recovery.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "SkillMisevo-Bench",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "mao2026practicemakesunsafeskill"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Skill authoring-to-carryover trace plus local repair and retirement; no descendant or deletion proof.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "EVOMAL",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "wu2026evomalselfpoisoningselfevolvingcoding"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Create-path and five-round source-removal trace; no natural-stream or descendant-deletion proof.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "R-Judge / ASB / Agent-SafetyBench",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "yuan2024rjudge",
-       "zhang_2024_agent_security_bench_asb_for",
-       "zhang_2024_agent_safetybench_evaluating"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Recognition, security tasks, and unsafe-choice scoring; no lifecycle response.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "OEP / PASB / MemEvoBench",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "wang2026oep",
-       "mao2026agentsdontjustagree",
-       "xie2026memevobench"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Experience or memory updates and later reuse; no recovery denominator.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "PerMemSafe / PS-Bench / RBI-Eval",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "an-etal-2026-permemsafe",
-       "guo-etal-2026-personalization",
-       "xu2026memorystaysilentmeasuring"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Personalized context and warranted-memory-use evaluation.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "PersistBench",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "pulipaka2026persistbench"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Forgetting and use boundaries; no descendant-wide repair.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "SafeAgent / Progent / CaMeL / DRIFT / LlamaFirewall",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "liu_2026_safeagent_a_runtime_protecti",
-       "shi2025progent",
-       "debenedetti2026defeating",
-       "li2025drift",
-       "chennabasappa_2025_llamafirewall_an_open_source"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Tool authorization and local containment, not descendant repair.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "Fine-tuning safety / PEFT safety / SEVerA / Dormant tests",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "qi2023finetuning_safety",
-       "hong2024peta",
-       "banerjee2026severa",
-       "gloaguen2025watch_your_steps"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "Model update, activation, and verification slices; no agent-loop recovery trace.",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     }
-    ]
-   },
-   {
-    "type": "row",
-    "cells": [
-     {
-      "html": "Safe LoRA",
-      "colspan": 1,
-      "head": "",
-      "refs": [
-       "hsu2024safe_lora"
-      ]
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"direct\">✓</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"partial\">◐</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
-      "refs": []
-     },
-     {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
-      "colspan": 1,
-      "head": "",
       "refs": []
      },
      {
-      "html": "<span class=\"cov\" title=\"mostly absent\">○</span>",
+      "html": "What the metric directly observes",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "LoRA update and bounded mitigation; no lifecycle rollback evidence.",
+      "html": "Inferring rollback, deletion, or contestability without traces",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -17902,6 +16652,6 @@
     ]
    }
   ],
-  "caption": "Benchmark family coverage along the reusable-state lifecycle, <span class=\"cov\" title=\"direct\">✓</span>direct, <span class=\"cov\" title=\"partial\">◐</span>partial, <span class=\"cov\" title=\"mostly absent\">○</span>mostly absent."
+  "caption": ""
  }
 ]

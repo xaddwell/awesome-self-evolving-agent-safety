@@ -170,7 +170,7 @@
 <div class="wrap">
   <header class="hero">
     <h1>Paper Reader</h1>
-    <p class="hero-sub">The 625 coded records of the self-evolving agent safety survey. Every record carries its <b>SAVER</b> coding — substrate, adaptation operation, and outcome family — plus its registry origin. Filter by any field, combine filters freely, and open the linked source.</p>
+    <p class="hero-sub">The 625 coded records of the self-evolving agent safety survey. Every record carries its <b>SAVER</b> coding — substrate, adaptation operation, and outcome family — plus its registry origin and a confidence label. Codings are machine-initial: <b>low-confidence records are hidden by default</b> (use the Confidence filter to include them). Filter by any field, combine filters freely, and open the linked source.</p>
   </header>
 
   <div class="controls">
@@ -194,6 +194,8 @@
       <div class="pills" id="fDetail"></div>
       <div class="fg-label">Origin</div>
       <div class="pills" id="fOrigin"></div>
+      <div class="fg-label">Confidence</div>
+      <div class="pills" id="fConfidence"></div>
     </div>
   </div>
 
@@ -258,7 +260,7 @@
   var PAPERS = [];
   var q = '';
   var sortMode = 'date-desc';
-  var filters = { substrate: null, adaptation: null, outcome: null, detail: null, origin: null };
+  var filters = { substrate: null, adaptation: null, outcome: null, detail: null, origin: null, confidence: 'mh' };
 
   function href(p) {
     if (p.url && /^https?:\/\//.test(p.url)) return p.url;
@@ -300,6 +302,21 @@
     paint(document.getElementById('fOutcome'), 'outcome', group('outcome', null), function (k) { return k === 'Violation' ? 'var(--c-violation)' : 'var(--c-response)'; });
     paint(document.getElementById('fDetail'), 'outcome_detail', group('outcome_detail', VIOLATIONS.concat(RESPONSES)));
     paint(document.getElementById('fOrigin'), 'record_origin', group('record_origin', ['registry', 'reviewed_card']));
+    var cEl = document.getElementById('fConfidence');
+    var cLow = PAPERS.filter(function (x) { return x.confidence === 'low'; }).length;
+    var cMh = PAPERS.length - cLow;
+    cEl.innerHTML = '<button class="pill" data-v="mh" style="--pill-c:var(--c-response)">Medium &amp; High (' + fmt(cMh) + ')</button>'
+      + '<button class="pill" data-v="low" style="--pill-c:#B45309">Low — machine-initial (' + fmt(cLow) + ')</button>'
+      + '<button class="pill" data-v="all" style="--pill-c:var(--accent)">All (' + fmt(PAPERS.length) + ')</button>';
+    cEl.querySelectorAll('.pill').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-v') === filters.confidence);
+      b.addEventListener('click', function () {
+        cEl.querySelectorAll('.pill').forEach(function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        filters.confidence = b.getAttribute('data-v');
+        renderCards();
+      });
+    });
   }
 
   function matches(p) {
@@ -308,6 +325,8 @@
     if (filters.outcome && p.outcome !== filters.outcome) return false;
     if (filters.detail && p.outcome_detail !== filters.detail) return false;
     if (filters.origin && p.record_origin !== filters.origin) return false;
+    if (filters.confidence === 'mh' && (!p.confidence || p.confidence === 'low')) return false;
+    if (filters.confidence === 'low' && p.confidence !== 'low') return false;
     if (!q) return true;
     var hay = (p.title + ' ' + (p.citation_key || '') + ' ' + (p.arxiv_id || '') + ' ' + (p.doi || '')).toLowerCase();
     return q.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
@@ -320,7 +339,8 @@
     if (sortMode === 'date-desc') list.sort(function (a, b) { return (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title); });
     else if (sortMode === 'date-asc') list.sort(function (a, b) { return (a.year || 0) - (b.year || 0) || a.title.localeCompare(b.title); });
     else list.sort(function (a, b) { return a.title.localeCompare(b.title); });
-    stats.textContent = fmt(list.length) + ' / ' + fmt(PAPERS.length) + ' papers';
+    var note = filters.confidence === 'all' ? '' : (filters.confidence === 'mh' ? ' · low-confidence hidden' : ' · low-confidence only');
+    stats.textContent = fmt(list.length) + ' / ' + fmt(PAPERS.length) + ' papers' + note;
 
     box.innerHTML = list.slice(0, 300).map(function (p) {
       var lc = SUB_COLOR[p.substrate] || 'var(--accent)';
@@ -333,6 +353,7 @@
         + '<span class="badge" style="--bc:' + (p.outcome === 'Violation' ? 'var(--c-violation)' : 'var(--c-response)') + '">' + esc(p.outcome || '?') + '</span>'
         + '<span class="badge muted">' + esc(p.outcome_detail || '?') + '</span>'
         + (p.record_origin === 'reviewed_card' ? '<span class="badge" style="--bc:#8B5CF6">card</span>' : '<span class="badge" style="--bc:#3B82F6">registry</span>')
+        + (p.confidence === 'low' ? '<span class="badge" style="--bc:#B45309">low conf.</span>' : '<span class="badge" style="--bc:#2F7F73">' + esc(p.confidence || '?') + '</span>')
         + '</div></div>';
     }).join('')
     + (list.length > 300 ? '<p class="empty">Showing first 300 of ' + fmt(list.length) + ' matches — refine the filters above.</p>' : '')
@@ -345,6 +366,8 @@
   function applyParams() {
     var sp = new URLSearchParams(location.search);
     var fieldMap = { substrate: 'substrate', adaptation: 'adaptation', outcome: 'outcome', detail: 'outcome_detail', origin: 'record_origin' };
+    var conf = sp.get('confidence');
+    if (conf && (conf === 'all' || conf === 'low' || conf === 'mh')) filters.confidence = conf;
     if (sp.get('q')) {
       q = sp.get('q').toLowerCase();
       document.getElementById('q').value = sp.get('q');
