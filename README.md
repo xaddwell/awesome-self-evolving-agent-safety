@@ -8,12 +8,13 @@
 [![Papers](https://img.shields.io/badge/Papers-683-blue.svg)](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/xaddwell/awesome-self-evolving-agent-safety/pulls)
 [![GitHub stars](https://img.shields.io/github/stars/xaddwell/awesome-self-evolving-agent-safety?style=social)](https://github.com/xaddwell/awesome-self-evolving-agent-safety)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xaddwell/awesome-self-evolving-agent-safety/pulls)
 
 **A transition-centered survey of safety in self-evolving agents: how reusable influence persists, moves, and changes role across carriers — organized by the SAVER framework (`S×A → V→E→R`) over 683 coded papers.**
 
 [[Website]](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/) · [[Paper Reader]](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html) · [[Paper (PDF)]](assets/SAVER-Survey.pdf)
 
-<img src="assets/img/overview.png" width="86%" alt="Overview of the transition-centered survey structure: Substrate × Adaptation → Violation → Exposure → Response">
+<img src="assets/img/banner.png" width="100%" alt="Safety in Self-Evolving Agents — SAVER: S×A → V → E → R">
 
 </div>
 
@@ -45,6 +46,10 @@ This capability changes the safety problem. When experience becomes reusable sta
 | **E · Exposure** | Where does the failure become observable? | Tool calls, model outputs, shared artifacts, governance audits, deletion requests |
 | **R · Response** | What can contain or repair it? | Admission gates, migration checks, activation authorization, runtime guards, descendant rollback, deletion verification, contestability |
 
+<div align="center">
+<img src="assets/img/overview.png" width="86%" alt="Overview of the transition-centered survey structure: Substrate × Adaptation → Violation → Exposure → Response">
+</div>
+
 **Key insights.** (1) Many safety failures originate not from harmful information but from unsafe transitions that elevate the persistence, authority, or scope of legitimate state. (2) The field controls unsafe admission and visible failures well, but influence-lineage tracking across migration, propagation, and recovery remains fragmented. (3) Evaluation should move from endpoint metrics to lifecycle-level evidence that unsafe influence is traced, contained, and prevented from re-emerging after continued adaptation.
 
 ## Corpus
@@ -66,7 +71,7 @@ The coded pool follows the survey's systematic scoping protocol (see the paper's
 ## Taxonomy
 
 <div align="center">
-<img src="assets/img/roadmap.png" width="52%" alt="SAVER literature roadmap">
+<img src="assets/img/taxonomy.png" width="86%" alt="SAVER taxonomy structure: substrates, adaptation operations, terminal families">
 </div>
 
 All counts and links are driven by `papers.json`, generated from [`data/saver_record_literature.csv`](data/saver_record_literature.csv) — the same coding surface that drives manuscript Figure 1. **Codings are machine-initial**: 549 of the 683 records are low-confidence. The website charts use only the 134 medium/high-confidence records, and the Paper Reader hides low-confidence records by default (Confidence filter), so machine labels are never presented as hand-verified curation.
@@ -98,6 +103,22 @@ Three paper figures, reproduced from the manuscript:
 | <img src="assets/img/transmutation.png" width="100%"> | <img src="assets/img/output2state.png" width="100%"> | <img src="assets/img/lattice.png" width="100%"> |
 | The same sentence carries different authority depending on its carrier. | The unit of analysis expands from a response to a reusable state transition. | Upward authority movement requires an explicit gate. |
 
+## Literature Roadmap
+
+<div align="center">
+<img src="assets/img/roadmap.png" width="56%" alt="SAVER literature roadmap">
+</div>
+
+The full roadmap is interactive on the [project page](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/#roadmap): four substrate lanes, operation paths, and violation/response leaves with numbered reference links.
+
+## Website Preview
+
+| Desktop | At a Glance | Mobile |
+| :---: | :---: | :---: |
+| <img src="assets/img/site_preview.png" width="100%"> | <img src="assets/img/site_preview_glance.png" width="100%"> | <img src="assets/img/site_preview_mobile.png" width="100%"> |
+
+Live at [xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/).
+
 ## Interactive Project Page
 
 [`index.html`](index.html) renders everything live from `papers.json` / `stats.json` / `tables.json` / `roadmap.json`:
@@ -121,7 +142,7 @@ Three paper figures, reproduced from the manuscript:
 ├── refmap.json                 # Bib key -> paper metadata resolution map (generated)
 ├── assets/
 │   ├── SAVER-Survey.pdf        # Paper PDF
-│   └── img/                    # Figure images rendered from the manuscript
+│   └── img/                    # Banner, figures, and site previews
 ├── data/
 │   └── saver_record_literature.csv   # Coding source of truth
 ├── source/                     # Vendored LaTeX sources (tables + roadmap + references.bib)
@@ -144,6 +165,12 @@ python3 tools/gen_papers_json.py
 ## Contribute
 
 We welcome corrections and new papers. Please open an issue using the [Paper Submission](https://github.com/xaddwell/awesome-self-evolving-agent-safety/issues/new?template=paper-submission.md) template with the paper title, link, and your proposed SAVER coding (substrate / adaptation / outcome family). Changes are reconciled against `data/saver_record_literature.csv`, the same surface that drives the manuscript figures. For feedback on the survey itself, contact xaddwell@zju.edu.cn.
+
+## Contributors
+
+<a href="https://github.com/xaddwell/awesome-self-evolving-agent-safety/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=xaddwell/awesome-self-evolving-agent-safety" alt="Contributors" />
+</a>
 
 ## Star History
 
