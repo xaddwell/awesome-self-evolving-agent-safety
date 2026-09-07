@@ -70,10 +70,6 @@ The coded pool follows the survey's systematic scoping protocol (see the paper's
 
 ## Taxonomy
 
-<div align="center">
-<img src="assets/img/taxonomy.png" width="86%" alt="SAVER taxonomy structure: substrates, adaptation operations, terminal families">
-</div>
-
 All counts and links are driven by `papers.json`, generated from [`data/saver_record_literature.csv`](data/saver_record_literature.csv) — the same coding surface that drives manuscript Figure 1. **Codings are machine-initial**: 549 of the 683 records are low-confidence. The website charts use only the 134 medium/high-confidence records, and the Paper Reader hides low-confidence records by default (Confidence filter), so machine labels are never presented as hand-verified curation.
 
 ### Substrate families
@@ -111,14 +107,6 @@ Three paper figures, reproduced from the manuscript:
 
 The full roadmap is interactive on the [project page](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/#roadmap): four substrate lanes, operation paths, and violation/response leaves with numbered reference links.
 
-## Website Preview
-
-| Desktop | At a Glance | Mobile |
-| :---: | :---: | :---: |
-| <img src="assets/img/site_preview.png" width="100%"> | <img src="assets/img/site_preview_glance.png" width="100%"> | <img src="assets/img/site_preview_mobile.png" width="100%"> |
-
-Live at [xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/).
-
 ## Interactive Project Page
 
 [`index.html`](index.html) renders everything live from `papers.json` / `stats.json` / `tables.json` / `roadmap.json`:
@@ -142,7 +130,7 @@ Live at [xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety](https://xaddwell
 ├── refmap.json                 # Bib key -> paper metadata resolution map (generated)
 ├── assets/
 │   ├── SAVER-Survey.pdf        # Paper PDF
-│   └── img/                    # Banner, figures, and site previews
+│   └── img/                    # Banner and figure images
 ├── data/
 │   └── saver_record_literature.csv   # Coding source of truth
 ├── source/                     # Vendored LaTeX sources (tables + roadmap + references.bib)
