@@ -143,7 +143,7 @@ python3 tools/gen_papers_json.py
 
 ## Contribute
 
-We welcome corrections and new papers. Please open an issue using the [Paper Submission](https://github.com/xaddwell/awesome-self-evolving-agent-safety/issues/new?template=paper-submission.md) template with the paper title, link, and your proposed SAVER coding (substrate / adaptation / outcome family). Changes are reconciled against `data/saver_record_literature.csv`, the same surface that drives the manuscript figures. For feedback on the survey itself, contact sji@zju.edu.cn.
+We welcome corrections and new papers. Please open an issue using the [Paper Submission](https://github.com/xaddwell/awesome-self-evolving-agent-safety/issues/new?template=paper-submission.md) template with the paper title, link, and your proposed SAVER coding (substrate / adaptation / outcome family). Changes are reconciled against `data/saver_record_literature.csv`, the same surface that drives the manuscript figures. For feedback on the survey itself, contact xaddwell@zju.edu.cn.
 
 ## Star History
 
