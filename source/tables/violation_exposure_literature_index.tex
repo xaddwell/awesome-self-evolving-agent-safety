@@ -1,8 +1,8 @@
-\begin{table}[t]
+\begin{table}[h]
 \centering
 \begin{minipage}{0.98\linewidth}
 \captionsetup{hypcap=false}
-\caption{Exposure surfaces for latent state failures. Memory retrieval, privacy disclosure, tool action, multi-agent uptake, benchmark tasks, and model deployment expose different parts of the same lifecycle gap; role labels mark whether a row is direct evidence, contextual rereading, or gap-facing support.}
+\caption{Exposure surfaces for latent state failures. Memory retrieval, privacy disclosure, tool action, multi-agent uptake, benchmark tasks, and model deployment expose different parts of the same lifecycle gap; role labels identify the contribution represented by each row.}
 \label{tab:violation-exposure-literature-index}
 \centering
 \tiny
@@ -37,7 +37,7 @@ Prompt injection apps~\cite{liu_2023_prompt_injection_attack_agai} & 2023 & \Tab
 AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool action & Untrusted tool data $\rightarrow$ tool call/web action \\
 InjecAgent~\cite{zhan_2024_injecagent_benchmarking_indi} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool action & Authority confusion $\rightarrow$ indirect injection \\
 AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Tool action & Authority-collapsed memory $\rightarrow$ unauthorized action \\
-Agent Context CPE~\cite{li2026whatsagentscontextcontext} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectWorkflow & Tool action & Role/scope escalation $\rightarrow$ RCE, denial of service, or tool misuse \\
+Agent Context CPE~\cite{li2026whatsagentscontextcontext} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectWorkflow & Tool action & Role/scope escalation $\rightarrow$ remote code execution, denial of service, or tool misuse \\
 STAC~\cite{li2026stac} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Tool chain compromise $\rightarrow$ tool route \\
 LivePI~\cite{zhao2026livepi} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Live injected state $\rightarrow$ interactive action \\
 Prompt tool selection~\cite{shi2026prompt_tool_selection} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Connector manipulation $\rightarrow$ tool selection \\

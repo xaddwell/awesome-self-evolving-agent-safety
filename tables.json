@@ -2302,7 +2302,7 @@
       "refs": []
      },
      {
-      "html": "Low rank adapter substrate",
+      "html": "Low-rank adapter substrate",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -2345,7 +2345,7 @@
       "refs": []
      },
      {
-      "html": "Parameter efficient update family",
+      "html": "Parameter-efficient update family",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -2654,7 +2654,7 @@
     ]
    }
   ],
-  "caption": "Substrates carrying safety attributes in the current literature. Memory and tool carriers are best instrumented; workflow, shared artifact, and model state remain thinner. Role labels mark contribution function, not a claim that every row supports a full lifecycle record."
+  "caption": "Substrates carrying safety attributes in the current literature."
  },
  {
   "id": "adaptation_literature_index",
@@ -5481,7 +5481,7 @@
     ]
    }
   ],
-  "caption": "Adaptation and activation operations in the current literature. The evidence is strongest for add and activate operations, and thinner for migrate, propagate, and model-side modify operations. Role labels separate direct anchors from capability mechanisms reread through the transition lens."
+  "caption": "Adaptation and activation operations in the current literature. "
  },
  {
   "id": "violation_literature_index",
@@ -7763,7 +7763,7 @@
     ]
    }
   ],
-  "caption": "Safety attribute violations in the current literature. Authority, scope, privacy, auditability, and recovery failures become comparable when tied to a concrete state transition; the role column distinguishes direct anchors from capability or survey rows that are reread through SAVER."
+  "caption": "Safety attribute violations in the current literature. Authority, scope, privacy, auditability, and recovery failures become comparable when tied to a concrete state transition."
  },
  {
   "id": "violation_exposure_literature_index",
@@ -8879,7 +8879,7 @@
       "refs": []
      },
      {
-      "html": "Role/scope escalation → RCE, denial of service, or tool misuse",
+      "html": "Role/scope escalation → remote code execution, denial of service, or tool misuse",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -10700,7 +10700,7 @@
     ]
    }
   ],
-  "caption": "Exposure surfaces for latent state failures. Memory retrieval, privacy disclosure, tool action, multi-agent uptake, benchmark tasks, and model deployment expose different parts of the same lifecycle gap; role labels mark whether a row is direct evidence, contextual rereading, or gap-facing support."
+  "caption": "Exposure surfaces for latent state failures. Memory retrieval, privacy disclosure, tool action, multi-agent uptake, benchmark tasks, and model deployment expose different parts of the same lifecycle gap; role labels identify the contribution represented by each row."
  },
  {
   "id": "response_literature_index",
