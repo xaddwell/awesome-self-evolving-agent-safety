@@ -13,6 +13,8 @@
 
 [[Website]](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/) · [[Paper Reader]](https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html) · [[Paper (PDF)]](assets/SAVER-Survey.pdf)
 
+<img src="assets/img/overview.png" width="86%" alt="Overview of the transition-centered survey structure: Substrate × Adaptation → Violation → Exposure → Response">
+
 </div>
 
 ## Authors
@@ -47,6 +49,10 @@ This capability changes the safety problem. When experience becomes reusable sta
 
 ## Corpus
 
+<div align="center">
+<img src="assets/img/literature_flow.png" width="86%" alt="Temporal distribution and SAVER flow of the literature">
+</div>
+
 The coded pool follows the survey's systematic scoping protocol (see the paper's survey-protocol appendix):
 
 | Stage | Count |
@@ -58,6 +64,10 @@ The coded pool follows the survey's systematic scoping protocol (see the paper's
 | Medium/high-confidence codings (low-confidence: 549) | 134 |
 
 ## Taxonomy
+
+<div align="center">
+<img src="assets/img/roadmap.png" width="52%" alt="SAVER literature roadmap">
+</div>
 
 All counts and links are driven by `papers.json`, generated from [`data/saver_record_literature.csv`](data/saver_record_literature.csv) — the same coding surface that drives manuscript Figure 1. **Codings are machine-initial**: 549 of the 683 records are low-confidence. The website charts use only the 134 medium/high-confidence records, and the Paper Reader hides low-confidence records by default (Confidence filter), so machine labels are never presented as hand-verified curation.
 
@@ -78,6 +88,15 @@ All counts and links are driven by `papers.json`, generated from [`data/saver_re
 
 **Violation** — Provenance Loss · Authority Escalation · Privacy & Purpose · Persistent Descendants · Operational Integrity · Model Safety Regression
 **Response** — Preventive Governance · Transition & Activation · Monitoring & Containment · Recovery & Contestability
+
+## Key Mechanisms
+
+Three paper figures, reproduced from the manuscript:
+
+| Cross-Substrate Transmutation | From Output to Adaptive-State Safety | Safety Attribute Laundering |
+| :---: | :---: | :---: |
+| <img src="assets/img/transmutation.png" width="100%"> | <img src="assets/img/output2state.png" width="100%"> | <img src="assets/img/lattice.png" width="100%"> |
+| The same sentence carries different authority depending on its carrier. | The unit of analysis expands from a response to a reusable state transition. | Upward authority movement requires an explicit gate. |
 
 ## Interactive Project Page
 
@@ -101,7 +120,8 @@ All counts and links are driven by `papers.json`, generated from [`data/saver_re
 ├── roadmap.json                # Roadmap tree (generated from LaTeX)
 ├── refmap.json                 # Bib key -> paper metadata resolution map (generated)
 ├── assets/
-│   └── SAVER-Survey.pdf        # Paper PDF
+│   ├── SAVER-Survey.pdf        # Paper PDF
+│   └── img/                    # Figure images rendered from the manuscript
 ├── data/
 │   └── saver_record_literature.csv   # Coding source of truth
 ├── source/                     # Vendored LaTeX sources (tables + roadmap + references.bib)
