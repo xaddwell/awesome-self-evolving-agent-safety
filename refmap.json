@@ -32,7 +32,7 @@
   "url": "https://aclanthology.org/2026.findings-acl.320/"
  },
  "an2025ipiguard": {
-  "csv_key": "",
+  "csv_key": "an2025ipiguard",
   "title": "IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents",
   "year": 2025,
   "arxiv_id": "2508.15310",
@@ -40,7 +40,7 @@
   "url": "https://aclanthology.org/2025.emnlp-main.53/"
  },
  "andriushchenko2025agentharm": {
-  "csv_key": "",
+  "csv_key": "andriushchenko2025agentharm",
   "title": "AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents",
   "year": 2025,
   "arxiv_id": "2410.09024",
@@ -80,7 +80,7 @@
   "url": "http://arxiv.org/abs/2404.13161"
  },
  "cao2025safelawbench": {
-  "csv_key": "",
+  "csv_key": "cao2025safelawbench",
   "title": "SafeLawBench: Towards Safe Alignment of Large Language Models",
   "year": 2025,
   "arxiv_id": "",
@@ -96,7 +96,7 @@
   "url": "https://arxiv.org/abs/2407.12784"
  },
  "chen2025lorashielddatafreeeditingalignment": {
-  "csv_key": "",
+  "csv_key": "chen2025lorashielddatafreeeditingalignment",
   "title": "LoRAShield: Data-Free Editing Alignment for Secure Personalized LoRA Sharing",
   "year": 2025,
   "arxiv_id": "2507.07056",
@@ -104,7 +104,7 @@
   "url": "https://arxiv.org/abs/2507.07056"
  },
  "chen2026customization": {
-  "csv_key": "",
+  "csv_key": "chen2026customization",
   "title": "Customization under Fire: Plugin Poisoning in Text-to-Image Ecosystem",
   "year": 2026,
   "arxiv_id": "",
@@ -192,7 +192,7 @@
   "url": "http://arxiv.org/abs/2603.11619"
  },
  "dong2026safesearch": {
-  "csv_key": "",
+  "csv_key": "dong2026safesearch",
   "title": "SafeSearch: Automated Red-Teaming of LLM-Based Search Agents",
   "year": 2026,
   "arxiv_id": "2509.23694",
@@ -264,7 +264,7 @@
   "url": "https://doi.org/10.1145/3715073.3715075"
  },
  "gloaguen2025watch_your_steps": {
-  "csv_key": "",
+  "csv_key": "gloaguen2025watch_your_steps",
   "title": "Watch your steps: Dormant Adversarial Behaviors that Activate upon LLM Finetuning",
   "year": 2025,
   "arxiv_id": "2505.16567",
@@ -288,7 +288,7 @@
   "url": "https://aclanthology.org/2026.acl-long.1260/"
  },
  "guo2024redcode": {
-  "csv_key": "",
+  "csv_key": "guo2024redcode",
   "title": "RedCode: Risky Code Execution and Generation Benchmark for Code Agents",
   "year": 2024,
   "arxiv_id": "2411.07781",
@@ -304,7 +304,7 @@
   "url": "https://doi.org/10.65109/lchb2977"
  },
  "han2024peft_survey": {
-  "csv_key": "",
+  "csv_key": "han2024peft_survey",
   "title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
   "year": 2024,
   "arxiv_id": "2403.14608",
@@ -328,10 +328,10 @@
   "url": "https://doi.org/10.1609/aaaiss.v2i1.27688"
  },
  "he2026contextgetsrootprivilege": {
-  "csv_key": "",
+  "csv_key": "he2026contextgetsrootprivilege",
   "title": "When Context Gets Root: Privilege Escalation in LLM Harnesses",
   "year": 2026,
-  "arxiv_id": "2608.27299",
+  "arxiv_id": "2608.27299v1",
   "doi": "10.48550/arXiv.2608.27299",
   "url": "https://arxiv.org/abs/2608.27299"
  },
@@ -368,7 +368,7 @@
   "url": "http://arxiv.org/abs/2403.14720"
  },
  "hong2024peta": {
-  "csv_key": "",
+  "csv_key": "hong2024peta",
   "title": "PETA: Parameter-Efficient Trojan Attacks",
   "year": 2024,
   "arxiv_id": "2310.00648",
@@ -384,7 +384,7 @@
   "url": "https://arxiv.org/abs/2405.16833"
  },
  "hu2022lora": {
-  "csv_key": "",
+  "csv_key": "hu2022lora",
   "title": "LoRA: Low-Rank Adaptation of Large Language Models",
   "year": 2022,
   "arxiv_id": "",
@@ -430,14 +430,6 @@
   "arxiv_id": "",
   "doi": "10.54392/irjmt2523",
   "url": "https://doi.org/10.54392/irjmt2523"
- },
- "jewell_2026_pre_execution_self_review_ca": {
-  "csv_key": "jewell_2026_pre_execution_self_review_ca",
-  "title": "Pre-execution self-review catching a self-introduced state-threading defect in an autonomous code-remediation agent",
-  "year": 2026,
-  "arxiv_id": "",
-  "doi": "10.5281/zenodo.20245469",
-  "url": "https://github.com/hyperpolymath/technical-notes"
  },
  "jha2026breaking": {
   "csv_key": "jha2026breaking",
@@ -496,7 +488,7 @@
   "url": "https://doi.org/10.3390/fi17020057"
  },
  "khan2025agentsafe_governance": {
-  "csv_key": "",
+  "csv_key": "khan2025agentsafe_governance",
   "title": "AGENTSAFE: A Unified Framework for Ethical Assurance and Governance in Agentic AI",
   "year": 2025,
   "arxiv_id": "2512.03180",
@@ -531,12 +523,12 @@
   "csv_key": "lan_2025_prompt_injection_detection_i",
   "title": "Prompt Injection Detection in LLM Integrated Applications",
   "year": 2025,
-  "arxiv_id": "2025.10001",
+  "arxiv_id": "",
   "doi": "10.53941/ijndi.2025.100013",
   "url": "https://doi.org/10.53941/ijndi.2025.100013"
  },
  "lee2026mobilesafetybench": {
-  "csv_key": "",
+  "csv_key": "lee2026mobilesafetybench",
   "title": "MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control",
   "year": 2026,
   "arxiv_id": "",
@@ -576,7 +568,7 @@
   "url": "https://papers.nips.cc/paper_files/paper/2025/hash/77f3b26c7907aa27b207df9b9d43f29a-Abstract-Conference.html"
  },
  "li2026experience_evolving_memory": {
-  "csv_key": "",
+  "csv_key": "li2026experience_evolving_memory",
   "title": "Experience-Evolving Multi-Turn Tool-Use Agent with Hybrid Episodic-Procedural Memory",
   "year": 2026,
   "arxiv_id": "2512.07287",
@@ -600,7 +592,7 @@
   "url": "https://arxiv.org/abs/2606.17034"
  },
  "li2026stac": {
-  "csv_key": "",
+  "csv_key": "li2026stac",
   "title": "STAC: When Innocent Tools Form Dangerous Chains to Jailbreak LLM Agents",
   "year": 2026,
   "arxiv_id": "2509.25624",
@@ -615,11 +607,19 @@
   "doi": "",
   "url": "https://arxiv.org/abs/2603.05517"
  },
+ "li2026whatsagentscontextcontext": {
+  "csv_key": "li2026whatsagentscontextcontext",
+  "title": "What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness",
+  "year": 2026,
+  "arxiv_id": "2609.01222v1",
+  "doi": "10.48550/arXiv.2609.01222",
+  "url": "https://arxiv.org/abs/2609.01222"
+ },
  "li_2023_camel_communicative_agents_f": {
   "csv_key": "li_2023_camel_communicative_agents_f",
   "title": "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society",
   "year": 2023,
-  "arxiv_id": "2303.17760",
+  "arxiv_id": "",
   "doi": "10.48550/arxiv.2303.17760",
   "url": "http://arxiv.org/abs/2303.17760"
  },
@@ -648,7 +648,7 @@
   "url": "http://arxiv.org/abs/2403.03218"
  },
  "liao2026redteamcua": {
-  "csv_key": "",
+  "csv_key": "liao2026redteamcua",
   "title": "RedTeamCUA: Realistic Adversarial Testing of Computer-Use Agents in Hybrid Web-OS Environments",
   "year": 2026,
   "arxiv_id": "2505.21936",
@@ -656,7 +656,7 @@
   "url": "https://openreview.net/forum?id=yWwrgcBoK3"
  },
  "lin2026memory_security_survey": {
-  "csv_key": "",
+  "csv_key": "lin2026memory_security_survey",
   "title": "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle",
   "year": 2026,
   "arxiv_id": "2604.16548",
@@ -664,7 +664,7 @@
   "url": "https://arxiv.org/abs/2604.16548"
  },
  "lin2026sope": {
-  "csv_key": "",
+  "csv_key": "lin2026sope",
   "title": "SOPE: Situation-Aware and Statistically Indistinguishable Privacy Exfiltration for MCP-enabled Agents",
   "year": 2026,
   "arxiv_id": "",
@@ -672,7 +672,7 @@
   "url": ""
  },
  "liu2025autodan_turbo": {
-  "csv_key": "",
+  "csv_key": "liu2025autodan_turbo",
   "title": "AutoDAN-Turbo: A Lifelong Agent for Strategy Self-Exploration to Jailbreak LLMs",
   "year": 2025,
   "arxiv_id": "2410.05295",
@@ -688,7 +688,7 @@
   "url": "https://arxiv.org/abs/2511.12997"
  },
  "liu2026simplemem": {
-  "csv_key": "",
+  "csv_key": "liu2026simplemem",
   "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
   "year": 2026,
   "arxiv_id": "2601.02553",
@@ -736,7 +736,7 @@
   "url": "https://arxiv.org/abs/2608.01558"
  },
  "luo2025agentauditor": {
-  "csv_key": "",
+  "csv_key": "luo2025agentauditor",
   "title": "AgentAuditor: Human-Level Safety and Security Evaluation for LLM Agents",
   "year": 2025,
   "arxiv_id": "2506.00641",
@@ -744,7 +744,7 @@
   "url": "https://openreview.net/forum?id=2KKqp7MWJM"
  },
  "luo2025agrail": {
-  "csv_key": "",
+  "csv_key": "luo2025agrail",
   "title": "AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection",
   "year": 2025,
   "arxiv_id": "",
@@ -856,7 +856,7 @@
   "url": "https://arxiv.org/abs/2310.08560"
  },
  "pan2023machiavelli": {
-  "csv_key": "",
+  "csv_key": "pan2023machiavelli",
   "title": "Do the Rewards Justify the Means? Measuring Trade-Offs Between Rewards and Ethical Behavior in the Machiavelli Benchmark",
   "year": 2023,
   "arxiv_id": "",
@@ -920,7 +920,7 @@
   "url": "https://arxiv.org/abs/2602.01146"
  },
  "qi2023finetuning_safety": {
-  "csv_key": "",
+  "csv_key": "qi2023finetuning_safety",
   "title": "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!",
   "year": 2023,
   "arxiv_id": "2310.03693",
@@ -944,7 +944,7 @@
   "url": "http://arxiv.org/abs/2605.23989"
  },
  "radosevich2025mcp_safety_audit": {
-  "csv_key": "",
+  "csv_key": "radosevich2025mcp_safety_audit",
   "title": "MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits",
   "year": 2025,
   "arxiv_id": "2504.03767",
@@ -952,7 +952,7 @@
   "url": "https://arxiv.org/abs/2504.03767"
  },
  "rajesh2026panini": {
-  "csv_key": "",
+  "csv_key": "rajesh2026panini",
   "title": "Panini: Continual Learning in Token Space via Structured Memory",
   "year": 2026,
   "arxiv_id": "2602.15156",
@@ -960,7 +960,7 @@
   "url": "https://arxiv.org/abs/2602.15156"
  },
  "rando2024universal_jailbreak_backdoors": {
-  "csv_key": "",
+  "csv_key": "rando2024universal_jailbreak_backdoors",
   "title": "Universal Jailbreak Backdoors from Poisoned Human Feedback",
   "year": 2023,
   "arxiv_id": "2311.14455",
@@ -1032,7 +1032,7 @@
   "url": "http://arxiv.org/abs/2311.16119"
  },
  "shao2026misevolve": {
-  "csv_key": "",
+  "csv_key": "shao2026misevolve",
   "title": "Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents",
   "year": 2026,
   "arxiv_id": "2509.26354",
@@ -1056,7 +1056,7 @@
   "url": "https://arxiv.org/abs/2504.11703"
  },
  "shi2026prompt_tool_selection": {
-  "csv_key": "",
+  "csv_key": "shi2026prompt_tool_selection",
   "title": "Prompt Injection Attack to Tool Selection in LLM Agents",
   "year": 2026,
   "arxiv_id": "2504.19793",
@@ -1192,7 +1192,7 @@
   "url": "https://arxiv.org/abs/2305.16291"
  },
  "wang2025agentvigil": {
-  "csv_key": "",
+  "csv_key": "wang2025agentvigil",
   "title": "AGENTVIGIL: Automatic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents",
   "year": 2025,
   "arxiv_id": "",
@@ -1208,7 +1208,7 @@
   "url": "https://arxiv.org/abs/2511.21460"
  },
  "wang2025openguardrails": {
-  "csv_key": "",
+  "csv_key": "wang2025openguardrails",
   "title": "OpenGuardrails: A Configurable, Unified, and Scalable Guardrails Platform for Large Language Models",
   "year": 2025,
   "arxiv_id": "2510.19169",
@@ -1232,7 +1232,7 @@
   "url": "https://arxiv.org/abs/2509.26100"
  },
  "wang2026devil_moltbook": {
-  "csv_key": "",
+  "csv_key": "wang2026devil_moltbook",
   "title": "The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies",
   "year": 2026,
   "arxiv_id": "2602.09877",
@@ -1312,7 +1312,7 @@
   "url": "https://arxiv.org/abs/2406.09187"
  },
  "xie2026memevobench": {
-  "csv_key": "",
+  "csv_key": "xie2026memevobench",
   "title": "MemEvoBench: Benchmarking Safety Risks from Memory Misevolution in LLM Agents",
   "year": 2026,
   "arxiv_id": "2604.15774",
@@ -1344,7 +1344,7 @@
   "url": "https://arxiv.org/abs/2606.06055"
  },
  "xu2026when": {
-  "csv_key": "",
+  "csv_key": "xu2026when",
   "title": "When Agents ``Misremember'' Collectively: Exploring the Mandela Effect in LLM-based Multi-Agent Systems",
   "year": 2026,
   "arxiv_id": "2602.00428",
@@ -1464,7 +1464,7 @@
   "url": "https://arxiv.org/abs/2401.10019"
  },
  "yuan2026agenticred": {
-  "csv_key": "",
+  "csv_key": "yuan2026agenticred",
   "title": "AgenticRed: Evolving Agentic Systems for Red-Teaming",
   "year": 2026,
   "arxiv_id": "2601.13518",
@@ -1528,7 +1528,7 @@
   "url": "https://arxiv.org/abs/2607.05189"
  },
  "zhang2026embedding_defenses_fail": {
-  "csv_key": "",
+  "csv_key": "zhang2026embedding_defenses_fail",
   "title": "When Embedding-Based Defenses Fail: Rethinking Safety in LLM-Based Multi-Agent Systems",
   "year": 2026,
   "arxiv_id": "2605.01133",
@@ -1608,7 +1608,7 @@
   "url": "https://doi.org/10.1609/aaai.v39i22.34505"
  },
  "zhao2026amabench": {
-  "csv_key": "",
+  "csv_key": "zhao2026amabench",
   "title": "AMA-Bench: Evaluating Long-Horizon Memory for Agentic Applications",
   "year": 2026,
   "arxiv_id": "2602.22769",
@@ -1624,7 +1624,7 @@
   "url": "https://arxiv.org/abs/2604.16968"
  },
  "zhao2026faithful_self_evolvers": {
-  "csv_key": "",
+  "csv_key": "zhao2026faithful_self_evolvers",
   "title": "Large Language Model Agents Are Not Always Faithful Self-Evolvers",
   "year": 2026,
   "arxiv_id": "2601.22436",
@@ -1632,7 +1632,7 @@
   "url": "https://arxiv.org/abs/2601.22436"
  },
  "zhao2026livepi": {
-  "csv_key": "",
+  "csv_key": "zhao2026livepi",
   "title": "LivePI: More Realistic Benchmarking of Agents Against Indirect Prompt Injection",
   "year": 2026,
   "arxiv_id": "2605.17986",
@@ -1648,7 +1648,7 @@
   "url": "https://doi.org/10.53941/tai.2025.100003"
  },
  "zhou2026mcpshield": {
-  "csv_key": "",
+  "csv_key": "zhou2026mcpshield",
   "title": "MCPShield: A Security Cognition Layer for Adaptive Trust Calibration in Model Context Protocol Agents",
   "year": 2026,
   "arxiv_id": "2602.14281",

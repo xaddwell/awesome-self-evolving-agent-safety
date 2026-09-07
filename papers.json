@@ -32,6 +32,70 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-denning1976lattice-information-flow",
+  "title": "A Lattice Model of Secure Information Flow",
+  "year": 1976,
+  "citation_key": "denning1976lattice_information_flow",
+  "arxiv_id": "0051.36005",
+  "doi": "10.1145/360051.360056",
+  "url": "https://doi.org/10.1145/360051.360056",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-buneman2001why-where-provenance",
+  "title": "Why and Where: A Characterization of Data Provenance",
+  "year": 2001,
+  "citation_key": "buneman2001why_where_provenance",
+  "arxiv_id": "",
+  "doi": "10.1007/3-540-44503-X_20",
+  "url": "https://doi.org/10.1007/3-540-44503-X_20",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-sabelfeld2003language-information-flow",
+  "title": "Language-Based Information-Flow Security",
+  "year": 2003,
+  "citation_key": "sabelfeld2003language_information_flow",
+  "arxiv_id": "2002.80612",
+  "doi": "10.1109/JSAC.2002.806121",
+  "url": "https://doi.org/10.1109/JSAC.2002.806121",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-leucker2009runtime-verification",
+  "title": "A Brief Account of Runtime Verification",
+  "year": 2009,
+  "citation_key": "leucker2009runtime_verification",
+  "arxiv_id": "",
+  "doi": "10.1016/j.jlap.2008.08.004",
+  "url": "https://doi.org/10.1016/j.jlap.2008.08.004",
+  "substrate": "Workflow",
+  "adaptation": "Activate",
+  "outcome": "Response",
+  "outcome_detail": "Transition & Activation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "a-multi-agent-based-integrated-volt-var-optimization-engine-for-fast-vehicle-to",
   "title": "A multi-agent based integrated volt-var optimization engine for fast vehicle-to-grid reactive power dispatch and electric vehicle coordination",
   "year": 2018,
@@ -1488,6 +1552,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-hu2022lora",
+  "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+  "year": 2022,
+  "citation_key": "hu2022lora",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "https://openreview.net/forum?id=nZeVKeeFYf9",
+  "substrate": "Model",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "multi-agent-concentrative-coordination-with-decentralized-task-representation",
   "title": "Multi-Agent Concentrative Coordination with Decentralized Task Representation",
   "year": 2022,
@@ -1888,6 +1968,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-pan2023machiavelli",
+  "title": "Do the Rewards Justify the Means? Measuring Trade-Offs Between Rewards and Ethical Behavior in the Machiavelli Benchmark",
+  "year": 2023,
+  "citation_key": "pan2023machiavelli",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "https://proceedings.mlr.press/v202/pan23a.html",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "esgreveal-an-llm-based-approach-for-extracting-structured-data-from-esg-reports",
   "title": "ESGReveal: An LLM-based approach for extracting structured data from ESG reports",
   "year": 2023,
@@ -1933,6 +2029,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-qi2023finetuning-safety",
+  "title": "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!",
+  "year": 2023,
+  "citation_key": "qi2023finetuning_safety",
+  "arxiv_id": "2310.03693",
+  "doi": "10.48550/arXiv.2310.03693",
+  "url": "https://arxiv.org/abs/2310.03693",
+  "substrate": "Model",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -2528,6 +2640,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-rando2024universal-jailbreak-backdoors",
+  "title": "Universal Jailbreak Backdoors from Poisoned Human Feedback",
+  "year": 2023,
+  "citation_key": "rando2024universal_jailbreak_backdoors",
+  "arxiv_id": "2311.14455",
+  "doi": "10.48550/arXiv.2311.14455",
+  "url": "https://arxiv.org/abs/2311.14455",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "using-cognitive-psychology-to-understand-gpt-3",
   "title": "Using cognitive psychology to understand GPT-3",
   "year": 2023,
@@ -3005,6 +3133,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-dong2024conversation-safety-survey",
+  "title": "Attacks, Defenses and Evaluations for LLM Conversation Safety: A Survey",
+  "year": 2024,
+  "citation_key": "dong2024conversation_safety_survey",
+  "arxiv_id": "",
+  "doi": "10.18653/v1/2024.naacl-long.375",
+  "url": "https://aclanthology.org/2024.naacl-long.375/",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -4464,6 +4608,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-han2024peft-survey",
+  "title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
+  "year": 2024,
+  "citation_key": "han2024peft_survey",
+  "arxiv_id": "2403.14608",
+  "doi": "10.48550/arXiv.2403.14608",
+  "url": "https://arxiv.org/abs/2403.14608",
+  "substrate": "Model",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "personal-llm-agents-insights-and-survey-about-the-capability-efficiency-and-secu",
   "title": "Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security",
   "year": 2024,
@@ -4477,6 +4637,22 @@
   "outcome_detail": "Privacy & Purpose",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-hong2024peta",
+  "title": "PETA: Parameter-Efficient Trojan Attacks",
+  "year": 2024,
+  "citation_key": "hong2024peta",
+  "arxiv_id": "2310.00648",
+  "doi": "10.48550/arXiv.2310.00648",
+  "url": "https://arxiv.org/abs/2310.00648",
+  "substrate": "Model",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -4605,6 +4781,22 @@
   "outcome_detail": "Transition & Activation",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-guo2024redcode",
+  "title": "RedCode: Risky Code Execution and Generation Benchmark for Code Agents",
+  "year": 2024,
+  "citation_key": "guo2024redcode",
+  "arxiv_id": "2411.07781",
+  "doi": "10.52202/079017-3369",
+  "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/bfd082c452dffb450d5a5202b0419205-Abstract-Datasets_and_Benchmarks_Track.html",
+  "substrate": "Tools & Skills",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -5232,6 +5424,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-wang2025comprehensive",
+  "title": "A comprehensive survey in llm (-agent) full stack safety: Data, training and deployment",
+  "year": 2025,
+  "citation_key": "wang2025comprehensive",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Activate",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "a-comprehensive-survey-of-large-language-models-for-human-activity-recognition-o",
   "title": "A Comprehensive Survey of Large Language Models for Human Activity Recognition: Opportunities, Challenges, and Future Directions",
   "year": 2025,
@@ -5245,6 +5453,22 @@
   "outcome_detail": "Preventive Governance",
   "record_origin": "registry",
   "source_status": "source_limited",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-fang2025comprehensive",
+  "title": "A comprehensive survey of self-evolving ai agents: A new paradigm bridging foundation models and lifelong agentic systems",
+  "year": 2025,
+  "citation_key": "fang2025comprehensive",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -5584,6 +5808,22 @@
   "confidence": "medium"
  },
  {
+  "id": "rendered-citation-wang2025aeiouunifieddefenseframework",
+  "title": "AEIOU: A Unified Defense Framework against NSFW Prompts in Text-to-Image Models",
+  "year": 2025,
+  "citation_key": "wang2025aeiouunifieddefenseframework",
+  "arxiv_id": "2412.18123",
+  "doi": "10.48550/arXiv.2412.18123",
+  "url": "https://arxiv.org/abs/2412.18123",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "agent-identity-evals-measuring-agentic-identity",
   "title": "Agent Identity Evals: Measuring Agentic Identity",
   "year": 2025,
@@ -5632,6 +5872,22 @@
   "confidence": "high"
  },
  {
+  "id": "rendered-citation-luo2025agentauditor",
+  "title": "AgentAuditor: Human-Level Safety and Security Evaluation for LLM Agents",
+  "year": 2025,
+  "citation_key": "luo2025agentauditor",
+  "arxiv_id": "2506.00641",
+  "doi": "",
+  "url": "https://openreview.net/forum?id=2KKqp7MWJM",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "agentdam-privacy-benchmark-for-data-minimization-in-web-agents",
   "title": "AgentDAM: Privacy Benchmark for Data Minimization in Web Agents",
   "year": 2025,
@@ -5645,6 +5901,22 @@
   "outcome_detail": "Privacy & Purpose",
   "record_origin": "registry",
   "source_status": "registry_only",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-andriushchenko2025agentharm",
+  "title": "AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents",
+  "year": 2025,
+  "citation_key": "andriushchenko2025agentharm",
+  "arxiv_id": "2410.09024",
+  "doi": "10.48550/arXiv.2410.09024",
+  "url": "https://arxiv.org/abs/2410.09024",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -5741,6 +6013,54 @@
   "outcome_detail": "Recovery & Contestability",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-khan2025agentsafe-governance",
+  "title": "AGENTSAFE: A Unified Framework for Ethical Assurance and Governance in Agentic AI",
+  "year": 2025,
+  "citation_key": "khan2025agentsafe_governance",
+  "arxiv_id": "2512.03180",
+  "doi": "10.48550/arXiv.2512.03180",
+  "url": "https://arxiv.org/abs/2512.03180",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Preventive Governance",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-wang2025agentvigil",
+  "title": "AGENTVIGIL: Automatic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents",
+  "year": 2025,
+  "citation_key": "wang2025agentvigil",
+  "arxiv_id": "",
+  "doi": "10.18653/v1/2025.findings-emnlp.1258",
+  "url": "https://aclanthology.org/2025.findings-emnlp.1258/",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-luo2025agrail",
+  "title": "AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection",
+  "year": 2025,
+  "citation_key": "luo2025agrail",
+  "arxiv_id": "",
+  "doi": "10.18653/v1/2025.acl-long.399",
+  "url": "https://aclanthology.org/2025.acl-long.399/",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -5886,6 +6206,22 @@
   "record_origin": "registry",
   "source_status": "source_limited",
   "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-liu2025autodan-turbo",
+  "title": "AutoDAN-Turbo: A Lifelong Agent for Strategy Self-Exploration to Jailbreak LLMs",
+  "year": 2025,
+  "citation_key": "liu2025autodan_turbo",
+  "arxiv_id": "2410.05295",
+  "doi": "10.48550/arXiv.2410.05295",
+  "url": "https://arxiv.org/abs/2410.05295",
+  "substrate": "Model",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "medium"
  },
  {
   "id": "autohma-llm-efficient-task-coordination-and-execution-in-heterogeneous-multi-age",
@@ -6640,6 +6976,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-an2025ipiguard",
+  "title": "IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents",
+  "year": 2025,
+  "citation_key": "an2025ipiguard",
+  "arxiv_id": "2508.15310",
+  "doi": "10.18653/v1/2025.emnlp-main.53",
+  "url": "https://aclanthology.org/2025.emnlp-main.53/",
+  "substrate": "Tools & Skills",
+  "adaptation": "Add",
+  "outcome": "Response",
+  "outcome_detail": "Transition & Activation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "large-language-model-agent-a-survey-on-methodology-applications-and-challenges",
   "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
   "year": 2025,
@@ -6944,6 +7296,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-chen2025lorashielddatafreeeditingalignment",
+  "title": "LoRAShield: Data-Free Editing Alignment for Secure Personalized LoRA Sharing",
+  "year": 2025,
+  "citation_key": "chen2025lorashielddatafreeeditingalignment",
+  "arxiv_id": "2507.07056",
+  "doi": "10.48550/arXiv.2507.07056",
+  "url": "https://arxiv.org/abs/2507.07056",
+  "substrate": "Model",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Recovery & Contestability",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "madra-multi-agent-debate-for-risk-aware-embodied-planning",
   "title": "MADRA: Multi-Agent Debate for Risk-Aware Embodied Planning",
   "year": 2025,
@@ -6974,6 +7342,22 @@
   "record_origin": "registry",
   "source_status": "source_limited",
   "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-radosevich2025mcp-safety-audit",
+  "title": "MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits",
+  "year": 2025,
+  "citation_key": "radosevich2025mcp_safety_audit",
+  "arxiv_id": "2504.03767",
+  "doi": "10.48550/arXiv.2504.03767",
+  "url": "https://arxiv.org/abs/2504.03767",
+  "substrate": "Tools & Skills",
+  "adaptation": "Activate",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "med-agentx-multimodal-large-language-model-agents-with-explainable-reinforcement",
@@ -7166,6 +7550,22 @@
   "record_origin": "registry",
   "source_status": "source_limited",
   "confidence": "medium"
+ },
+ {
+  "id": "rendered-citation-wang2025openguardrails",
+  "title": "OpenGuardrails: A Configurable, Unified, and Scalable Guardrails Platform for Large Language Models",
+  "year": 2025,
+  "citation_key": "wang2025openguardrails",
+  "arxiv_id": "2510.19169",
+  "doi": "10.48550/arXiv.2510.19169",
+  "url": "https://arxiv.org/abs/2510.19169",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "os-agents-a-survey-on-mllm-based-agents-for-computer-phone-and-browser-use",
@@ -7533,6 +7933,22 @@
   "outcome_detail": "Transition & Activation",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-cao2025safelawbench",
+  "title": "SafeLawBench: Towards Safe Alignment of Large Language Models",
+  "year": 2025,
+  "citation_key": "cao2025safelawbench",
+  "arxiv_id": "",
+  "doi": "10.18653/v1/2025.findings-acl.721",
+  "url": "https://aclanthology.org/2025.findings-acl.721/",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -7968,6 +8384,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-li-etal-2025-twist",
+  "title": "TWIST: Text-encoder Weight-editing for Inserting Secret Trojans in Text-to-Image Models",
+  "year": 2025,
+  "citation_key": "li-etal-2025-twist",
+  "arxiv_id": "",
+  "doi": "10.18653/v1/2025.acl-long.541",
+  "url": "https://aclanthology.org/2025.acl-long.541/",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "unveiling-privacy-risks-in-llm-agent-memory",
   "title": "Unveiling Privacy Risks in LLM Agent Memory",
   "year": 2025,
@@ -7982,6 +8414,22 @@
   "record_origin": "registry",
   "source_status": "full_text",
   "confidence": "medium"
+ },
+ {
+  "id": "rendered-citation-gloaguen2025watch-your-steps",
+  "title": "Watch your steps: Dormant Adversarial Behaviors that Activate upon LLM Finetuning",
+  "year": 2025,
+  "citation_key": "gloaguen2025watch_your_steps",
+  "arxiv_id": "2505.16567",
+  "doi": "10.48550/arXiv.2505.16567",
+  "url": "https://arxiv.org/abs/2505.16567",
+  "substrate": "Model",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Model Safety Regression",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "webcoach-self-evolving-web-agents-with-cross-session-memory-guidance",
@@ -8048,6 +8496,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-wu2026comparative",
+  "title": "A Comparative Survey of Security Risks in AI Systems: From LLMs to AI Agents and Embodied Agents",
+  "year": 2026,
+  "citation_key": "wu2026comparative",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "a-framework-for-formalizing-llm-agent-security",
   "title": "A Framework for Formalizing LLM Agent Security",
   "year": 2026,
@@ -8096,6 +8560,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-lin2026memory-security-survey",
+  "title": "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle",
+  "year": 2026,
+  "citation_key": "lin2026memory_security_survey",
+  "arxiv_id": "2604.16548",
+  "doi": "10.48550/arXiv.2604.16548",
+  "url": "https://arxiv.org/abs/2604.16548",
+  "substrate": "Memory",
+  "adaptation": "Add",
+  "outcome": "Response",
+  "outcome_detail": "Preventive Governance",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "a-unified-evaluation-and-governance-framework-for-trustworthy-llm-agents",
   "title": "A Unified Evaluation and Governance Framework for Trustworthy LLM Agents",
   "year": 2026,
@@ -8141,6 +8621,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "registry",
   "source_status": "abstract_or_short",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-yuan2026agenticred",
+  "title": "AgenticRed: Evolving Agentic Systems for Red-Teaming",
+  "year": 2026,
+  "citation_key": "yuan2026agenticred",
+  "arxiv_id": "2601.13518",
+  "doi": "10.48550/arXiv.2601.13518",
+  "url": "https://arxiv.org/abs/2601.13518",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -8200,11 +8696,27 @@
   "doi": "10.48550/arXiv.2608.21159",
   "url": "https://arxiv.org/abs/2608.21159",
   "substrate": "Workflow",
-  "adaptation": "Modify",
+  "adaptation": "Activate",
   "outcome": "Response",
   "outcome_detail": "Transition & Activation",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
+  "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-zhao2026amabench",
+  "title": "AMA-Bench: Evaluating Long-Horizon Memory for Agentic Applications",
+  "year": 2026,
+  "citation_key": "zhao2026amabench",
+  "arxiv_id": "2602.22769",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2602.22769",
+  "substrate": "Memory",
+  "adaptation": "Add",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -8288,6 +8800,22 @@
   "confidence": "high"
  },
  {
+  "id": "rendered-citation-chen2026beyond",
+  "title": "Beyond Over-Refusal: Defending Indirect Prompt Injection via Latent Instruction Manifolds",
+  "year": 2026,
+  "citation_key": "chen2026beyond",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "bi-mem-bidirectional-construction-of-hierarchical-memory-for-personalized-llms-v",
   "title": "Bi-Mem: Bidirectional Construction of Hierarchical Memory for Personalized LLMs via Inductive-Reflective Agents",
   "year": 2026,
@@ -8344,12 +8872,12 @@
   "doi": "10.48550/arXiv.2608.09732",
   "url": "https://arxiv.org/abs/2608.09732",
   "substrate": "Tools & Skills",
-  "adaptation": "Activate",
+  "adaptation": "Add",
   "outcome": "Violation",
   "outcome_detail": "Authority Escalation",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
-  "confidence": "low"
+  "confidence": "high"
  },
  {
   "id": "consensus-validated-memory-improves-agent-performance-on-complex-tasks",
@@ -8366,6 +8894,22 @@
   "record_origin": "registry",
   "source_status": "full_text",
   "confidence": "medium"
+ },
+ {
+  "id": "rendered-citation-chen2026customization",
+  "title": "Customization under Fire: Plugin Poisoning in Text-to-Image Ecosystem",
+  "year": 2026,
+  "citation_key": "chen2026customization",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "d-mem-dopamine-gated-agentic-memory-via-reward-prediction-error-routing",
@@ -8615,13 +9159,29 @@
   "arxiv_id": "2608.25776v1",
   "doi": "10.48550/arXiv.2608.25776",
   "url": "https://arxiv.org/abs/2608.25776",
-  "substrate": "Workflow",
-  "adaptation": "Add",
+  "substrate": "Tools & Skills",
+  "adaptation": "Propagate",
   "outcome": "Violation",
   "outcome_detail": "Provenance Loss",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
-  "confidence": "medium"
+  "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-li2026experience-evolving-memory",
+  "title": "Experience-Evolving Multi-Turn Tool-Use Agent with Hybrid Episodic-Procedural Memory",
+  "year": 2026,
+  "citation_key": "li2026experience_evolving_memory",
+  "arxiv_id": "2512.07287",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2512.07287",
+  "substrate": "Memory",
+  "adaptation": "Abstract",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "experimental-campaign-for-political-behaviour-in-llm-agents-experimental-insight",
@@ -8896,6 +9456,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-zhao2026faithful-self-evolvers",
+  "title": "Large Language Model Agents Are Not Always Faithful Self-Evolvers",
+  "year": 2026,
+  "citation_key": "zhao2026faithful_self_evolvers",
+  "arxiv_id": "2601.22436",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2601.22436",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "library-drift-diagnosing-and-fixing-a-silent-failure-mode-in-self-evolving-llm-s",
   "title": "Library Drift: Diagnosing and Fixing a Silent Failure Mode in Self-Evolving LLM Skill Libraries",
   "year": 2026,
@@ -8909,6 +9485,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-zhao2026livepi",
+  "title": "LivePI: More Realistic Benchmarking of Agents Against Indirect Prompt Injection",
+  "year": 2026,
+  "citation_key": "zhao2026livepi",
+  "arxiv_id": "2605.17986",
+  "doi": "10.48550/arXiv.2605.17986",
+  "url": "https://arxiv.org/abs/2605.17986",
+  "substrate": "Workflow",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -8960,6 +9552,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-zhou2026mcpshield",
+  "title": "MCPShield: A Security Cognition Layer for Adaptive Trust Calibration in Model Context Protocol Agents",
+  "year": 2026,
+  "citation_key": "zhou2026mcpshield",
+  "arxiv_id": "2602.14281",
+  "doi": "10.48550/arXiv.2602.14281",
+  "url": "https://arxiv.org/abs/2602.14281",
+  "substrate": "Tools & Skills",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "memconflict-evaluating-long-term-memory-systems-under-memory-conflicts",
   "title": "MemConflict: Evaluating Long-Term Memory Systems Under Memory Conflicts",
   "year": 2026,
@@ -8973,6 +9581,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-xie2026memevobench",
+  "title": "MemEvoBench: Benchmarking Safety Risks from Memory Misevolution in LLM Agents",
+  "year": 2026,
+  "citation_key": "xie2026memevobench",
+  "arxiv_id": "2604.15774",
+  "doi": "10.48550/arXiv.2604.15774",
+  "url": "https://arxiv.org/abs/2604.15774",
+  "substrate": "Memory",
+  "adaptation": "Add",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -9136,6 +9760,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-lee2026mobilesafetybench",
+  "title": "MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control",
+  "year": 2026,
+  "citation_key": "lee2026mobilesafetybench",
+  "arxiv_id": "",
+  "doi": "10.1609/aaai.v40i44.41090",
+  "url": "https://ojs.aaai.org/index.php/AAAI/article/view/41090",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "mrmmia-membership-inference-attacks-on-memory-in-chat-agents",
   "title": "MRMMIA: Membership Inference Attacks on Memory in Chat Agents",
   "year": 2026,
@@ -9149,6 +9789,22 @@
   "outcome_detail": "Privacy & Purpose",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-gan2026navigating",
+  "title": "Navigating the risks: A survey of security and privacy threats in LLM-based agents",
+  "year": 2026,
+  "citation_key": "gan2026navigating",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Privacy & Purpose",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -9229,6 +9885,38 @@
   "outcome_detail": "Operational Integrity",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-mou2026pandora",
+  "title": "Pandora’s Toolbox: A Survey of Generalist Agent Security from the Lifecycle Perspective",
+  "year": 2026,
+  "citation_key": "mou2026pandora",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Tools & Skills",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-rajesh2026panini",
+  "title": "Panini: Continual Learning in Token Space via Structured Memory",
+  "year": 2026,
+  "citation_key": "rajesh2026panini",
+  "arxiv_id": "2602.15156",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2602.15156",
+  "substrate": "Memory",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -9335,13 +10023,13 @@
   "arxiv_id": "2608.12851v1",
   "doi": "10.48550/arXiv.2608.12851",
   "url": "https://arxiv.org/abs/2608.12851",
-  "substrate": "Workflow",
-  "adaptation": "Modify",
+  "substrate": "Tools & Skills",
+  "adaptation": "Migrate",
   "outcome": "Violation",
-  "outcome_detail": "Operational Integrity",
+  "outcome_detail": "Authority Escalation",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
-  "confidence": "low"
+  "confidence": "high"
  },
  {
   "id": "pre-execution-self-review-catching-a-self-introduced-state-threading-defect-in-a",
@@ -9374,6 +10062,22 @@
   "record_origin": "registry",
   "source_status": "full_text",
   "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-shi2026prompt-tool-selection",
+  "title": "Prompt Injection Attack to Tool Selection in LLM Agents",
+  "year": 2026,
+  "citation_key": "shi2026prompt_tool_selection",
+  "arxiv_id": "2504.19793",
+  "doi": "10.14722/ndss.2026.230675",
+  "url": "https://www.ndss-symposium.org/ndss-paper/prompt-injection-attack-to-tool-selection-in-llm-agents/",
+  "substrate": "Tools & Skills",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "medium"
  },
  {
   "id": "prompt-injection-attacks-in-large-language-models-and-ai-agent-systems-a-compreh",
@@ -9440,6 +10144,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-liao2026redteamcua",
+  "title": "RedTeamCUA: Realistic Adversarial Testing of Computer-Use Agents in Hybrid Web-OS Environments",
+  "year": 2026,
+  "citation_key": "liao2026redteamcua",
+  "arxiv_id": "2505.21936",
+  "doi": "",
+  "url": "https://openreview.net/forum?id=yWwrgcBoK3",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "reliability-challenges-of-llm-agents-systemic-failure-causes-and-governance",
   "title": "Reliability Challenges of LLM Agents: Systemic Failure Causes and Governance",
   "year": 2026,
@@ -9501,6 +10221,54 @@
   "outcome_detail": "Preventive Governance",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-dong2026safesearch",
+  "title": "SafeSearch: Automated Red-Teaming of LLM-Based Search Agents",
+  "year": 2026,
+  "citation_key": "dong2026safesearch",
+  "arxiv_id": "2509.23694",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2509.23694",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-ma2026safety",
+  "title": "Safety at scale: A comprehensive survey of large model and agent safety",
+  "year": 2026,
+  "citation_key": "ma2026safety",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-li2026safety",
+  "title": "Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses",
+  "year": 2026,
+  "citation_key": "li2026safety",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -9632,6 +10400,22 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-liu2026simplemem",
+  "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
+  "year": 2026,
+  "citation_key": "liu2026simplemem",
+  "arxiv_id": "2601.02553",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2601.02553",
+  "substrate": "Memory",
+  "adaptation": "Add",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "skilljack-persistent-skill-backdoors-in-self-evolving-agents",
   "title": "SkillJack: Persistent Skill Backdoors in Self-Evolving Agents",
   "year": 2026,
@@ -9646,6 +10430,22 @@
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
   "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-du2026snapguardlightweightpromptinjection",
+  "title": "SnapGuard: Lightweight Prompt Injection Detection for Screenshot-Based Web Agents",
+  "year": 2026,
+  "citation_key": "du2026snapguardlightweightpromptinjection",
+  "arxiv_id": "2604.25562",
+  "doi": "10.48550/arXiv.2604.25562",
+  "url": "https://arxiv.org/abs/2604.25562",
+  "substrate": "Tools & Skills",
+  "adaptation": "Add",
+  "outcome": "Response",
+  "outcome_detail": "Preventive Governance",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "socio-normative-trustworthiness-of-llm-agents-evaluating-autonomy-support-and-re",
@@ -9680,6 +10480,38 @@
   "confidence": "low"
  },
  {
+  "id": "rendered-citation-lin2026sope",
+  "title": "SOPE: Situation-Aware and Statistically Indistinguishable Privacy Exfiltration for MCP-enabled Agents",
+  "year": 2026,
+  "citation_key": "lin2026sope",
+  "arxiv_id": "",
+  "doi": "",
+  "url": "",
+  "substrate": "Tools & Skills",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Privacy & Purpose",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-li2026stac",
+  "title": "STAC: When Innocent Tools Form Dangerous Chains to Jailbreak LLM Agents",
+  "year": 2026,
+  "citation_key": "li2026stac",
+  "arxiv_id": "2509.25624",
+  "doi": "10.48550/arXiv.2509.25624",
+  "url": "https://arxiv.org/abs/2509.25624",
+  "substrate": "Tools & Skills",
+  "adaptation": "Activate",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "medium"
+ },
+ {
   "id": "superlocalmemory-privacy-preserving-multi-agent-memory-with-bayesian-trust-defen",
   "title": "SuperLocalMemory: Privacy-Preserving Multi-Agent Memory with Bayesian Trust Defense Against Memory Poisoning",
   "year": 2026,
@@ -9709,6 +10541,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "registry",
   "source_status": "full_text",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-wang2026devil-moltbook",
+  "title": "The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies",
+  "year": 2026,
+  "citation_key": "wang2026devil_moltbook",
+  "arxiv_id": "2602.09877",
+  "doi": "10.48550/arXiv.2602.09877",
+  "url": "https://arxiv.org/abs/2602.09877",
+  "substrate": "Workflow",
+  "adaptation": "Modify",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {
@@ -9872,6 +10720,38 @@
   "confidence": "low"
  },
  {
+  "id": "whats-in-your-agents-context-context-privilege-escalation-attacks-against-ai-agent-harness",
+  "title": "What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness",
+  "year": 2026,
+  "citation_key": "li2026whatsagentscontextcontext",
+  "arxiv_id": "2609.01222v1",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2609.01222",
+  "substrate": "Workflow",
+  "adaptation": "Migrate",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-xu2026when",
+  "title": "When Agents ``Misremember'' Collectively: Exploring the Mandela Effect in LLM-based Multi-Agent Systems",
+  "year": 2026,
+  "citation_key": "xu2026when",
+  "arxiv_id": "2602.00428",
+  "doi": "10.48550/arXiv.2602.00428",
+  "url": "https://openreview.net/forum?id=yIoMqDes7O",
+  "substrate": "Memory",
+  "adaptation": "Propagate",
+  "outcome": "Violation",
+  "outcome_detail": "Provenance Loss",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
+ },
+ {
   "id": "when-agents-remember-too-much-memory-poisoning-attacks-on-large-language-model-agents",
   "title": "When Agents Remember Too Much: Memory Poisoning Attacks on Large Language Model Agents",
   "year": 2026,
@@ -9902,6 +10782,38 @@
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
   "confidence": "medium"
+ },
+ {
+  "id": "when-context-gets-root-privilege-escalation-in-llm-harnesses",
+  "title": "When Context Gets Root: Privilege Escalation in LLM Harnesses",
+  "year": 2026,
+  "citation_key": "he2026contextgetsrootprivilege",
+  "arxiv_id": "2608.27299v1",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2608.27299",
+  "substrate": "Workflow",
+  "adaptation": "Migrate",
+  "outcome": "Violation",
+  "outcome_detail": "Authority Escalation",
+  "record_origin": "reviewed_card",
+  "source_status": "reviewed_card",
+  "confidence": "high"
+ },
+ {
+  "id": "rendered-citation-zhang2026embedding-defenses-fail",
+  "title": "When Embedding-Based Defenses Fail: Rethinking Safety in LLM-Based Multi-Agent Systems",
+  "year": 2026,
+  "citation_key": "zhang2026embedding_defenses_fail",
+  "arxiv_id": "2605.01133",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2605.01133",
+  "substrate": "Workflow",
+  "adaptation": "Propagate",
+  "outcome": "Response",
+  "outcome_detail": "Monitoring & Containment",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
+  "confidence": "low"
  },
  {
   "id": "when-experience-becomes-instruction-trajectory-poisoning-in-self-evolving-agent-skill-systems",
@@ -9981,6 +10893,22 @@
   "outcome_detail": "Provenance Loss",
   "record_origin": "reviewed_card",
   "source_status": "reviewed_card",
+  "confidence": "low"
+ },
+ {
+  "id": "rendered-citation-shao2026misevolve",
+  "title": "Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents",
+  "year": 2026,
+  "citation_key": "shao2026misevolve",
+  "arxiv_id": "2509.26354",
+  "doi": "10.48550/arXiv.2509.26354",
+  "url": "https://arxiv.org/abs/2509.26354",
+  "substrate": "Workflow",
+  "adaptation": "Migrate",
+  "outcome": "Violation",
+  "outcome_detail": "Operational Integrity",
+  "record_origin": "rendered_citation",
+  "source_status": "rendered_citation",
   "confidence": "low"
  },
  {

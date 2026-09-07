@@ -31,16 +31,17 @@ PerMemSafe~\cite{an-etal-2026-permemsafe} & 2026 & \TableRoleBenchmarkSafety & \
 PersistBench~\cite{pulipaka2026persistbench} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy exposure & Forgetting failure $\rightarrow$ leakage across domains \\
 RBI-Eval~\cite{xu2026memorystaysilentmeasuring} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Privacy exposure & Memory use boundary $\rightarrow$ sensitive recall \\
 EchoLeak~\cite{reddy_2025_echoleak_the_first_real_worl} & 2025 & \TableRoleAttack & \TableTargetLLMAgent & \TableObjectContext & Privacy exposure & Data leakage $\rightarrow$ assistant context \\
-Personal agent context~\cite{li_2024_personal_llm_agents_insights} & 2024 & \TableRoleSafety & \TableTargetAgent & \TableObjectMemory & Personal context & Persistent user context $\rightarrow$ assistant reuse \\
+Personal agent context~\cite{li_2024_personal_llm_agents_insights} & 2024 & \TableRoleSurveySafety & \TableTargetAgent & \TableObjectMemory & Personal context & Persistent user context $\rightarrow$ assistant reuse \\
 \SAVERTableGroup{saverExposureHead}{7}{Tool action}
 Prompt injection apps~\cite{liu_2023_prompt_injection_attack_agai} & 2023 & \TableRoleAttack & \TableTargetLLMAgent & \TableObjectTool & Tool action & Untrusted content $\rightarrow$ web/action step \\
 AgentDojo~\cite{debenedetti2024agentdojo} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool action & Untrusted tool data $\rightarrow$ tool call/web action \\
 InjecAgent~\cite{zhan_2024_injecagent_benchmarking_indi} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectTool & Tool action & Authority confusion $\rightarrow$ indirect injection \\
 AuthMem-Bench~\cite{zhan2026memoryauthoritybenchmarkingauthority} & 2026 & \TableRoleBenchmarkSafety & \TableTargetAgent & \TableObjectMemory & Tool action & Authority-collapsed memory $\rightarrow$ unauthorized action \\
+Agent Context CPE~\cite{li2026whatsagentscontextcontext} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectWorkflow & Tool action & Role/scope escalation $\rightarrow$ RCE, denial of service, or tool misuse \\
 STAC~\cite{li2026stac} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Tool chain compromise $\rightarrow$ tool route \\
 LivePI~\cite{zhao2026livepi} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Live injected state $\rightarrow$ interactive action \\
 Prompt tool selection~\cite{shi2026prompt_tool_selection} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Connector manipulation $\rightarrow$ tool selection \\
-SafeSearch~\cite{dong2026safesearch} & 2026 & \TableRoleAttack & \TableTargetAgent & \TableObjectTool & Tool action & Search safety $\rightarrow$ search action \\
+SafeSearch~\cite{dong2026safesearch} & 2026 & \TableRoleRedTeam & \TableTargetAgent & \TableObjectTool & Search trajectory & Adversarial search interaction $\rightarrow$ unsafe trajectory \\
 Task Shield~\cite{jia_2025_the_task_shield_enforcing_ta} & 2025 & \TableRoleDefense & \TableTargetAgent & \TableObjectTool & Tool action & Task policy mismatch $\rightarrow$ tool action gate \\
 ASB~\cite{zhang_2024_agent_security_bench_asb_for} & 2024 & \TableStudyAttackBenchmark & \TableTargetAgent & \TableObjectEvaluation & Tool action & Authority/cost misuse $\rightarrow$ agent actions \\
 \SAVERTableGroup{saverExposureHead}{7}{Runtime guard}

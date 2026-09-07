@@ -206,6 +206,49 @@
     "type": "row",
     "cells": [
      {
+      "html": "Agent Context CPE",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "li2026whatsagentscontextcontext"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Context-source roles and scopes across 12 harnesses",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
       "html": "Memory mechanisms",
       "colspan": 1,
       "head": "",
@@ -1596,7 +1639,7 @@
       "refs": []
      },
      {
-      "html": "<span class=\"role\" style=\"--rc:#9B7FBD\">Safety</span>",
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -1614,7 +1657,7 @@
       "refs": []
      },
      {
-      "html": "Tool description and connector choice drift",
+      "html": "Tool description and connector choice manipulation",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -4181,7 +4224,7 @@
       "refs": []
      },
      {
-      "html": "<span class=\"role\" style=\"--rc:#9B7FBD\">Safety</span>",
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -4451,6 +4494,55 @@
      },
      {
       "html": "Tool content gains a higher context role",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
+      "html": "Agent Context CPE",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "li2026whatsagentscontextcontext"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#A8D5BE\">Migrate</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Content gains a higher role or wider scope",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -5714,6 +5806,55 @@
     "type": "row",
     "cells": [
      {
+      "html": "Agent Context CPE",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "li2026whatsagentscontextcontext"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Authority / scope",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Harness elevates source role or persistence scope",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
       "html": "AgentDojo",
       "colspan": 1,
       "head": "",
@@ -6512,7 +6653,7 @@
       "refs": []
      },
      {
-      "html": "<span class=\"role\" style=\"--rc:#9B7FBD\">Safety</span>",
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -8469,7 +8610,7 @@
       "refs": []
      },
      {
-      "html": "<span class=\"role\" style=\"--rc:#9B7FBD\">Safety</span>",
+      "html": "<span class=\"role\" style=\"--rc:#8A97A8\">Survey (Safety)</span>",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -8700,6 +8841,55 @@
     "type": "row",
     "cells": [
      {
+      "html": "Agent Context CPE",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "li2026whatsagentscontextcontext"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Tool action",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Role/scope escalation → RCE, denial of service, or tool misuse",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
       "html": "STAC",
       "colspan": 1,
       "head": "",
@@ -8861,7 +9051,7 @@
       "refs": []
      },
      {
-      "html": "<span class=\"role\" style=\"--rc:#C75B66\">Attack</span>",
+      "html": "<span class=\"role\" style=\"--rc:#C47163\">Red Team</span>",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -8879,13 +9069,13 @@
       "refs": []
      },
      {
-      "html": "Tool action",
+      "html": "Search trajectory",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "Search safety → search action",
+      "html": "Adversarial search interaction → unsafe trajectory",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -12295,7 +12485,7 @@
       "refs": []
      },
      {
-      "html": "<span class=\"role\" style=\"--rc:#3F9B8F\">Defense</span>",
+      "html": "<span class=\"role\" style=\"--rc:#C47163\">Red Team</span>",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -12313,13 +12503,13 @@
       "refs": []
      },
      {
-      "html": "Containment",
+      "html": "Monitoring",
       "colspan": 1,
       "head": "",
       "refs": []
      },
      {
-      "html": "Search agent safety control",
+      "html": "Sandboxed search-agent red teaming",
       "colspan": 1,
       "head": "",
       "refs": []
@@ -15069,6 +15259,61 @@
      },
      {
       "html": "13 objectives; six harnesses",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     }
+    ]
+   },
+   {
+    "type": "row",
+    "cells": [
+     {
+      "html": "Agent Context CPE",
+      "colspan": 1,
+      "head": "",
+      "refs": [
+       "li2026whatsagentscontextcontext"
+      ]
+     },
+     {
+      "html": "2026",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"role\" style=\"--rc:#C2914B\">Benchmark</span>Attack",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"target\">Agent</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "<span class=\"chip\" style=\"--cc:#EDC884\">Workflow</span>",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Role and scope escalation",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "Migrate/Violation/Exposure",
+      "colspan": 1,
+      "head": "",
+      "refs": []
+     },
+     {
+      "html": "282 sources; 1,761 paths; 12 harnesses",
       "colspan": 1,
       "head": "",
       "refs": []

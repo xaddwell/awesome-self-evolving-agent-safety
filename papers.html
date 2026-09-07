@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paper Reader — Safety in Self-Evolving Agents</title>
-<meta name="description" content="Browse the 625 coded papers of the self-evolving agent safety survey, filterable by SAVER substrate, adaptation operation, outcome family, and origin.">
+<meta name="description" content="Browse the 683 coded papers of the self-evolving agent safety survey, filterable by SAVER substrate, adaptation operation, outcome family, and origin.">
 <meta property="og:title" content="Paper Reader — Safety in Self-Evolving Agents Survey">
-<meta property="og:description" content="Browse the 625 coded papers of the self-evolving agent safety survey with SAVER filters.">
+<meta property="og:description" content="Browse the 683 coded papers of the self-evolving agent safety survey with SAVER filters.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/papers.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -170,13 +170,13 @@
 <div class="wrap">
   <header class="hero">
     <h1>Paper Reader</h1>
-    <p class="hero-sub">The 625 coded records of the self-evolving agent safety survey. Every record carries its <b>SAVER</b> coding — substrate, adaptation operation, and outcome family — plus its registry origin and a confidence label. Codings are machine-initial: <b>low-confidence records are hidden by default</b> (use the Confidence filter to include them). Filter by any field, combine filters freely, and open the linked source.</p>
+    <p class="hero-sub">The 683 coded records of the self-evolving agent safety survey. Every record carries its <b>SAVER</b> coding — substrate, adaptation operation, and outcome family — plus its registry origin and a confidence label. Codings are machine-initial: <b>low-confidence records are hidden by default</b> (use the Confidence filter to include them). Filter by any field, combine filters freely, and open the linked source.</p>
   </header>
 
   <div class="controls">
     <div class="search-row">
       <input id="q" class="search-input" type="search" placeholder="Search title, citation key, arXiv id…" aria-label="Search papers" autocomplete="off">
-      <span class="stats" id="stats">625 papers</span>
+      <span class="stats" id="stats">683 papers</span>
       <select id="sort" class="sort-sel" aria-label="Sort papers">
         <option value="title">Title A–Z</option>
         <option value="date-desc" selected>Newest first</option>
@@ -352,7 +352,7 @@
         + '<span class="badge muted">' + esc(p.adaptation || '?') + '</span>'
         + '<span class="badge" style="--bc:' + (p.outcome === 'Violation' ? 'var(--c-violation)' : 'var(--c-response)') + '">' + esc(p.outcome || '?') + '</span>'
         + '<span class="badge muted">' + esc(p.outcome_detail || '?') + '</span>'
-        + (p.record_origin === 'reviewed_card' ? '<span class="badge" style="--bc:#8B5CF6">card</span>' : '<span class="badge" style="--bc:#3B82F6">registry</span>')
+        + (p.record_origin === 'reviewed_card' ? '<span class="badge" style="--bc:#8B5CF6">card</span>' : (p.record_origin === 'rendered_citation' ? '<span class="badge" style="--bc:#0E7490">citation</span>' : '<span class="badge" style="--bc:#3B82F6">registry</span>'))
         + (p.confidence === 'low' ? '<span class="badge" style="--bc:#B45309">low conf.</span>' : '<span class="badge" style="--bc:#2F7F73">' + esc(p.confidence || '?') + '</span>')
         + '</div></div>';
     }).join('')

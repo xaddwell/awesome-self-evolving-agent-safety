@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Safety in Self-Evolving Agents: A Survey</title>
-<meta name="description" content="A transition-centered survey of safety in self-evolving agents: how reusable influence persists, moves, and changes role across carriers, organized by the SAVER framework (S×A→V→E→R). 625 coded papers.">
+<meta name="description" content="A transition-centered survey of safety in self-evolving agents: how reusable influence persists, moves, and changes role across carriers, organized by the SAVER framework (S×A→V→E→R). 683 coded papers.">
 <meta name="keywords" content="self-evolving agents, agent safety, adaptive state, memory poisoning, governance, LLM agents, survey, SAVER">
 <meta property="og:title" content="Safety in Self-Evolving Agents: A Survey">
-<meta property="og:description" content="SAVER: a transition-centered framework for self-evolving agent safety. 625 coded papers across substrates, adaptation operations, violations, exposures, and responses.">
+<meta property="og:description" content="SAVER: a transition-centered framework for self-evolving agent safety. 683 coded papers across substrates, adaptation operations, violations, exposures, and responses.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Safety in Self-Evolving Agents: A Survey">
-<meta name="twitter:description" content="SAVER: a transition-centered framework for self-evolving agent safety. 625 coded papers.">
+<meta name="twitter:description" content="SAVER: a transition-centered framework for self-evolving agent safety. 683 coded papers.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   "name": "Safety in Self-Evolving Agents: A Survey",
-  "description": "A transition-centered survey of safety in self-evolving agents, organized by the SAVER framework (S×A→V→E→R) over 625 coded papers.",
+  "description": "A transition-centered survey of safety in self-evolving agents, organized by the SAVER framework (S×A→V→E→R) over 683 coded papers.",
   "url": "https://xaddwell.github.io/Awesome-Self-Evolving-Agent-Safety/",
   "datePublished": "2026-08",
   "about": ["Self-Evolving Agents", "Agent Safety", "Adaptive State", "Memory Poisoning", "Governance"],
@@ -569,7 +569,7 @@
     <div class="hero-spot" id="heroSpot"></div>
     <span class="badge-pill bp-accent">Preprint 2026</span>
     <span class="badge-pill">Awesome</span>
-    <span class="badge-pill">625 Surveyed Papers</span>
+    <span class="badge-pill">683 Surveyed Papers</span>
     <span class="badge-pill">31 Authors</span>
     <h1 class="hero-title">Safety in Self-Evolving Agents<span class="hero-sub">A Survey of Risks, Attacks, and Governance</span></h1>
     <p class="hero-lead">
@@ -613,7 +613,7 @@
 </header>
 
 <div class="stats-strip" id="statsStrip">
-  <div class="stat-item"><span class="stat-num" id="stCoded">625</span><span class="stat-label">Surveyed Papers</span></div>
+  <div class="stat-item"><span class="stat-num" id="stCoded">683</span><span class="stat-label">Surveyed Papers</span></div>
   <div class="stat-item"><span class="stat-num" id="stScreened">583</span><span class="stat-label">Screened Corpus</span></div>
   <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Substrate Families</span></div>
   <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Adaptation Ops</span></div>
@@ -638,43 +638,20 @@
   <div class="inner" style="max-width:860px;">
     <h2 class="sh">Abstract</h2>
     <p style="text-align:justify;">
-      Large language models (LLMs) exhibit strong general capabilities yet remain essentially static after deployment, failing to adapt to novel tasks, evolving environments, or dynamic contexts. In open-ended interactive environments, this characteristic motivates a shift toward self-evolving agents that continuously update reusable state: model weights, memory entries, tool definitions, or architectural components, from data, interactions, and accumulated experience.
+      Large language models (LLMs) exhibit strong general capabilities yet their parameters typically remain fixed after deployment, limiting learning from new interactions. In open-ended interactive environments, this characteristic motivates a shift toward self-evolving agents that continuously update reusable state: model parameters, memory entries, tool definitions, skill libraries, or workflows, from data, interactions, and accumulated experience.
     </p>
     <p style="text-align:justify;">
-      This fundamentally changes the safety problem: when experience becomes reusable state, past events become future causes, and information that was harmless in one context may later influence decisions with greater persistence, authority, or scope. Unlike LLM and agent safety that focus on whether a response is aligned or an action is authorized, self-evolving agent safety turns to whether safety properties survive the accumulation, generalization, and cross-context reuse of locally useful experience. Existing surveys organize agent safety around static components or lifecycle stages, but rarely track how a single piece of reusable influence, once written into state, changes its carrier, role, authority, and downstream consequences as the agent continues to evolve.
+      This fundamentally changes the safety problem: when experience becomes reusable state, past events become future causes, and information that was harmless in one context may later influence decisions with greater persistence, authority, or scope. Beyond assessing whether a response is aligned or an action is authorized, self-evolving agent safety turns to whether safety properties survive the accumulation, generalization, and cross-context reuse of locally useful experience.
     </p>
     <p style="text-align:justify;">
-      To address this gap, we present <b>SAVER</b>, a transition-centered framework that analyzes safety through <b>S</b>×<b>A</b>→<b>V</b>→<b>E</b>→<b>R</b>: <b>Substrate</b> locates where reusable influence resides, <b>Adaptation</b> identifies the operation that transforms it, <b>Violation</b> characterizes which safety attributes are compromised, <b>Exposure</b> determines where and to whom the failure becomes observable, and <b>Response</b> evaluates whether the influence can be contained, repaired, or revoked. Treating the <b>S</b>×<b>A</b> transition as the analysis unit, SAVER traces how a given transition may induce violations, expand exposure surfaces, and demand containment responses.
+      Existing surveys organize agent safety around components or lifecycle stages; we complement these views by tracing how a single piece of reusable influence, once written into state, changes its carrier, role, authority, and downstream consequences as the agent continues to evolve.
     </p>
     <p style="text-align:justify;">
-      Our survey reveals several key insights. Conceptually, safety failures need not originate from intrinsically harmful information; rather, otherwise legitimate state becomes unsafe when adaptation broadens its persistence, authority, or scope beyond the conditions under which it was originally valid. In terms of research coverage, existing work concentrates on early, observable stages: admission, retrieval, activation, exposure, and local containment while later stages remain sparse. Looking forward, we argue that evaluations must move beyond single-timepoint metrics toward longitudinal evidence verifying whether unsafe influence can be traced to its originating transition, contained at its exposure surface, and prevented from re-emerging after continued adaptation.
+      To support this analysis, we present <b>SAVER</b>, a transition-centered framework that analyzes safety through <b>S</b>×<b>A</b>→<b>V</b>→<b>E</b>→<b>R</b>: <b>Substrate</b> locates where reusable influence resides, <b>Adaptation</b> identifies the operation that transforms it, <b>Violation</b> characterizes which safety attributes are compromised, <b>Exposure</b> determines where and to whom the failure becomes observable, and <b>Response</b> evaluates whether the influence can be contained, repaired, or revoked. Treating the <b>S</b>×<b>A</b> transition as the analysis unit, SAVER traces how a given transition may induce violations, expand exposure surfaces, and demand containment responses.
     </p>
-
-<!-- OVERVIEW -->
-<section id="overview">
-  <div class="inner">
-    <h2 class="sh">Overview</h2>
-    <p class="scope-lead">Click any field of the <b>SAVER</b> relation to see what question it answers. Substrate and Adaptation form the transition pair; Violation, Exposure, and Response form the directed evidence chain that follows it.</p>
-    <div class="sel-band"><b>Selection &amp; Evolution Semantics</b> — above the per-transition record: why particular transitions recur, and how repeated choices can move the safety boundary.</div>
-    <div class="saver-flow" id="saverFlow">
-      <div class="saver-pair">
-        <div class="saver-stage" data-f="s" style="--fc:#527CDF;border-top:3px solid #527CDF;"><div class="k">S</div><div class="t">Substrate</div></div>
-        <div class="times">×</div>
-        <div class="saver-stage" data-f="a" style="--fc:#2F9E8F;border-top:3px solid #2F9E8F;"><div class="k">A</div><div class="t">Adaptation</div></div>
-      </div>
-      <div class="saver-arrow">→</div>
-      <div class="saver-stage" data-f="v" style="--fc:#E2707C;border-top:3px solid #E2707C;"><div class="k">V</div><div class="t">Violation</div></div>
-      <div class="saver-arrow">→</div>
-      <div class="saver-stage" data-f="e" style="--fc:#9B72D6;border-top:3px solid #9B72D6;"><div class="k">E</div><div class="t">Exposure</div></div>
-      <div class="saver-arrow">→</div>
-      <div class="saver-stage" data-f="r" style="--fc:#2F7F73;border-top:3px solid #2F7F73;"><div class="k">R</div><div class="t">Response</div></div>
-    </div>
-    <div class="field-def" id="fieldDef">
-      <span class="fd-k">S · Substrate</span><span class="fd-q">Where does the reusable influence reside?</span>
-      <div class="fd-d">The carrier and its authority regime: prompt context, memory entry, retrieval chunk, tool binding, workflow rule, shared artifact, adapter, or policy state.</div>
-    </div>
-  </div>
-</section>
+    <p style="text-align:justify;">
+      Our survey reveals several key insights. Conceptually, safety failures need not originate from intrinsically harmful information; rather, otherwise legitimate state becomes unsafe when adaptation broadens its persistence, authority, or scope beyond the conditions under which it was originally valid. In terms of research coverage, existing work concentrates on early, observable stages: admission, retrieval, activation, exposure, and local containment while later stages of evolution remain sparse. Looking forward, we argue that evaluations must move beyond single-timepoint metrics toward longitudinal evidence verifying whether unsafe influence can be traced to its originating transition, contained at its exposure surface, and prevented from re-emerging after continued adaptation.
+    </p>
 
 <!-- SCOPE -->
 <!-- KEY MECHANISMS -->
@@ -735,16 +712,16 @@
 <section id="scope">
   <div class="inner">
     <h2 class="sh">Survey Scope</h2>
-    <p class="scope-lead">We review <strong>625 coded papers</strong> through the transition lens, spanning adversarial and non-adversarial risks across four substrate families, and the governance mechanisms that admit, migrate, activate, monitor, and repair reusable state.</p>
+    <p class="scope-lead">We review <strong>683 coded papers</strong> through the transition lens, spanning adversarial and non-adversarial risks across four substrate families, and the governance mechanisms that admit, migrate, activate, monitor, and repair reusable state.</p>
     <div class="table-scroll">
       <table class="scope-table">
         <thead><tr><th>Substrate Family</th><th>Carriers Covered</th><th style="text-align:right">Papers</th></tr></thead>
         <tbody>
-          <tr><td><div class="lname">Workflow</div></td><td><div class="ltopics">Workflow rules · Planner &amp; topology state · Shared artifacts · Multi-agent routing</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:163px;background:var(--c-workflow)"></span><span class="cnt">293</span></div></td></tr>
-          <tr><td><div class="lname">Memory</div></td><td><div class="ltopics">Prompt &amp; context · Long-term memory · Retrieval &amp; knowledge stores</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:108px;background:var(--c-memory)"></span><span class="cnt">195</span></div></td></tr>
-          <tr><td><div class="lname">Tools &amp; Skills</div></td><td><div class="ltopics">Tool &amp; API bindings · Skill &amp; procedure libraries · MCP state</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:55px;background:var(--c-tools)"></span><span class="cnt">99</span></div></td></tr>
-          <tr><td><div class="lname">Model</div></td><td><div class="ltopics">Parameters &amp; adapters · Policy prompts · Cache state · Steering vectors</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:21px;background:var(--c-model)"></span><span class="cnt">38</span></div></td></tr>
-          <tr class="total-row"><td colspan="2">Total (coded pool)</td><td style="text-align:right"><span class="total-count">625</span></td></tr>
+          <tr><td><div class="lname">Workflow</div></td><td><div class="ltopics">Workflow rules · Planner &amp; topology state · Shared artifacts · Multi-agent routing</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:181px;background:var(--c-workflow)"></span><span class="cnt">326</span></div></td></tr>
+          <tr><td><div class="lname">Memory</div></td><td><div class="ltopics">Prompt &amp; context · Long-term memory · Retrieval &amp; knowledge stores</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:112px;background:var(--c-memory)"></span><span class="cnt">202</span></div></td></tr>
+          <tr><td><div class="lname">Tools &amp; Skills</div></td><td><div class="ltopics">Tool &amp; API bindings · Skill &amp; procedure libraries · MCP state</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:61px;background:var(--c-tools)"></span><span class="cnt">110</span></div></td></tr>
+          <tr><td><div class="lname">Model</div></td><td><div class="ltopics">Parameters &amp; adapters · Policy prompts · Cache state · Steering vectors</div></td><td class="cnt-cell"><div class="bar-wrap"><span class="bar" style="width:25px;background:var(--c-model)"></span><span class="cnt">45</span></div></td></tr>
+          <tr class="total-row"><td colspan="2">Total (coded pool)</td><td style="text-align:right"><span class="total-count">683</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -759,9 +736,9 @@
 <section id="glance">
   <div class="inner">
     <h2 class="sh">At a Glance</h2>
-    <p class="scope-lead">All charts render live from <code>papers.json</code>, the coding surface of the manuscript. To avoid machine-initial labeling noise, every chart here uses only the <b>126 medium/high-confidence codings</b>; the Paper Reader browses the full pool and hides the 499 low-confidence records by default (Confidence filter). Click a taxonomy node or a family bar to open the reader with the matching filter. The year trend is restricted to the Figure 1 window (2023 onward).</p>
+    <p class="scope-lead">All charts render live from <code>papers.json</code>, the coding surface of the manuscript. To avoid machine-initial labeling noise, every chart here uses only the <b>134 medium/high-confidence codings</b>; the Paper Reader browses the full pool and hides the 549 low-confidence records by default (Confidence filter). Click a taxonomy node or a family bar to open the reader with the matching filter. The year trend is restricted to the Figure 1 window (2023 onward).</p>
     <div class="viz-grid">
-      <div class="viz-card viz-full"><h3>Papers per Year</h3><p class="viz-sub">524 coded records with usable time metadata, 2023 through 7 August 2026 — the self-evolving-agent window of the corpus</p><div id="vz-year" class="viz-chart"></div></div>
+      <div class="viz-card viz-full"><h3>Papers per Year</h3><p class="viz-sub">medium/high-confidence codings with usable time metadata in the Figure 1 window</p><div id="vz-year" class="viz-chart"></div></div>
       <div class="viz-card"><h3>Taxonomy — click a layer to drill in</h3><p class="viz-sub">Substrate → Adaptation → terminal family (medium/high confidence)</p><div id="vz-sun" class="viz-chart viz-tall"></div></div>
       <div class="viz-card"><h3>SAVER Flow</h3><p class="viz-sub">Substrate → Adaptation → Violation / Response (medium/high confidence)</p><div id="vz-sankey" class="viz-chart viz-tall"></div>
         <div class="viz-legend">
@@ -784,12 +761,12 @@
 <section id="papers">
   <div class="inner" style="max-width:900px;">
     <h2 class="sh">Surveyed Papers</h2>
-    <p class="scope-lead">All 625 coded records live in the dedicated <a href="papers.html">Paper Reader</a> with search and SAVER filters. Jump straight to a substrate family:</p>
+    <p class="scope-lead">All 683 coded records live in the dedicated <a href="papers.html">Paper Reader</a> with search and SAVER filters. Jump straight to a substrate family:</p>
     <div class="papers-teaser">
-      <a class="pt-card" href="papers.html?substrate=Workflow" style="--lc:var(--c-workflow)"><span class="pt-num">293</span><span class="pt-name">Workflow</span><span class="pt-desc">rules · planners · shared artifacts</span></a>
-      <a class="pt-card" href="papers.html?substrate=Memory" style="--lc:var(--c-memory)"><span class="pt-num">195</span><span class="pt-name">Memory</span><span class="pt-desc">context · long-term · retrieval</span></a>
-      <a class="pt-card" href="papers.html?substrate=Tools%20%26%20Skills" style="--lc:var(--c-tools)"><span class="pt-num">99</span><span class="pt-name">Tools &amp; Skills</span><span class="pt-desc">bindings · skill libraries · MCP</span></a>
-      <a class="pt-card" href="papers.html?substrate=Model" style="--lc:var(--c-model)"><span class="pt-num">38</span><span class="pt-name">Model</span><span class="pt-desc">parameters · adapters · policy</span></a>
+      <a class="pt-card" href="papers.html?substrate=Workflow" style="--lc:var(--c-workflow)"><span class="pt-num">326</span><span class="pt-name">Workflow</span><span class="pt-desc">rules · planners · shared artifacts</span></a>
+      <a class="pt-card" href="papers.html?substrate=Memory" style="--lc:var(--c-memory)"><span class="pt-num">202</span><span class="pt-name">Memory</span><span class="pt-desc">context · long-term · retrieval</span></a>
+      <a class="pt-card" href="papers.html?substrate=Tools%20%26%20Skills" style="--lc:var(--c-tools)"><span class="pt-num">110</span><span class="pt-name">Tools &amp; Skills</span><span class="pt-desc">bindings · skill libraries · MCP</span></a>
+      <a class="pt-card" href="papers.html?substrate=Model" style="--lc:var(--c-model)"><span class="pt-num">45</span><span class="pt-name">Model</span><span class="pt-desc">parameters · adapters · policy</span></a>
     </div>
     <p style="text-align:center;margin-top:1.2rem;">
       <a class="cta-btn cta-primary" href="papers.html">Open Paper Reader →</a>
@@ -832,8 +809,8 @@
   <div class="inner" style="max-width:860px;">
     <h2 class="sh">News</h2>
     <div class="card-list">
-      <div class="info-card"><h3>2026-08 · Project page launched</h3><p>Repository and interactive project page published, driven by the manuscript's coded literature surface (625 coded records; 524 with usable time metadata through 7 August 2026).</p></div>
-      <div class="info-card"><h3>2026-08 · Corpus snapshot</h3><p>The coding pool behind Figure 1 of the paper is frozen at its 7 August 2026 cutoff; new integrations keep the same SAVER coding contract.</p></div>
+      <div class="info-card"><h3>2026-08 · Project page launched</h3><p>Repository and interactive project page published, driven by the manuscript's coded literature surface (683 coded records; 577 with usable time metadata through 4 September 2026).</p></div>
+      <div class="info-card"><h3>2026-08 · Corpus snapshot</h3><p>The coding pool behind Figure 1 of the paper is frozen at its 4 September 2026 cutoff; new integrations keep the same SAVER coding contract.</p></div>
     </div>
   </div>
 </section>
@@ -955,8 +932,8 @@
     var stages = [
       { name: 'Screened registry (14 Jun 2026)', v: stats.screened_records, c: '#93B4F7' },
       { name: 'Unique registry works (4 duplicates canonicalized)', v: stats.registry_works, c: '#60A5FA' },
-      { name: 'Surveyed pool (registry + reviewed paper cards)', v: stats.coded_records, c: '#3B82F6' },
-      { name: 'In Figure 1 window (2023–7 Aug 2026)', v: stats.usable_time_metadata, c: '#2563EB' },
+      { name: 'Frozen coded pool (579 registry + 48 cards + 56 rendered citations)', v: stats.coded_records, c: '#3B82F6' },
+      { name: 'In Figure 1 window (' + (stats.time_window || '2023 onward') + ')', v: stats.usable_time_metadata, c: '#2563EB' },
       { name: 'Medium/high-confidence codings', v: (stats.confidence_medium_high || 0), c: '#2F7F73' }
     ];
     var top = stages[0].v || 1;

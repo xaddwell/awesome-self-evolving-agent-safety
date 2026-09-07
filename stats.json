@@ -1,11 +1,12 @@
 {
- "coded_records": 625,
+ "coded_records": 683,
  "registry_works": 579,
- "reviewed_cards": 46,
+ "reviewed_cards": 48,
+ "citation_supplements": 56,
  "screened_records": 583,
  "canonicalized_duplicates": 4,
- "usable_time_metadata": 524,
- "time_window": "2023 through 7 August 2026",
- "confidence_low": 499,
- "confidence_medium_high": 126
+ "usable_time_metadata": 577,
+ "time_window": "2023 through 4 September 2026",
+ "confidence_low": 549,
+ "confidence_medium_high": 134
 }
