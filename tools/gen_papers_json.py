@@ -24,6 +24,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 DEFAULT_CSV = REPO / "data" / "saver_record_literature.csv"
 DEFAULT_VOCAB = REPO / "source" / "table_vocabulary.tex"
+DEFAULT_BIB = REPO / "source" / "references.bib"
 DEFAULT_TABLES = [
     "substrate_literature_index",
     "adaptation_literature_index",
@@ -31,8 +32,18 @@ DEFAULT_TABLES = [
     "violation_exposure_literature_index",
     "response_literature_index",
     "evaluation_literature_index",
-    "lifecycle_coverage_matrix",
-    "benchmark_saver_coverage_matrix",
+    "local_registry_corpus_expansion",
+    "verified_quantitative_seed_landscape",
+]
+READING_KEYS = [
+    "gao2025self_evolving_agents",
+    "tao2024self_evolution_llm_survey",
+    "lin2026memory_security_survey",
+    "zhang2026harnesssafeevaluatingsafetypersistent",
+    "lotfi2026securingagenticaiperaction",
+    "qi2026trustworthy_agentic_ai",
+    "lin2026safetyselfevolvingllmagent",
+    "liu2025foundation_agents",
 ]
 DEFAULT_ROADMAP = REPO / "source" / "roadmap.tex"
 OUT_DIR = REPO / ".tmp" / "saver_page"  # unused for the vendored copy; --out defaults to the repo root
@@ -439,10 +450,81 @@ def parse_roadmap(tex: str) -> dict:
 #  main                                                                         #
 # --------------------------------------------------------------------------- #
 
+def parse_bib(path: Path) -> dict[str, dict]:
+    """Parse references.bib into key -> {title, authors, year, arxiv_id, doi, url}."""
+    entries: dict[str, dict] = {}
+    text = path.read_text(encoding="utf-8")
+    key = None
+    fields: dict[str, str] = {}
+    for line in text.splitlines():
+        m = re.match(r"@\w+\{([^,]+),", line)
+        if m:
+            key = m.group(1).strip()
+            fields = {}
+            continue
+        if key is not None and line.strip().startswith("}"):
+            entries[key] = fields
+            key = None
+            continue
+        fm = re.match(r"^\s*(\w+)\s*=\s*\{(.*)\},?\s*$", line)
+        if fm and key is not None:
+            fields[fm.group(1).lower()] = fm.group(2).strip()
+    arxiv_re = re.compile(r"(\d{4}\.\d{4,5})")
+    for k, f in entries.items():
+        arxiv = f.get("eprint", "")
+        if not arxiv:
+            m = arxiv_re.search(f.get("url", ""))
+            arxiv = m.group(1) if m else ""
+        if not arxiv:
+            m = arxiv_re.search(f.get("doi", ""))
+            arxiv = m.group(1) if m else ""
+        entries[k] = {
+            "title": re.sub(r"[{}]", "", f.get("title", "")).strip(),
+            "authors": re.sub(r"[{}]", "", f.get("author", "")).strip(),
+            "year": f.get("year", ""),
+            "arxiv_id": arxiv,
+            "doi": f.get("doi", ""),
+            "url": f.get("url", ""),
+        }
+    return entries
+
+
+def norm_title(t: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (t or "").lower())
+
+
+def build_refmap(needed_keys: set[str], bib: dict[str, dict], papers: list[dict]) -> dict:
+    """Resolve bib keys against the CSV (citation_key, arxiv_id, doi, title) and the bib itself."""
+    by_key = {p["citation_key"]: p for p in papers if p["citation_key"]}
+    by_arxiv = {p["arxiv_id"]: p for p in papers if p["arxiv_id"]}
+    by_doi = {p["doi"]: p for p in papers if p["doi"]}
+    by_title = {norm_title(p["title"]): p for p in papers if p["title"]}
+    out: dict[str, dict] = {}
+    for key in sorted(needed_keys):
+        b = bib.get(key, {})
+        rec = by_key.get(key)
+        if rec is None and b.get("arxiv_id"):
+            rec = by_arxiv.get(b["arxiv_id"])
+        if rec is None and b.get("doi"):
+            rec = by_doi.get(b["doi"])
+        if rec is None and b.get("title"):
+            rec = by_title.get(norm_title(b["title"]))
+        out[key] = {
+            "csv_key": (rec or {}).get("citation_key", ""),
+            "title": (rec or {}).get("title") or b.get("title") or key,
+            "year": (rec or {}).get("year") or (int(b["year"]) if str(b.get("year", "")).isdigit() else None),
+            "arxiv_id": (rec or {}).get("arxiv_id") or b.get("arxiv_id") or "",
+            "doi": (rec or {}).get("doi") or b.get("doi") or "",
+            "url": (rec or {}).get("url") or b.get("url") or "",
+        }
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default=str(DEFAULT_CSV))
     ap.add_argument("--vocab", default=str(DEFAULT_VOCAB))
+    ap.add_argument("--bib", default=str(DEFAULT_BIB))
     ap.add_argument("--tables-dir", default=str(REPO / "source" / "tables"))
     ap.add_argument("--tables", default=",".join(DEFAULT_TABLES))
     ap.add_argument("--roadmap", default=str(DEFAULT_ROADMAP))
@@ -480,10 +562,13 @@ def main() -> None:
         "coded_records": len(papers),
         "registry_works": sum(1 for r in rows if r.get("record_origin") == "registry"),
         "reviewed_cards": sum(1 for r in rows if r.get("record_origin") == "reviewed_card"),
+        "citation_supplements": sum(
+            1 for r in rows if r.get("record_origin") == "rendered_citation"
+        ),
         "screened_records": 583,
         "canonicalized_duplicates": 4,
         "usable_time_metadata": len(usable),
-        "time_window": "2023 through 7 August 2026",
+        "time_window": "2023 through 4 September 2026",
     }
 
     vocab_path = Path(args.vocab)
@@ -493,15 +578,36 @@ def main() -> None:
     parser = CellParser(vocab)
 
     tables_out = []
+    needed_keys: set[str] = set(READING_KEYS)
     for name in args.tables.split(","):
         tex = (table_dir / f"{name}.tex").read_text(encoding="utf-8")
         conv = convert_table(tex, parser, papers_by_key)
         if conv:
             tables_out.append({"id": name, **conv})
+            for row in conv["rows"]:
+                for cell in row.get("cells", []):
+                    needed_keys.update(cell.get("refs", []))
+            if conv.get("header"):
+                for cell in conv["header"]["cells"]:
+                    needed_keys.update(cell.get("refs", []))
         else:
             print(f"warning: could not convert table {name}")
 
     roadmap_out = parse_roadmap(Path(args.roadmap).read_text(encoding="utf-8"))
+
+    def _collect_roadmap_refs(node: dict) -> None:
+        needed_keys.update(node.get("refs", []))
+        for c in node.get("children", []):
+            _collect_roadmap_refs(c)
+
+    _collect_roadmap_refs(roadmap_out)
+
+    bib = parse_bib(Path(args.bib))
+    refmap = build_refmap(needed_keys, bib, papers)
+
+    conf = Counter(r.get("confidence", "") for r in rows)
+    stats["confidence_low"] = conf.get("low", 0)
+    stats["confidence_medium_high"] = conf.get("medium", 0) + conf.get("high", 0)
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -509,9 +615,11 @@ def main() -> None:
     (out / "stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "tables.json").write_text(json.dumps(tables_out, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "roadmap.json").write_text(json.dumps(roadmap_out, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out / "refmap.json").write_text(json.dumps(refmap, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"papers: {len(papers)}")
     print(f"tables: {len(tables_out)} ({', '.join(t['id'] for t in tables_out)})")
     print(f"roadmap root: {roadmap_out['name']!r} with {len(roadmap_out.get('children', []))} lanes")
+    print(f"refmap: {len(refmap)} keys ({sum(1 for v in refmap.values() if v['csv_key'])} resolved to CSV records)")
     print(f"wrote {out}")
 
 

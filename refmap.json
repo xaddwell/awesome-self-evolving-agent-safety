@@ -663,6 +663,14 @@
   "doi": "10.48550/arXiv.2604.16548",
   "url": "https://arxiv.org/abs/2604.16548"
  },
+ "lin2026safetyselfevolvingllmagent": {
+  "csv_key": "lin2026safetyselfevolvingllmagent",
+  "title": "Safety in Self-Evolving LLM Agent Systems: Threats, Amplification, and Case Studies",
+  "year": 2026,
+  "arxiv_id": "2606.23075",
+  "doi": "10.48550/arXiv.2606.23075",
+  "url": "https://arxiv.org/abs/2606.23075"
+ },
  "lin2026sope": {
   "csv_key": "lin2026sope",
   "title": "SOPE: Situation-Aware and Statistically Indistinguishable Privacy Exfiltration for MCP-enabled Agents",
@@ -678,6 +686,14 @@
   "arxiv_id": "2410.05295",
   "doi": "10.48550/arXiv.2410.05295",
   "url": "https://arxiv.org/abs/2410.05295"
+ },
+ "liu2025foundation_agents": {
+  "csv_key": "2025_advances_and_challenges_in_foundation_agent",
+  "title": "Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems",
+  "year": 2025,
+  "arxiv_id": "2504.01990",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2504.01990"
  },
  "liu2025webcoach": {
   "csv_key": "2025_webcoach_self_evolving_web_agents_with_cros",
