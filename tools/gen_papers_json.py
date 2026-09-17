@@ -44,6 +44,8 @@ READING_KEYS = [
     "qi2026trustworthy_agentic_ai",
     "lin2026safetyselfevolvingllmagent",
     "liu2025foundation_agents",
+    "ma2026safety",
+    "yu2025trustworthy_llm_agents",
 ]
 DEFAULT_ROADMAP = REPO / "source" / "roadmap.tex"
 OUT_DIR = REPO / ".tmp" / "saver_page"  # unused for the vendored copy; --out defaults to the repo root

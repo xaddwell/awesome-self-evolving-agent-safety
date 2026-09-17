@@ -791,6 +791,14 @@
   "doi": "",
   "url": "http://arxiv.org/abs/2603.25097"
  },
+ "ma2026safety": {
+  "csv_key": "ma2026safety",
+  "title": "Safety at scale: A comprehensive survey of large model and agent safety",
+  "year": 2026,
+  "arxiv_id": "",
+  "doi": "",
+  "url": ""
+ },
  "mao2026agentsdontjustagree": {
   "csv_key": "mao2026agentsdontjustagree",
   "title": "Agents Don't Just Agree, They Remember: Benchmarking Persistent Sycophancy in Stateful Personal Agents",
@@ -1462,6 +1470,14 @@
   "arxiv_id": "2608.03509",
   "doi": "10.48550/arXiv.2608.03509",
   "url": "https://arxiv.org/abs/2608.03509"
+ },
+ "yu2025trustworthy_llm_agents": {
+  "csv_key": "yu2025trustworthy_llm_agents",
+  "title": "A Survey on Trustworthy LLM Agents: Threats and Countermeasures",
+  "year": 2025,
+  "arxiv_id": "2503.09648",
+  "doi": "10.48550/arXiv.2503.09648",
+  "url": "https://arxiv.org/abs/2503.09648"
  },
  "yu_2022_security_preserving_multi_ag": {
   "csv_key": "yu_2022_security_preserving_multi_ag",
